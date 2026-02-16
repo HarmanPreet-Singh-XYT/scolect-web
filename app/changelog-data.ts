@@ -20,9 +20,27 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.0.5",
+    date: "February 15, 2026",
+    isLatest: true,
+    improvements: [
+      "Improved Windows tracking to resolve and display actual system application names.",
+      "Enhanced UWP app name detection for more accurate reporting."
+    ],
+    fixes: [
+      "Fixed UWP applications being shown as 'Application Frame Host' instead of their real app names."
+    ],
+    tech: [
+      "Improved Windows UWP process-to-application name resolution",
+      "Optimized Windows-specific tracking pipeline"
+    ],
+    windowsLink: "https://apps.microsoft.com/detail/9phbzxnpvhsq?hl=en-US&gl=CA",
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.0.4/Scolect.-.Track.Screen.Time.App.Usage.dmg",
+  },
+  {
    version: "v2.0.4",
     date: "February 14, 2026",
-    isLatest: true,
+    isLatest: false,
     improvements: [
       "Optimized local database read/write operations.",
       "Reduced memory usage by avoiding full data loads into memory.",
