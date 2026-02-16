@@ -20,42 +20,53 @@ export interface Release {
 
 export const releases: Release[] = [
   {
-    version: "v2.0.4",
+   version: "v2.0.4",
     date: "February 14, 2026",
     isLatest: true,
-    features: [
-      "Includes optimizations related to local database access (read/write).",
-      "algorithms are implemented to reduce memory overhead, basically not loading all the data onto the memory.",
-      "Keeping some data on the memory for instant access (5MB max)."
+    improvements: [
+      "Optimized local database read/write operations.",
+      "Reduced memory usage by avoiding full data loads into memory.",
+      "Introduced smart in-memory caching for instant access (up to 5MB)."
+    ],
+    tech: [
+      "Streaming-based data access instead of eager loading",
+      "Memory-bounded caching strategy for frequently accessed records"
     ],
     macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.0.4/Scolect.-.Track.Screen.Time.App.Usage.dmg",
   },
   {
     version: "v2.0.3",
     date: "February 14, 2026",
-    isLatest: false,
+    improvements: [
+      "Improved Applications section UX.",
+      "Optimized data storage and retrieval pipeline.",
+      "Latest tracking data now appears instantly on the UI.",
+      "Reduced unnecessary background UI refreshes."
+    ],
+    fixes: [
+      "Fixed application tracking toggle unintentionally stopping tracking.",
+      "Fixed large application names not being stored correctly.",
+      "Resolved issues causing delayed UI updates."
+    ],
     features: [
-      "Fixed tracking toggle in Applications triggering tracking to be stopped.",
-      "Improved UX for Applications section.",
-      "Fixed large app name not being stored.",
-      "App now tracks itself too.",
-      "Optimized data storage.",
-      "App now shows latest data immediately on UI.",
-      "Fixed unnecessary UI updates in background."
+      "Application now tracks its own usage."
     ],
     macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.0.3/Scolect.-.Track.Screen.Time.App.Usage.dmg",
   },
   {
     version: "v2.0.2",
     date: "February 12, 2026",
-    isLatest: false,
     features: [
-      "Fixes certain issue with idle detection causing app to crash on Windows - monitoring",
-      "Option added for toggling keyboard input monitoring.",
-      "add rebranding model back for windows"
+      "Added option to enable or disable keyboard input monitoring."
     ],
+    fixes: [
+      "Fixed idle detection crash on Windows monitoring engine."
+    ],
+    improvements: [
+      "Restored rebranding model on Windows builds."
+    ],
+    note: "Monitoring if crashes still occur. Report issues to bugs@scolect.com or via the Report Bugs page if you can reproduce them.",
     macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.0.2/Scolect.-.Track.Screen.Time.App.Usage.dmg",
-    note: "Monitoring if crashes still occur. Report to bugs@scolect.com or through report bugs page if you face app crash and you know how to reproduce that same crash."
   },
   {
     version: "v2.0.0",
