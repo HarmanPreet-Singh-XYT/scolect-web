@@ -2,4 +2,4 @@ User-Agent: *
 Allow: /
 Disallow: /private/
 
-Sitemap: https://www.scolect/sitemap.xml
+Sitemap: https://www.scolect.com/sitemap.xml
