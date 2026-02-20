@@ -1,5 +1,4 @@
-User-Agent: *
-Allow: /
+User-agent: *
 Disallow: /private/
 
-Sitemap: https://www.scolect.com/sitemap.xml
+Sitemap: https://scolect.com/sitemap.xml
