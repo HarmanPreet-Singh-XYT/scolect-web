@@ -539,30 +539,34 @@ export default function ReportBugPage() {
             </div>
 
             {/* Email */}
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] transition-all duration-500 group hover:shadow-2xl hover:shadow-violet-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <Mail size={48} className="text-[#7C3AED] mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Email Report</h3>
-              <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6">
-                For bugs containing personal data or if you prefer email.
-              </p>
-              <a href="mailto:bugs.scolect@harmanita.com" className="inline-flex items-center gap-2 font-bold text-[#7C3AED] hover:gap-4 transition-all duration-300 group/link">
-                Email Bug Report <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-              </a>
-            </div>
+            <a href="mailto:bugs@scolect.com">
+              <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] transition-all duration-500 group hover:shadow-2xl hover:shadow-violet-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Mail size={48} className="text-[#7C3AED] mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Email Report</h3>
+                <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6">
+                  For bugs containing personal data or if you prefer email.
+                </p>
+                <p className="inline-flex items-center gap-2 font-bold text-[#7C3AED] hover:gap-4 transition-all duration-300 group/link">
+                  Email Bug Report <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                </p>
+              </div>
+            </a>
 
             {/* Security */}
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#F43F5E] transition-all duration-500 group hover:shadow-2xl hover:shadow-red-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '200ms' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <Lock size={48} className="text-[#F43F5E] mb-6 group-hover:scale-110 transition-transform duration-300" />
-              <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Security Email</h3>
-              <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6">
-                For sensitive vulnerabilities. Use form above or email directly.
-              </p>
-              <a href="mailto:security.scolect@harmanita.com" className="inline-flex items-center gap-2 font-bold text-[#F43F5E] hover:gap-4 transition-all duration-300 group/link">
-                Email Security Team <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
-              </a>
-            </div>
+            <a href="mailto:security@scolect.com">
+              <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#F43F5E] transition-all duration-500 group hover:shadow-2xl hover:shadow-red-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '200ms' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-red-500/0 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Lock size={48} className="text-[#F43F5E] mb-6 group-hover:scale-110 transition-transform duration-300" />
+                <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Security Email</h3>
+                <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6">
+                  For sensitive vulnerabilities. Use form above or email directly.
+                </p>
+                <p className="inline-flex items-center gap-2 font-bold text-[#F43F5E] hover:gap-4 transition-all duration-300 group/link">
+                  Email Security Team <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </section>
