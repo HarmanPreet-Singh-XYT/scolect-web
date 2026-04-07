@@ -20,9 +20,28 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.1.0",
+    date: "April 7, 2026",
+    isLatest: true,
+    features: [
+      "Added ability to change the daily reset time."
+    ],
+    improvements: [
+      "General optimizations.",
+      "(MacOS) Changed data save location to Documents/Scolect with automatic migration to prevent data loss during app updates or removal."
+    ],
+    fixes: [
+      "(MacOS) Fixed issue where Auto Update was not working correctly.",
+      "Fixed slider snapping issues at 15-minute intervals in Alerts & Limits for Daily Limits."
+    ],
+    note: "It is highly recommended to download this update manually.",
+    size: 22.7,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.1.0/Scolect.-.Track.Screen.Time.App.Usage.dmg"
+  },
+  {
     version: "v2.0.10",
     date: "March 6, 2026",
-    isLatest: true,
+    isLatest: false,
     fixes: [
       "Fixed Focus Mode sessions not accumulating correctly and incorrectly continuing previous sessions instead of creating new ones.",
       "Fixed Session History chart showing monthly data instead of the intended weekly data."
