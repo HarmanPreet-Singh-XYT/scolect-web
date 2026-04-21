@@ -20,9 +20,23 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.1.1",
+    date: "April 20, 2026",
+    isLatest: true,
+    improvements: [
+      "Improved the way focus mode sync works, now allows resume of sessions same day.",
+      "General improvements"
+    ],
+    fixes: [
+      "Fixed Slider values in the Alerts & Limits not being implemented or to say not working."
+    ],
+    size: 22.7,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.1.1/Scolect.dmg"
+  },
+  {
     version: "v2.1.0",
     date: "April 7, 2026",
-    isLatest: true,
+    isLatest: false,
     features: [
       "Added ability to change the daily reset time."
     ],
