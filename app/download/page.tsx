@@ -1,34 +1,53 @@
 "use client"
-import React, { useState } from 'react';
-import { 
-  Download, 
-  Shield, 
-  Zap, 
-  RefreshCw, 
-  Cloud, 
-  Monitor, 
-  Cpu, 
-  HardDrive, 
-  AlertTriangle, 
-  Github, 
-  Terminal, 
-  Smartphone, 
+import React, { useState, useEffect } from 'react';
+import {
+  Download,
+  Shield,
+  Zap,
+  RefreshCw,
+  Cloud,
+  Monitor,
+  Cpu,
+  HardDrive,
+  AlertTriangle,
+  Github,
+  Terminal,
+  Smartphone,
   HelpCircle,
   Apple,
   CheckCircle2,
   ArrowRight,
   X,
-  ExternalLink
+  ExternalLink,
+  Globe
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import { useRouter } from 'next/navigation';
 import { releases } from '../changelog-data';
 
+const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/scolect-%E2%80%93-screen-time-web/bhmdflomhhikleikahmfmjbpfmfglbff";
+
+type DetectedBrowser = 'chrome' | 'firefox' | 'other';
+
+function detectBrowser(): DetectedBrowser {
+  if (typeof navigator === 'undefined') return 'other';
+  const ua = navigator.userAgent;
+  if (/Firefox\//.test(ua)) return 'firefox';
+  if (/Chrome\/|Chromium\/|Edg\/|OPR\/|Brave\//.test(ua)) return 'chrome';
+  return 'other';
+}
+
 const DownloadPage: React.FC = () => {
   const router = useRouter();
   const [showMacDialog, setShowMacDialog] = useState(false);
-  
+  const [showExtensionDialog, setShowExtensionDialog] = useState(false);
+  const [detectedBrowser, setDetectedBrowser] = useState<DetectedBrowser>('other');
+
+  useEffect(() => {
+    setDetectedBrowser(detectBrowser());
+  }, []);
+
   // Get the latest release data
   const latestRelease = releases.find(r => r.isLatest) || releases[0];
   
@@ -168,6 +187,96 @@ const DownloadPage: React.FC = () => {
         </div>
       )}
 
+      {/* Browser Extension Dialog */}
+      {showExtensionDialog && (
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
+          {/* Backdrop */}
+          <div
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+            onClick={() => setShowExtensionDialog(false)}
+          />
+
+          {/* Dialog */}
+          <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8 max-w-md w-full shadow-[0_25px_80px_rgba(0,0,0,0.4)] animate-[fadeInUp_0.3s_ease-out] z-10">
+            {/* Close button */}
+            <button
+              onClick={() => setShowExtensionDialog(false)}
+              className="absolute top-4 right-4 p-1.5 rounded-lg hover:bg-[var(--bg-page)] text-[var(--text-muted)] hover:text-[var(--text-main)] transition-all duration-300"
+            >
+              <X className="w-5 h-5" />
+            </button>
+
+            {/* Header */}
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--primary)] to-fuchsia-500 flex items-center justify-center shadow-lg">
+                <Globe className="w-5 h-5 text-white" />
+              </div>
+              <div>
+                <h3 className="font-bold text-lg text-[var(--text-main)]">Browser Extension</h3>
+                <p className="text-xs text-[var(--text-muted)]">Website tracking, synced to your desktop app</p>
+              </div>
+            </div>
+
+            <p className="text-sm text-[var(--text-muted)] mb-6 mt-4">
+              Choose your browser's extension store:
+            </p>
+
+            {/* Options */}
+            <div className="space-y-3">
+              {/* Chrome Web Store — available */}
+              <button
+                onClick={() => {
+                  window.open(CHROME_EXTENSION_URL, '_blank', 'noopener,noreferrer');
+                  setShowExtensionDialog(false);
+                }}
+                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+
+                <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
+                  <Globe className="w-5 h-5 text-white" />
+                </div>
+                <div className="relative z-10 flex-1">
+                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-2">
+                    Chrome Web Store
+                    {detectedBrowser === 'chrome' && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--success)]/20 text-[var(--success)] font-medium">Your Browser</span>
+                    )}
+                  </h4>
+                  <p className="text-xs text-[var(--text-muted)] mt-0.5">Chrome, Edge, Brave, Opera & other Chromium browsers</p>
+                </div>
+                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+              </button>
+
+              {/* Firefox Add-ons — coming soon */}
+              <div
+                className="relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] opacity-60 cursor-not-allowed text-left"
+              >
+                <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <Globe className="w-5 h-5 text-white" />
+                </div>
+                <div className="relative z-10 flex-1">
+                  <h4 className="font-semibold text-[var(--text-main)] flex items-center gap-2">
+                    Firefox Add-ons
+                    {detectedBrowser === 'firefox' && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--warning)]/20 text-[var(--warning)] font-medium">Your Browser</span>
+                    )}
+                  </h4>
+                  <p className="text-xs text-[var(--text-muted)] mt-0.5">Coming soon</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Footer note */}
+            {detectedBrowser === 'other' && (
+              <p className="text-xs text-[var(--text-muted)] mt-5 text-center">
+                We couldn't confirm your browser supports the extension yet — Chromium-based browsers are supported today.
+              </p>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="relative pt-36 pb-16 px-6 text-center max-w-5xl mx-auto">
         {/* Enhanced gradient orbs with improved animation */}
@@ -185,22 +294,22 @@ const DownloadPage: React.FC = () => {
             Download <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] via-fuchsia-500 to-cyan-500 bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] drop-shadow-[0_0_20px_rgba(124,58,237,0.5)]">Scolect</span>
           </h1>
           <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto mb-10 leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.2s_both]">
-            Free, open-source screen time tracking for desktop. Available on Windows and macOS.
+            Free, open-source screen time tracking for desktop and the web. Available on Windows, macOS, and Chrome.
           </p>
 
           {/* Platform Download Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-[fadeInUp_0.6s_ease-out_0.4s_both]">
             {/* Windows Download */}
-            <button 
+            <button
               onClick={handleWindowsDownload}
               className="group relative flex items-center gap-3 bg-gradient-to-r from-[var(--primary)] via-fuchsia-600 to-[var(--primary)] bg-[length:200%_auto] hover:bg-[var(--primary-hover)] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-[0_10px_40px_rgba(124,58,237,0.4)] hover:shadow-[0_20px_60px_rgba(124,58,237,0.6)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden animate-[gradientShift_3s_ease-in-out_infinite]"
             >
               {/* Animated gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              
+
               {/* Glow effect */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[var(--primary)]/50 via-fuchsia-500/50 to-cyan-500/50 blur-xl -z-10" />
-              
+
               <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 drop-shadow-lg" aria-hidden="true">
                 <path d="M0 0h11.377v11.372H0zM12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zM12.623 12.623H24V24H12.623z"/>
               </svg>
@@ -208,15 +317,26 @@ const DownloadPage: React.FC = () => {
             </button>
 
             {/* macOS Download */}
-            <button 
+            <button
               onClick={handleMacDownload}
               className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
             >
               {/* Animated gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-              
+
               <Apple className="w-6 h-6 relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" />
               <span className="relative z-10">Download for macOS</span>
+            </button>
+
+            {/* Browser Extension */}
+            <button
+              onClick={() => setShowExtensionDialog(true)}
+              className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+
+              <Globe className="w-6 h-6 relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500" />
+              <span className="relative z-10">Add to Browser</span>
             </button>
           </div>
 
@@ -546,11 +666,11 @@ const DownloadPage: React.FC = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-2xl font-bold mb-8 animate-[fadeInUp_0.6s_ease-out]">Platform Roadmap</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <PlatformCard 
+            <PlatformCard
               icon={<Terminal className="w-6 h-6" />}
               title="Linux"
-              desc="Coming soon! We're working on Linux support. The challenge is supporting various desktop environments. Community contributions welcome!"
-              status="planned"
+              desc="Not currently planned. Linux doesn't provide a reliable, cross-desktop-environment way to detect the foreground application, which core tracking depends on. We'd need a fundamentally different approach per distro/DE — community contributions exploring this are welcome."
+              status="unlikely"
               delay="0s"
             />
             <PlatformCard 
@@ -560,10 +680,10 @@ const DownloadPage: React.FC = () => {
               status="considering"
               delay="0.1s"
             />
-            <PlatformCard 
+            <PlatformCard
               icon={<Cloud className="w-6 h-6" />}
-              title="Cross-Platform Sync"
-              desc="Sync your data across all your devices. Coming after we've established solid support on all desktop platforms."
+              title="Cloud Cross-Device Sync"
+              desc="Today, the Chrome extension already syncs website data straight to your desktop app locally. Full cloud sync across separate devices is next, after we've established solid support on all desktop platforms."
               status="future"
               delay="0.2s"
             />
@@ -610,13 +730,22 @@ const DownloadPage: React.FC = () => {
                 <span className="relative z-10">Windows</span>
               </button>
               
-              <button 
-                onClick={handleMacDownload} 
+              <button
+                onClick={handleMacDownload}
                 className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <Apple className="w-5 h-5 relative z-10" />
                 <span className="relative z-10">macOS</span>
+              </button>
+
+              <button
+                onClick={() => setShowExtensionDialog(true)}
+                className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] hover:-translate-y-1 relative overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                <Globe className="w-5 h-5 relative z-10" />
+                <span className="relative z-10">Browser</span>
               </button>
             </div>
             
@@ -848,6 +977,8 @@ const PlatformCard = ({ icon, title, desc, status, delay }: { icon: React.ReactN
         return <span className="text-xs px-2 py-1 rounded-full bg-[var(--warning)]/20 text-[var(--warning)] font-medium">Considering</span>;
       case 'future':
         return <span className="text-xs px-2 py-1 rounded-full bg-sky-500/20 text-sky-500 font-medium">Future</span>;
+      case 'unlikely':
+        return <span className="text-xs px-2 py-1 rounded-full bg-rose-500/20 text-rose-500 font-medium">Not Planned</span>;
       default:
         return null;
     }

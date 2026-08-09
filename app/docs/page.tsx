@@ -306,7 +306,7 @@ export default function DocumentationPage() {
           
           <SubHeading id="installation">1.1 Installation</SubHeading>
           <Paragraph>
-            Download Scolect from our official download page. See our Download Page for detailed installation instructions and system requirements for Windows, macOS, and Linux.
+            Download Scolect from our official download page. See our Download Page for detailed installation instructions and system requirements for Windows and macOS.
           </Paragraph>
 
           <SubHeading id="first-launch">1.2 First Launch</SubHeading>
@@ -574,7 +574,7 @@ export default function DocumentationPage() {
                 <div className="text-sm text-[#52525B] dark:text-[#A1A1AA] mt-2">
                   <ul className="list-disc pl-5 space-y-1">
                     <li>Check <strong>Master Toggle</strong> in Settings.</li>
-                    <li>Check your <strong>System Notification Settings</strong> (Windows Settings, macOS System Preferences, or Linux notification daemon).</li>
+                    <li>Check your <strong>System Notification Settings</strong> (Windows Settings or macOS System Preferences).</li>
                     <li><strong>Focus Mode Conflict:</strong> If Focus Mode is active, screen time alerts are suppressed by design.</li>
                   </ul>
                 </div>
@@ -624,7 +624,7 @@ export default function DocumentationPage() {
                   <span className="transition-transform group-open:rotate-90 duration-300"><ChevronRight size={16} /></span>
                 </summary>
                 <div className="text-[#52525B] dark:text-[#A1A1AA] mt-3 pt-3 border-t border-zinc-100 dark:border-zinc-800 animate-fadeIn">
-                  Tracking stops. For continuous tracking, leave Scolect running in the background (it minimizes to system tray on Windows/Linux or menu bar on macOS).
+                  Tracking stops. For continuous tracking, leave Scolect running in the background (it minimizes to the system tray on Windows or the menu bar on macOS).
                 </div>
               </details>
 

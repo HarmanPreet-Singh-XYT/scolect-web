@@ -520,7 +520,6 @@ export default function ComparisonPage() {
             ]}
             disadvantages={[
               "Hardcore blocking (cannot create un-bypassable locks)",
-              "Website-level blocking (browser extension coming soon)",
               "Scheduled blocks"
             ]}
             summary={

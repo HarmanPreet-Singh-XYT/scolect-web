@@ -25,7 +25,9 @@ import {
   Sun,
   Activity,
   Sparkles,
-  Heart
+  Heart,
+  Globe,
+  Lock
 } from 'lucide-react';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
@@ -139,6 +141,28 @@ const StaggerChildren = ({
 // --- Floating Orb Component ---
 const FloatingOrb = ({ className }: { className?: string }) => (
   <div className={`absolute rounded-full blur-3xl opacity-30 dark:opacity-20 ${className}`} />
+);
+
+// --- Hand-drawn Doodle Sticker ---
+const Doodle = ({
+  icon: Icon,
+  className,
+  rotate = 0,
+  size = 32,
+  delay = 0,
+}: {
+  icon: React.ElementType;
+  className?: string;
+  rotate?: number;
+  size?: number;
+  delay?: number;
+}) => (
+  <div
+    className={`hidden lg:block absolute text-violet-500 dark:text-violet-300 animate-float pointer-events-none select-none ${className}`}
+    style={{ transform: `rotate(${rotate}deg)`, animationDelay: `${delay}s` }}
+  >
+    <Icon size={size} strokeWidth={2} />
+  </div>
 );
 
 // --- Animated Counter ---
@@ -265,6 +289,88 @@ const AccordionItem = ({ question, answer }: { question: string, answer: string 
   );
 };
 
+// --- Showcase Section ---
+
+const SHOWCASE_ITEMS = [
+  {
+    src: '/showcase/1.png',
+    title: 'Set limits, stay accountable',
+    description: 'Smart alerts before you go overboard—set daily limits per app and get notified the moment you approach them.',
+  },
+  {
+    src: '/showcase/2.png',
+    title: 'Every app, fully analyzed',
+    description: 'See usage trends, sessions, and habits per app with detailed weekly breakdowns and category insights.',
+  },
+  {
+    src: '/showcase/6.png',
+    title: 'Focus deeply, finish more',
+    description: 'Built-in Pomodoro & Focus modes with time distribution tracking help you get things done.',
+  },
+  {
+    src: '/showcase/7.png',
+    title: 'Advanced precision tracking',
+    description: 'Millisecond-accurate tracking with idle detection—captures even the slightest change in activity.',
+  },
+  {
+    src: '/showcase/4.png',
+    title: 'Your data stays on your device',
+    description: 'Fully private, customizable, and local-only. Export or import your data anytime, no cloud required.',
+  },
+  {
+    src: '/showcase/3.png',
+    title: 'Unlimited customization',
+    description: 'Customize every color of the app to match your preference, with light and dark theme support.',
+  },
+  {
+    src: '/showcase/5.png',
+    title: 'Multi-language support',
+    description: 'Read Scolect in your preferred language, with support for 10+ languages and counting.',
+  },
+];
+
+const ShowcaseSection = () => {
+  return (
+    <Section id="showcase">
+      <AnimateOnScroll direction="up">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <Badge color="teal">See It In Action</Badge>
+          <h2 className="mt-4 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">A Closer Look at Scolect</h2>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-lg">
+            Real screens from the real app. Every feature you'll actually use, front and center.
+          </p>
+        </div>
+      </AnimateOnScroll>
+
+      {/* Desktop: stacking sticky cards — each pins in place, then the next slides up and covers it */}
+      <div className="hidden lg:block">
+        {SHOWCASE_ITEMS.map((item, i) => (
+          <div
+            key={item.title}
+            className="sticky pb-6"
+            style={{ top: `${96 + i * 14}px`, zIndex: i + 1 }}
+          >
+            <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-2xl bg-zinc-100 dark:bg-zinc-900 ring-8 ring-zinc-50 dark:ring-zinc-950">
+              <img src={item.src} alt={item.title} className="w-full h-auto block" />
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Mobile/tablet: simple stacked cards, no sticky (avoids jank on small viewports) */}
+      <div className="lg:hidden space-y-6">
+        {SHOWCASE_ITEMS.map((item, i) => (
+          <AnimateOnScroll key={item.title} direction="up" delay={i * 60}>
+            <div className="rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-xl">
+              <img src={item.src} alt={item.title} className="w-full h-auto" />
+            </div>
+          </AnimateOnScroll>
+        ))}
+      </div>
+    </Section>
+  );
+};
+
 // --- Main Component ---
 
 export default function ScolectLanding() {
@@ -345,9 +451,26 @@ export default function ScolectLanding() {
         <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" />
         <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" />
         <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-        
+
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
-        
+
+        {/* Hand-drawn doodle stickers, echoing the showcase screenshot backgrounds */}
+        <Doodle icon={Timer} className="top-[10%] left-[5%]" rotate={-12} size={32} />
+        <Doodle icon={Check} className="top-[30%] left-[3%]" rotate={8} size={26} delay={1} />
+        <Doodle icon={Bell} className="top-[50%] left-[6%]" rotate={20} size={24} delay={0.5} />
+        <Doodle icon={Heart} className="top-[70%] left-[4%]" rotate={-8} size={28} delay={1.5} />
+        <Doodle icon={Sparkles} className="top-[88%] left-[9%]" rotate={12} size={22} delay={2} />
+        <Doodle icon={Shield} className="top-[18%] left-[16%]" rotate={-15} size={22} delay={0.8} />
+        <Doodle icon={Zap} className="top-[78%] left-[18%]" rotate={18} size={26} delay={1.2} />
+
+        <Doodle icon={Zap} className="top-[12%] right-[5%]" rotate={15} size={36} />
+        <Doodle icon={Shield} className="top-[32%] right-[3%]" rotate={-10} size={26} delay={0.6} />
+        <Doodle icon={Sparkles} className="top-[52%] right-[6%]" rotate={10} size={24} delay={1.4} />
+        <Doodle icon={Heart} className="top-[72%] right-[4%]" rotate={-14} size={26} delay={0.3} />
+        <Doodle icon={Check} className="top-[88%] right-[9%]" rotate={6} size={28} delay={1.8} />
+        <Doodle icon={Bell} className="top-[20%] right-[16%]" rotate={-18} size={22} delay={1.1} />
+        <Doodle icon={Timer} className="top-[80%] right-[18%]" rotate={12} size={24} delay={0.4} />
+
         <div className="max-w-4xl mx-auto relative z-10">
           <div 
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-4"
@@ -434,6 +557,9 @@ export default function ScolectLanding() {
           </div>
         </AnimateOnScroll>
       </div>
+
+      {/* Product Showcase */}
+      <ShowcaseSection />
 
       {/* Problem Statement */}
       <Section>
@@ -579,7 +705,7 @@ export default function ScolectLanding() {
             explanation="Everyone's workflow is different. Scolect adapts to you. Create categories like 'Client Work' or 'Learning'. Toggle visibility for system apps. This ensures your data is always relevant."
             index={4}
           />
-          <FeatureCard 
+          <FeatureCard
             icon={Shield}
             title="Your Data Stays Yours. Always."
             description="Unlike commercial tracking apps that sell your data, Scolect stores everything locally on your device. No cloud sync. No accounts."
@@ -590,6 +716,30 @@ export default function ScolectLanding() {
             ]}
             explanation="In an era where every app wants to monetize your attention, Scolect takes the opposite approach: radical privacy. Everything stays encrypted on your local machine."
             index={5}
+          />
+          <FeatureCard
+            icon={Globe}
+            title="Track Websites, Not Just Apps"
+            description="Install the free Scolect Chrome extension to track time spent on every website, then see it all synced straight into your desktop dashboard."
+            points={[
+              "Free Chrome Web Store extension",
+              "Automatic sync to your desktop app",
+              "One unified view of apps and sites"
+            ]}
+            explanation="Your browser is where most of the day disappears. Scolect closes that gap—install the extension once, and your website usage shows up right alongside your app usage on desktop."
+            index={6}
+          />
+          <FeatureCard
+            icon={Lock}
+            title="Block What's Holding You Back"
+            description="Set hard limits where you need them. Block distracting apps or websites entirely during focus hours or once you hit your daily limit."
+            points={[
+              "Block any app or website on demand",
+              "Automatic blocking when limits are hit",
+              "Pairs with Focus Mode for zero-distraction sessions"
+            ]}
+            explanation="Awareness alone isn't always enough. When willpower runs out, Scolect can step in and physically block the app or site—no extensions to disable, no workarounds."
+            index={7}
           />
         </div>
       </Section>

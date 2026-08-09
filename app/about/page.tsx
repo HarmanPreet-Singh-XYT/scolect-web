@@ -505,28 +505,28 @@ export default function AboutPage() {
               title="Recently Completed"
               statusColor="border-[#14B8A6]"
               icon={CheckCircle2}
-              items={["Backup & Restore", "Multi-language Support (10+)", "Enhanced App Details Modal", "Performance Optimizations"]}
+              items={["Chrome Extension (Website Tracking)", "Extension ↔ Desktop Sync", "App & Website Blocking", "Backup & Restore", "Multi-language Support (10+)"]}
               index={0}
             />
             <RoadmapColumn
               title="In Progress"
               statusColor="border-[#7C3AED]"
               icon={Zap}
-              items={["Distraction Blocking (Focus Mode)", "Do Not Disturb Scheduling", "Weekly Email Reports (Local)", "CSV Export"]}
+              items={["Do Not Disturb Scheduling", "Weekly Email Reports (Local)", "CSV Export"]}
               index={1}
             />
             <RoadmapColumn
               title="Planned"
               statusColor="border-[#F59E0B]"
               icon={Star}
-              items={["Weekday vs. Weekend Limits", "Application Tags", "Linux Support (Alpha)", "Goal System"]}
+              items={["Weekday vs. Weekend Limits", "Application Tags", "Goal System"]}
               index={2}
             />
             <RoadmapColumn
               title="Future Vision"
               statusColor="border-[#52525B]"
               icon={Sparkles}
-              items={["Browser Extension Integration", "Mobile Companion App", "AI-Powered Insights", "Correlation Analysis"]}
+              items={["Mobile Companion App", "AI-Powered Insights", "Correlation Analysis"]}
               index={3}
             />
           </div>

@@ -410,7 +410,7 @@ const ContactPage: React.FC = () => {
                   className="w-full px-4 py-3 rounded-lg bg-[var(--bg-page)] border border-[var(--border)] focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none transition-all duration-200 font-mono text-sm hover:border-[var(--primary)]/50 resize-none" 
                 />
                 <p className="text-xs text-[var(--text-muted)]">
-                  For technical support, please include: Scolect version, operating system (Windows/macOS/Linux), and steps to reproduce.
+                  For technical support, please include: Scolect version, operating system (Windows/macOS), and steps to reproduce.
                 </p>
               </div>
 

@@ -20,9 +20,45 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.2.2",
+    date: "August 9, 2026",
+    isLatest: true,
+    features: [
+      "Added app blocking feature for both macOS & Windows.",
+      "Web Extension is now available, making Scolect available for website tracking.",
+      "Added the ability to sync website data from the extension and view it directly in the app.",
+      "Added sorting for tables & search in the Alerts & Limits section."
+    ],
+    improvements: [
+      "Updated version history and download links."
+    ],
+    fixes: [
+      "Various bug fixes and improvements."
+    ],
+    size: 23.2,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.2.2/Scolect.dmg",
+    windowsLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.2.2/Scolect.-.Track.Screen.Time.App.Usage.exe"
+  },
+  {
+    version: "v2.1.3",
+    date: "June 30, 2026",
+    isLatest: false,
+    improvements: [
+      "Improved stability."
+    ]
+  },
+  {
+    version: "v2.1.2",
+    date: "June 25, 2026",
+    isLatest: false,
+    improvements: [
+      "Added improvements for stability on Windows (migrated from C++ to Rust for native implementations)."
+    ]
+  },
+  {
     version: "v2.1.1",
     date: "April 20, 2026",
-    isLatest: true,
+    isLatest: false,
     improvements: [
       "Improved the way focus mode sync works, now allows resume of sessions same day.",
       "General improvements"
