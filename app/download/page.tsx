@@ -27,6 +27,7 @@ import { useRouter } from 'next/navigation';
 import { releases } from '../changelog-data';
 
 const CHROME_EXTENSION_URL = "https://chromewebstore.google.com/detail/scolect-%E2%80%93-screen-time-web/bhmdflomhhikleikahmfmjbpfmfglbff";
+const FIREFOX_EXTENSION_URL = "https://addons.mozilla.org/en-US/firefox/addon/scolect/";
 
 type DetectedBrowser = 'chrome' | 'firefox' | 'other';
 
@@ -248,29 +249,36 @@ const DownloadPage: React.FC = () => {
                 <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
               </button>
 
-              {/* Firefox Add-ons — coming soon */}
-              <div
-                className="relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] opacity-60 cursor-not-allowed text-left"
+              {/* Firefox Add-ons — available */}
+              <button
+                onClick={() => {
+                  window.open(FIREFOX_EXTENSION_URL, '_blank', 'noopener,noreferrer');
+                  setShowExtensionDialog(false);
+                }}
+                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
               >
-                <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 shadow-lg">
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+
+                <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   <Globe className="w-5 h-5 text-white" />
                 </div>
                 <div className="relative z-10 flex-1">
-                  <h4 className="font-semibold text-[var(--text-main)] flex items-center gap-2">
+                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-2">
                     Firefox Add-ons
                     {detectedBrowser === 'firefox' && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--warning)]/20 text-[var(--warning)] font-medium">Your Browser</span>
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--success)]/20 text-[var(--success)] font-medium">Your Browser</span>
                     )}
                   </h4>
-                  <p className="text-xs text-[var(--text-muted)] mt-0.5">Coming soon</p>
+                  <p className="text-xs text-[var(--text-muted)] mt-0.5">Mozilla Firefox</p>
                 </div>
-              </div>
+                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+              </button>
             </div>
 
             {/* Footer note */}
             {detectedBrowser === 'other' && (
               <p className="text-xs text-[var(--text-muted)] mt-5 text-center">
-                We couldn't confirm your browser supports the extension yet — Chromium-based browsers are supported today.
+                We couldn't confirm your browser supports the extension yet — Chromium-based browsers and Firefox are supported today.
               </p>
             )}
           </div>
