@@ -19,7 +19,9 @@ import {
   Filter, 
   Download,
   Heart,
-  Sparkles
+  Sparkles,
+  EyeOff,
+  KeyRound
 } from 'lucide-react';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -819,6 +821,59 @@ export default function FeaturesPage() {
             </AnimateIn>
           </div>
         </Card>
+      </FeatureSection>
+
+      {/* --- FEATURE 6: PRIVATE MODE --- */}
+      <FeatureSection
+        id="private-mode"
+        icon={EyeOff}
+        title="Private Mode"
+        subtitle="Keep sensitive activity hidden, without ever leaving a gap in your data."
+        intro="Not everything you do needs to show up in a dashboard—especially one others might glance at. Private Mode lets you lock away specific apps or websites behind a password. They disappear from your lists and reports until you unlock them, but tracking never stops and your totals stay accurate the whole time."
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <Card title="Password-Protected & Locked by Default" className="relative overflow-hidden">
+            <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/5 rounded-full blur-2xl" />
+            <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4 relative z-10">
+              Set a password once to enable Private Mode. Mark any app or website as private, and it's hidden from Overview, Applications, Browser, Reports, and Alerts & Limits the moment the session locks.
+            </p>
+            <BulletList items={[
+              "Auto-relocks after a configurable session timeout",
+              "A dedicated toggle switches between public and private-only views",
+              "Locking is per-session—no need to re-mark items every time"
+            ]} />
+          </Card>
+
+          <Card title="Recovery, Built In" delay={80}>
+            <div className="flex items-center gap-2 mb-3">
+              <KeyRound size={16} className="text-[#7C3AED] dark:text-[#8B5CF6]" />
+              <h4 className="text-sm font-bold text-[#18181B] dark:text-[#FAFAFA]">Backup Code & Security Question</h4>
+            </div>
+            <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4">
+              Forgotten passwords happen. Every time you set or change your Private Mode password, Scolect walks you through generating a one-time backup code and a security question, so you're never permanently locked out of your own data.
+            </p>
+            <InsightBox text="Forgot your Private Mode password? Use your backup code or answer your security question to reset it—no data loss, no support ticket." />
+          </Card>
+
+          <div className="md:col-span-2">
+            <Card title="Hidden From View, Never From Your Totals" className="overflow-hidden relative" delay={100}>
+              <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-[#14B8A6]/5 rounded-full blur-3xl" />
+              <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4 relative z-10">
+                Private Mode is about visibility, not about breaking your data. Marking something private only changes whether it appears in lists and charts—by default, it's still counted in your overall screen time, category breakdowns, and productivity metrics, so your daily totals always reflect reality.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-3 relative z-10">
+                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-colors duration-200">
+                  <strong className="block text-[#18181B] dark:text-[#FAFAFA] mb-1">Hidden from lists</strong>
+                  Private apps and sites are filtered out of Applications, Browser, and Reports until unlocked.
+                </div>
+                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-colors duration-200">
+                  <strong className="block text-[#18181B] dark:text-[#FAFAFA] mb-1">Counted in totals</strong>
+                  Overall screen time and productivity scores stay accurate—nothing silently vanishes from your stats.
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
       </FeatureSection>
 
       {/* --- FINAL CTA --- */}

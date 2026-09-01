@@ -20,9 +20,28 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.3.0",
+    date: "September 1, 2026",
+    isLatest: true,
+    features: [
+      "Added Private Mode: password-protect and hide specific apps or websites from view, with a backup code and security question for recovery.",
+      "Added Multiple Browser Sync: connect and track more than one browser's website data from the extension into a single unified dashboard.",
+    ],
+    improvements: [
+      "Redesigned the Browser tab with more useful overview, history, categories, and limits views.",
+      "Updated onboarding UI for a smoother first-run setup on both desktop and the extension.",
+      "(Windows) Improved tracking accuracy for UWP apps, resolving real app names instead of generic host process names.",
+    ],
+    fixes: [
+      "Various bug fixes and general improvements."
+    ],
+    size: 24.1,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.3.0/screentime-2.3.0-macos.dmg",
+  },
+  {
     version: "v2.2.2",
     date: "August 9, 2026",
-    isLatest: true,
+    isLatest: false,
     features: [
       "Added app blocking feature for both macOS & Windows.",
       "Web Extension is now available, making Scolect available for website tracking.",

@@ -27,7 +27,8 @@ import {
   Sparkles,
   Heart,
   Globe,
-  Lock
+  Lock,
+  EyeOff
 } from 'lucide-react';
 import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
@@ -740,6 +741,18 @@ export default function ScolectLanding() {
             ]}
             explanation="Awareness alone isn't always enough. When willpower runs out, Scolect can step in and physically block the app or site—no extensions to disable, no workarounds."
             index={7}
+          />
+          <FeatureCard
+            icon={EyeOff}
+            title="Keep Sensitive Activity Private"
+            description="Password-protect and hide specific apps or websites from your dashboard, without ever pausing tracking or breaking your totals."
+            points={[
+              "Password-locked Private Mode with backup code recovery",
+              "Hide chosen apps/sites from lists and reports",
+              "Totals stay accurate—tracking never stops"
+            ]}
+            explanation="Privacy shouldn't mean gaps in your data. Mark what's sensitive, lock it behind a password, and it disappears from view—while your overall screen time stays complete and honest."
+            index={8}
           />
         </div>
       </Section>
