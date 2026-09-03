@@ -20,9 +20,19 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.3.1",
+    date: "September 3, 2026",
+    isLatest: true,
+    fixes: [
+      "Bug fixes and stability improvements."
+    ],
+    size: 24.1,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.3.1/screentime-2.3.1-macos.dmg",
+  },
+  {
     version: "v2.3.0",
     date: "September 1, 2026",
-    isLatest: true,
+    isLatest: false,
     features: [
       "Added Private Mode: password-protect and hide specific apps or websites from view, with a backup code and security question for recovery.",
       "Added Multiple Browser Sync: connect and track more than one browser's website data from the extension into a single unified dashboard.",
