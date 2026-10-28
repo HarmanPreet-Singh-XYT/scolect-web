@@ -20,9 +20,45 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.4.0",
+    date: "October 27, 2026",
+    isLatest: true,
+    features: [
+      "Insights: new view with a usage heatmap, daily timeline, search, and week-over-week comparison. Time that can't be placed on the timeline is tracked and shown separately.",
+      "Manual time logging: log time by hand or with a built-in stopwatch.",
+      "Category limits: set daily time limits per category.",
+      "Custom categories & rules: create your own categories and rules that assign apps to them.",
+      "Daily digest: end-of-day notification summarizing your screen time.",
+      "Browser limits: new limits widget for websites.",
+      "Multi-device sync: share screen time between devices through a synced folder, with snapshots so devices don't overwrite each other. Toggle Insights between this device and all devices.",
+      "Privacy: new privacy filters and a window-titles section in Settings.",
+      "Browser extension: authenticated access between the extension and the desktop app, with a new access panel in Settings. Extension bumped to 2.4.0 with reworked background, popup, and local-server sync.",
+    ],
+    improvements: [
+      "(Windows) Closing from the taskbar now hides the app to the tray.",
+      "(macOS) Cmd+Q now hides the app to the tray.",
+      "Repeated notifications are replaced instead of stacking.",
+      "The extension no longer lets website metadata grow without bound.",
+      "(Windows) Reworked foreground-window tracking, added a dedicated tray icon for pending updates, and updated the build.",
+      "(macOS) New block-overlay build that selects the right architecture automatically.",
+      "General UI/UX polish, a shared duration input, and trackpad scrolling that no longer sticks in nested lists.",
+      "~330 new translation strings across all supported languages; FAQ now fully translated.",
+    ],
+    fixes: [
+      "Onboarding no longer reappears after a theme change.",
+      "More resilient startup: Windows storage falls back on failure, corrupt settings degrade gracefully instead of crashing, notification setup failures no longer block launch, and critical startup steps are wrapped in error guards.",
+      "Second launches are only treated as duplicates if the first instance acknowledges them, removing false positives.",
+      "Added crash logging for field diagnostics.",
+      "Fixed an app-limit notification settings check.",
+      "App tracking no longer creates duplicate entries.",
+    ],
+    size: 25.5,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.4.0/screentime-2.4.0-macos.dmg",
+  },
+  {
     version: "v2.3.1",
     date: "September 3, 2026",
-    isLatest: true,
+    isLatest: false,
     fixes: [
       "Bug fixes and stability improvements."
     ],
