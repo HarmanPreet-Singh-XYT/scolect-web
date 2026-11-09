@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Bug, Lock, Send, ChevronDown, CheckCircle2,
   AlertTriangle, Settings2, Loader2,
@@ -30,6 +30,12 @@ const EMPTY: FormData = {
   steps: '', expected: '', actual: '', operatingSystem: '', scolectVersion: '', ram: '',
 };
 
+const PRETTY_PLATFORM: Record<string, string> = {
+  macos: 'macOS',
+  windows: 'Windows',
+  linux: 'Linux',
+};
+
 const SEVERITIES = [
   { value: 'critical' as Severity, label: 'Critical', hint: 'App unusable / data loss',  dot: 'bg-rose-500',   ring: 'ring-rose-500/30',   active: 'border-rose-500 bg-rose-50 dark:bg-rose-500/10 text-rose-700 dark:text-rose-400'    },
   { value: 'high'     as Severity, label: 'High',     hint: 'Major feature broken',       dot: 'bg-orange-500', ring: 'ring-orange-500/30', active: 'border-orange-500 bg-orange-50 dark:bg-orange-500/10 text-orange-700 dark:text-orange-400' },
@@ -53,6 +59,31 @@ export default function BugReportForm() {
   const [mode,   setMode]   = useState<Mode>('simple');
   const [status, setStatus] = useState<Status>('idle');
   const [form,   setForm]   = useState<FormData>(EMPTY);
+  const [meta,   setMeta]   = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const captured: Record<string, string> = {};
+    (['source', 'app', 'platform', 'version', 'build'] as const).forEach(key => {
+      const value = params.get(key);
+      if (value) captured[key] = value;
+    });
+    if (Object.keys(captured).length === 0) return;
+
+    setMeta(captured);
+    setMode('advanced');
+
+    const platform = captured.platform
+      ? PRETTY_PLATFORM[captured.platform.toLowerCase()] ?? captured.platform
+      : '';
+
+    setForm(prev => ({
+      ...prev,
+      type: params.get('type') === 'security' ? 'security' : prev.type,
+      operatingSystem: prev.operatingSystem || platform,
+      scolectVersion: prev.scolectVersion || captured.version || '',
+    }));
+  }, []);
 
   const set = (k: keyof FormData, v: string) => setForm(p => ({ ...p, [k]: v }));
 
@@ -71,6 +102,7 @@ export default function BugReportForm() {
         ...form,
         windowsVersion: form.operatingSystem, // API field name
         ScolectVersion: form.scolectVersion,  // API field name (capital S)
+        meta,
       };
       const res  = await fetch('/api/send-bug-report', {
         method: 'POST',

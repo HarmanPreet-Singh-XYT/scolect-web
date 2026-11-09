@@ -36,14 +36,16 @@ import Footer from '@/components/layout/Footer';
 // Text: #18181B (Zinc 900) / #FAFAFA (Zinc 50)
 
 // --- Feedback Form Modal Component ---
+type FeedbackType = 'feature' | 'ux' | 'content' | 'performance' | 'praise' | 'other';
+type FeedbackMeta = Record<string, string>;
+
 interface FeedbackFormProps {
   isOpen: boolean;
   onClose: () => void;
+  meta?: FeedbackMeta;
 }
 
-type FeedbackType = 'feature' | 'ux' | 'content' | 'performance' | 'praise' | 'other';
-
-const FeedbackFormModal = ({ isOpen, onClose }: FeedbackFormProps) => {
+const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) => {
   const [formData, setFormData] = useState({
     type: '' as FeedbackType | '',
     title: '',
@@ -105,7 +107,7 @@ const FeedbackFormModal = ({ isOpen, onClose }: FeedbackFormProps) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, meta }),
       });
       
       if (!response.ok) {
@@ -183,6 +185,21 @@ const FeedbackFormModal = ({ isOpen, onClose }: FeedbackFormProps) => {
 
           {/* Form */}
           <form onSubmit={handleSubmit} className="p-6 space-y-6">
+            {/* App metadata captured from the launch URL */}
+            {(meta.app || meta.platform || meta.version || meta.build) && (
+              <div className="rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-800 px-4 py-3 text-xs text-[#52525B] dark:text-[#A1A1AA]">
+                <span className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Sent from the app</span>
+                <span className="block mt-1">
+                  {[
+                    meta.app && `App: ${meta.app}`,
+                    meta.platform && `Platform: ${meta.platform}`,
+                    meta.version && `Version: ${meta.version}`,
+                    meta.build && `Build: ${meta.build}`,
+                  ].filter(Boolean).join(' · ')}
+                </span>
+              </div>
+            )}
+
             {/* Feedback Type */}
             <div>
               <label className="block text-sm font-bold text-[#18181B] dark:text-[#FAFAFA] mb-3">
@@ -530,9 +547,22 @@ const AnimatedStat = ({ icon: Icon, value, label, color }: { icon: any, value: s
 export default function FeedbackPage() {
   const [isVisible, setIsVisible] = useState(false);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [meta, setMeta] = useState<FeedbackMeta>({});
 
   useEffect(() => {
     setIsVisible(true);
+
+    const params = new URLSearchParams(window.location.search);
+    const captured: FeedbackMeta = {};
+    (['source', 'app', 'platform', 'version', 'build'] as const).forEach(key => {
+      const value = params.get(key);
+      if (value) captured[key] = value;
+    });
+    setMeta(captured);
+
+    if (params.get('source') === 'app') {
+      setIsFormOpen(true);
+    }
   }, []);
 
   return (
@@ -969,6 +999,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
       <FeedbackFormModal 
         isOpen={isFormOpen} 
         onClose={() => setIsFormOpen(false)} 
+        meta={meta}
       />
     </div>
   );

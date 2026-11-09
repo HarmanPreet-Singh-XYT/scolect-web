@@ -4,6 +4,17 @@ import nodemailer from 'nodemailer';
 export async function POST(request: Request) {
   try {
     const formData = await request.json();
+
+    const meta: Record<string, string> = formData.meta && typeof formData.meta === 'object' ? formData.meta : {};
+    const metaLabels: { [key: string]: string } = {
+      source: 'Source',
+      app: 'App',
+      platform: 'Platform',
+      version: 'Version',
+      build: 'Build',
+    };
+    const metaEntries = Object.entries(meta).filter(([key, value]) => metaLabels[key] && value);
+    const hasMeta = metaEntries.length > 0;
     
     // Create transporter using standardized environment variables
     const transporter = nodemailer.createTransport({
@@ -208,6 +219,20 @@ export async function POST(request: Request) {
               </div>
             </div>
 
+            ${hasMeta ? `
+            <div class="section">
+              <div class="section-title">Submitted From</div>
+              <div class="info-grid">
+                ${metaEntries.map(([key, value]) => `
+                <div class="info-item">
+                  <div class="info-label">${metaLabels[key]}</div>
+                  <div class="info-value">${value}</div>
+                </div>
+                `).join('')}
+              </div>
+            </div>
+            ` : ''}
+
             <div class="section">
               <div class="section-title">Reporter Contact</div>
               <div class="section-content">
@@ -250,6 +275,7 @@ SYSTEM INFORMATION
 - Windows Version: ${formData.windowsVersion}
 - Scolect Version: ${formData.ScolectVersion}
 ${formData.ram ? `- RAM: ${formData.ram}` : ''}
+${hasMeta ? `\nSUBMITTED FROM\n${metaEntries.map(([key, value]) => `- ${metaLabels[key]}: ${value}`).join('\n')}` : ''}
 
 REPORTER CONTACT
 ${formData.email}

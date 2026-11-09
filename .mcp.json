@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "mobbin": {
+      "transport": "http",
+      "enabled": true,
+      "url": "https://api.mobbin.com/mcp",
+      "oauth": {
+        "authorizationUrl": "https://ujasntkfphywizsdaapi.supabase.co/auth/v1/oauth/authorize",
+        "tokenUrl": "https://ujasntkfphywizsdaapi.supabase.co/auth/v1/oauth/token",
+        "clientId": "0b5493f5-9257-4990-a31c-4e5057e9454f",
+        "scopes": [
+          "openid"
+        ],
+        "resource": "https://api.mobbin.com/mcp"
+      }
+    }
+  }
+}

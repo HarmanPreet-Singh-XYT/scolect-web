@@ -36,6 +36,17 @@ export async function POST(request: NextRequest) {
 
     const feedbackTypeLabel = typeLabels[body.type] || body.type;
 
+    const meta: Record<string, string> = body.meta && typeof body.meta === 'object' ? body.meta : {};
+    const metaLabels: { [key: string]: string } = {
+      source: 'Source',
+      app: 'App',
+      platform: 'Platform',
+      version: 'Version',
+      build: 'Build',
+    };
+    const metaEntries = Object.entries(meta).filter(([key, value]) => metaLabels[key] && value);
+    const hasMeta = metaEntries.length > 0;
+
     // Email HTML template
     const emailHtml = `
       <!DOCTYPE html>
@@ -163,6 +174,13 @@ export async function POST(request: NextRequest) {
               </div>
             ` : ''}
             
+            ${hasMeta ? `
+              <div class="contact-info">
+                <div class="field-label" style="margin-bottom: 10px;">Submitted From</div>
+                ${metaEntries.map(([key, value]) => `<p><strong>${metaLabels[key]}:</strong> ${value}</p>`).join('')}
+              </div>
+            ` : ''}
+            
             <div class="timestamp">
               Submitted on ${new Date().toLocaleString('en-US', { 
                 weekday: 'long', 
@@ -194,7 +212,7 @@ Description:
 ${body.description}
 
 ${body.name ? `Name: ${body.name}\n` : ''}${body.email ? `Email: ${body.email}\n` : ''}
-
+${hasMeta ? `\nSubmitted From:\n${metaEntries.map(([key, value]) => `- ${metaLabels[key]}: ${value}`).join('\n')}\n` : ''}
 Submitted at: ${new Date().toISOString()}
     `.trim();
 

@@ -57,7 +57,6 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { name: 'Home', href: '/' },
     { name: 'Features', href: '/features' },
     { name: 'Download', href: '/download' },
     { name: 'Docs', href: '/docs' },
