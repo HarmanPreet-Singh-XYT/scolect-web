@@ -140,7 +140,7 @@ const SectionWrapper = ({ children, className = "", id = "" }: { children: React
 const SectionHeader = ({ title, subtitle, center = false, badge }: { title: string, subtitle?: string, center?: boolean, badge?: string }) => (
   <Reveal className={`mb-16 ${center ? 'text-center' : ''}`}>
     {badge && (
-      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-6`}>
+      <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6`}>
         <Sparkles size={14} className="animate-pulse" />
         {badge}
       </div>
@@ -158,18 +158,18 @@ const SectionHeader = ({ title, subtitle, center = false, badge }: { title: stri
 
 const ValueCard = ({ icon: Icon, title, children, index }: { icon: any, title: string, children: React.ReactNode, index: number }) => (
   <Reveal delay={index * 80}>
-    <div className="group relative h-full bg-white dark:bg-zinc-900/80 p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden backdrop-blur-sm">
-      <div className="absolute inset-0 bg-gradient-to-br from-violet-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="group relative h-full bg-white dark:bg-zinc-900/80 p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2 overflow-hidden backdrop-blur-sm">
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-        <div className="absolute inset-[-1px] rounded-2xl bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 opacity-20" />
+        <div className="absolute inset-[-1px] rounded-2xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 opacity-20" />
       </div>
 
       <div className="relative z-10">
-        <div className="p-4 bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] w-fit rounded-2xl text-white mb-6 shadow-lg shadow-violet-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+        <div className="p-4 bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] w-fit rounded-2xl text-white mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
           <Icon size={28} />
         </div>
-        <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4 group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors duration-300">{title}</h3>
+        <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">{title}</h3>
         <div className="text-[#52525B] dark:text-[#A1A1AA] leading-relaxed space-y-4">
           {children}
         </div>
@@ -192,7 +192,7 @@ const RoadmapColumn = ({ title, items, statusColor, icon: Icon, index }: { title
       {items.map((item, idx) => (
         <li
           key={idx}
-          className="group bg-white dark:bg-zinc-900/80 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 text-sm text-[#52525B] dark:text-[#A1A1AA] hover:border-violet-300 dark:hover:border-violet-700 hover:shadow-lg hover:shadow-violet-500/5 transition-all duration-300 hover:-translate-x-1 cursor-default"
+          className="group bg-white dark:bg-zinc-900/80 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 text-sm text-[#52525B] dark:text-[#A1A1AA] hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 hover:-translate-x-1 cursor-default"
         >
           <div className="flex items-center gap-3">
             <div className={`w-2 h-2 rounded-full ${statusColor.replace('border-', 'bg-')} group-hover:scale-150 transition-transform duration-300`} />
@@ -207,15 +207,15 @@ const RoadmapColumn = ({ title, items, statusColor, icon: Icon, index }: { title
 const TimelineItem = ({ year, title, children, index }: { year: string, title: string, children: React.ReactNode, index: number }) => (
   <Reveal delay={index * 80} className="relative pl-8 md:pl-0 md:grid md:grid-cols-5 md:gap-10 pb-16 last:pb-0 group">
     {/* Timeline Line */}
-    <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-zinc-200 dark:to-zinc-800 md:left-[20%]"></div>
+    <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue-500 to-zinc-200 dark:to-zinc-800 md:left-[20%]"></div>
 
     {/* Timeline Dot */}
-    <div className="absolute left-[-6px] top-1 w-3 h-3 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] md:left-[calc(20%-6px)] ring-4 ring-white dark:ring-[#09090B] shadow-lg shadow-violet-500/50 group-hover:scale-150 transition-transform duration-300"></div>
+    <div className="absolute left-[-6px] top-1 w-3 h-3 rounded-full bg-gradient-to-r from-[#4F7CFF] to-[#7296FF] md:left-[calc(20%-6px)] ring-4 ring-white dark:ring-[#09090B] shadow-lg shadow-blue-500/50 group-hover:scale-150 transition-transform duration-300"></div>
 
     <div className="md:col-span-1 md:text-right mb-2 md:mb-0">
-      <span className="inline-block px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-900/30 text-sm font-bold text-[#7C3AED] dark:text-[#8B5CF6]">{year}</span>
+      <span className="inline-block px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-sm font-bold text-[#2F5BE8] dark:text-[#7296FF]">{year}</span>
     </div>
-    <div className="md:col-span-4 bg-white dark:bg-zinc-900/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-violet-300 dark:hover:border-violet-700 hover:shadow-xl hover:shadow-violet-500/10 transition-all duration-300">
+    <div className="md:col-span-4 bg-white dark:bg-zinc-900/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
       <h4 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">{title}</h4>
       <p className="text-[#52525B] dark:text-[#A1A1AA]">{children}</p>
     </div>
@@ -223,11 +223,11 @@ const TimelineItem = ({ year, title, children, index }: { year: string, title: s
 );
 const TechCard = ({ icon: Icon, title, description, index }: { icon: any, title: string, description: string, index: number }) => (
   <Reveal delay={index * 80}>
-    <div className="group h-full p-6 bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-1">
-      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-100 to-purple-100 dark:from-violet-900/50 dark:to-purple-900/50 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
-        <Icon className="text-[#7C3AED]" size={24} />
+    <div className="group h-full p-6 bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 rounded-2xl hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-900/50 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300">
+        <Icon className="text-[#2F5BE8]" size={24} />
       </div>
-      <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors duration-300">{title}</h3>
+      <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">{title}</h3>
       <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">{description}</p>
     </div>
   </Reveal>
@@ -237,9 +237,9 @@ const ContactCard = ({ icon: Icon, title, subtitle, index, link = "https://githu
   <Reveal delay={index * 80}>
     <a
       href={link}
-      className="group block p-6 text-center rounded-2xl bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-2"
+      className="group block p-6 text-center rounded-2xl bg-white dark:bg-zinc-900/80 border border-zinc-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2"
     >
-      <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-violet-500 group-hover:to-purple-600 transition-all duration-300">
+      <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-blue-600 transition-all duration-300">
         <Icon className="text-[#18181B] dark:text-[#FAFAFA] group-hover:text-white transition-colors duration-300" size={24} />
       </div>
       <div className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-1">{title}</div>
@@ -251,7 +251,7 @@ const ContactCard = ({ icon: Icon, title, subtitle, index, link = "https://githu
 export default function AboutPage() {
   const router = useRouter();
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] overflow-x-hidden">
       <style jsx global>{`
         @keyframes shimmer {
           0% {
@@ -274,11 +274,11 @@ export default function AboutPage() {
         .shimmer-text {
           background: linear-gradient(
             90deg,
-            #7C3AED 0%,
-            #A78BFA 25%,
-            #7C3AED 50%,
-            #A78BFA 75%,
-            #7C3AED 100%
+            #4F7CFF 0%,
+            #97B6FF 25%,
+            #4F7CFF 50%,
+            #97B6FF 75%,
+            #4F7CFF 100%
           );
           background-size: 200% auto;
           -webkit-background-clip: text;
@@ -292,15 +292,15 @@ export default function AboutPage() {
 
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-12 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" />
-        <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[600px] h-[600px] bg-blue-400 -top-64 -right-64 animate-pulse" />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 -bottom-32 -left-32 animate-pulse" />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
 
         <div className="max-w-4xl mx-auto relative z-10">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-8">
               <Heart size={14} className="animate-pulse text-rose-500" />
               Built with passion, for the community
             </div>
@@ -322,13 +322,13 @@ export default function AboutPage() {
 
       {/* MISSION & WHY */}
       <SectionWrapper className="bg-[#FAFAFA] dark:bg-[#09090B] relative">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-violet-500/50 to-transparent" />
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />
 
         <div className="grid lg:grid-cols-2 gap-16">
           <Reveal direction="left">
             <div className="relative">
-              <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-violet-500 via-purple-500 to-transparent rounded-full" />
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-xs font-medium mb-4">
+              <div className="absolute -left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-blue-500 to-transparent rounded-full" />
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs font-medium mb-4">
                 <Zap size={12} />
                 Our Mission
               </div>
@@ -339,8 +339,8 @@ export default function AboutPage() {
                   <strong className="text-[#18181B] dark:text-[#FAFAFA]">Scolect exists as an alternative.</strong>
                 </p>
                 <p>We believe that understanding your digital habits is a fundamental right, not a premium feature. That awareness should empower, not shame.</p>
-                <p className="p-4 rounded-xl bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-950/50 dark:to-purple-950/50 border border-violet-200 dark:border-violet-800">
-                  Our mission is simple: <span className="text-[#7C3AED] dark:text-[#8B5CF6] font-semibold">give everyone the tools to understand their digital life, make informed choices, and work with their brain&apos;s natural rhythms—not against them.</span>
+                <p className="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-950/50 dark:to-blue-950/50 border border-blue-200 dark:border-blue-800">
+                  Our mission is simple: <span className="text-[#2F5BE8] dark:text-[#7296FF] font-semibold">give everyone the tools to understand their digital life, make informed choices, and work with their brain&apos;s natural rhythms—not against them.</span>
                 </p>
               </div>
             </div>
@@ -380,8 +380,8 @@ export default function AboutPage() {
 
       {/* OUR VALUES */}
       <SectionWrapper className="bg-white dark:bg-zinc-950 border-y border-zinc-200 dark:border-zinc-800 relative overflow-hidden">
-        <FloatingOrb className="w-[500px] h-[500px] bg-violet-400/50 -top-64 -right-64" />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400/50 -bottom-32 -left-32" />
+        <FloatingOrb className="w-[500px] h-[500px] bg-blue-400/50 -top-64 -right-64" />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400/50 -bottom-32 -left-32" />
 
         <div className="relative z-10">
           <SectionHeader
@@ -433,7 +433,7 @@ export default function AboutPage() {
 
             <ValueCard icon={BrainCircuit} title="User Autonomy" index={3}>
               <p>You&apos;re an adult. You don&apos;t need an app to parent you. Scolect provides information and reminders—not restrictions.</p>
-              <div className="p-4 mt-4 rounded-xl bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 italic text-sm">
+              <div className="p-4 mt-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 italic text-sm">
                 &quot;You&apos;ve reached your limit. You can continue if needed.&quot;
               </div>
               <p className="mt-4">The goal is awareness and intentionality, not control.</p>
@@ -510,7 +510,7 @@ export default function AboutPage() {
             />
             <RoadmapColumn
               title="In Progress"
-              statusColor="border-[#7C3AED]"
+              statusColor="border-[#4F7CFF]"
               icon={Zap}
               items={["Do Not Disturb Scheduling", "Weekly Email Reports (Local)", "CSV Export"]}
               index={1}
@@ -577,8 +577,8 @@ export default function AboutPage() {
           <Reveal direction="left">
             <div className="p-8 rounded-2xl bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 border border-zinc-200 dark:border-zinc-800 h-full">
               <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex-shrink-0">
-                  <Code2 className="text-[#7C3AED]" size={20} />
+                <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex-shrink-0">
+                  <Code2 className="text-[#2F5BE8]" size={20} />
                 </div>
                 Built By
               </h3>
@@ -587,14 +587,14 @@ export default function AboutPage() {
                   <img
                     src="/about_logo.jpeg"
                     alt="Harmanpreet Singh"
-                    className="w-14 h-14 rounded-full object-cover shadow-lg shadow-violet-500/30 flex-shrink-0"
+                    className="w-14 h-14 rounded-full object-cover shadow-lg shadow-blue-500/30 flex-shrink-0"
                   />
                   <div className="min-w-0">
                     <Link
                       href={"https://harmanita.com"}
                       className="group"
                     >
-                      <div className="font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] dark:group-hover:text-[#A78BFA] transition-colors duration-300 flex items-center gap-1">
+                      <div className="font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] dark:group-hover:text-[#97B6FF] transition-colors duration-300 flex items-center gap-1">
                         Harmanpreet Singh
                         <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
@@ -623,16 +623,16 @@ export default function AboutPage() {
                   { icon: Globe2, text: "Translators: Localize the app" },
                   { icon: MessageSquare, text: "Everyone: Report bugs & share ideas" }
                 ].map((item, idx) => (
-                  <li key={idx} className="flex gap-3 items-center p-3 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 hover:border-violet-300 dark:hover:border-violet-700 transition-colors duration-300">
-                    <div className="w-10 h-10 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center flex-shrink-0">
-                      <item.icon size={18} className="text-[#7C3AED]" />
+                  <li key={idx} className="flex gap-3 items-center p-3 rounded-xl bg-white dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-700 transition-colors duration-300">
+                    <div className="w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0">
+                      <item.icon size={18} className="text-[#2F5BE8]" />
                     </div>
                     <span className="text-[#52525B] dark:text-[#A1A1AA] text-sm">{item.text}</span>
                   </li>
                 ))}
               </ul>
               <div className="mt-6">
-                <a href="/community" className="inline-flex items-center gap-2 text-sm font-bold text-[#7C3AED] hover:text-[#6D28D9] transition-colors">
+                <a href="/community" className="inline-flex items-center gap-2 text-sm font-bold text-[#2F5BE8] hover:text-[#2547C4] transition-colors">
                   Read Contributing Guide <ArrowRight size={14} />
                 </a>
               </div>
@@ -645,12 +645,12 @@ export default function AboutPage() {
       <SectionWrapper className="bg-[#FAFAFA] dark:bg-[#09090B]">
         <div className="grid md:grid-cols-2 gap-8">
           <Reveal direction="left">
-            <div className="group h-full p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-500 hover:-translate-y-1">
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-6 shadow-lg shadow-violet-500/30 group-hover:scale-110 transition-transform duration-300">
+            <div className="group h-full p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-1">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30 group-hover:scale-110 transition-transform duration-300">
                 <Shield size={32} className="text-white" />
               </div>
               <h2 className="text-2xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4">Our Privacy Promise</h2>
-              <p className="text-lg font-medium text-[#7C3AED] dark:text-[#8B5CF6] mb-6">We don&apos;t collect your data. Period.</p>
+              <p className="text-lg font-medium text-[#2F5BE8] dark:text-[#7296FF] mb-6">We don&apos;t collect your data. Period.</p>
               <ul className="space-y-3 mb-6">
                 {["No accounts required", "No analytics tracking", "No cloud sync"].map((item, idx) => (
                   <li key={idx} className="flex gap-3 items-center p-3 rounded-xl bg-red-50 dark:bg-red-900/20 border border-red-100 dark:border-red-900/50">
@@ -683,7 +683,7 @@ export default function AboutPage() {
                     { emoji: "📝", text: "Write a review" },
                     { emoji: "💰", text: "Optional Donation" }
                   ].map((item, idx) => (
-                    <div key={idx} className="p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-sm text-[#52525B] dark:text-[#A1A1AA] hover:border-violet-300 dark:hover:border-violet-700 transition-colors duration-300">
+                    <div key={idx} className="p-3 rounded-xl bg-zinc-50 dark:bg-zinc-800/50 border border-zinc-200 dark:border-zinc-700 text-sm text-[#52525B] dark:text-[#A1A1AA] hover:border-blue-300 dark:hover:border-blue-700 transition-colors duration-300">
                       <span className="text-lg mr-2">{item.emoji}</span>{item.text}
                     </div>
                   ))}
@@ -707,13 +707,13 @@ export default function AboutPage() {
 
       {/* FINAL CTA */}
       <section className="relative py-32 px-6 text-center bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-900 overflow-hidden">
-        <FloatingOrb className="w-[500px] h-[500px] bg-violet-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[500px] h-[500px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
 
         <div className="max-w-3xl mx-auto relative z-10">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-8">
               <Download size={14} />
               Start Your Journey
             </div>
@@ -727,10 +727,10 @@ export default function AboutPage() {
 
           <Reveal delay={200}>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <button onClick={() => router.push("/download")} className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-violet-500/30 hover:shadow-2xl hover:shadow-violet-500/40 transition-all duration-300 hover:-translate-y-1">
+              <button onClick={() => router.push("/download")} className="group flex items-center justify-center gap-3 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] text-white font-bold py-4 px-8 rounded-2xl shadow-xl shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:-translate-y-1">
                 <Download size={20} className="group-hover:animate-bounce" /> Download Scolect
               </button>
-              <button onClick={() => router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp")} className="group flex items-center justify-center gap-3 bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 hover:border-[#7C3AED] dark:hover:border-[#8B5CF6] text-[#18181B] dark:text-[#FAFAFA] font-bold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-1">
+              <button onClick={() => router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp")} className="group flex items-center justify-center gap-3 bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 hover:border-[#4F7CFF] dark:hover:border-[#7296FF] text-[#18181B] dark:text-[#FAFAFA] font-bold py-4 px-8 rounded-2xl transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
                 <Github size={20} /> View on GitHub
               </button>
             </div>
@@ -757,11 +757,11 @@ export default function AboutPage() {
       <div className="py-16 text-center border-t border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
         <Reveal>
           <div className="max-w-2xl mx-auto px-6">
-            <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-violet-50 to-purple-50 dark:from-violet-950/30 dark:to-purple-950/30 border border-violet-200 dark:border-violet-800">
+            <div className="inline-block p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-950/30 border border-blue-200 dark:border-blue-800">
               <p className="text-lg italic text-[#52525B] dark:text-[#A1A1AA]">
-                &quot;Let&apos;s build a better digital future—<span className="text-[#7C3AED] dark:text-[#8B5CF6] font-semibold">together</span>.&quot;
+                &quot;Let&apos;s build a better digital future—<span className="text-[#2F5BE8] dark:text-[#7296FF] font-semibold">together</span>.&quot;
               </p>
-              <p className="text-sm mt-2 text-[#7C3AED] dark:text-[#8B5CF6] font-medium">— The Scolect Team</p>
+              <p className="text-sm mt-2 text-[#2F5BE8] dark:text-[#7296FF] font-medium">— The Scolect Team</p>
             </div>
           </div>
         </Reveal>

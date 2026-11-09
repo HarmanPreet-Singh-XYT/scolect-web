@@ -21,7 +21,7 @@ export default function TrustBadges() {
         <span>Open Source</span>
       </div>
       <div className="flex items-center gap-2 text-sm font-medium text-[#52525B] dark:text-[#A1A1AA]">
-        <Users size={18} className="text-[#7C3AED]" />
+        <Users size={18} className="text-[#2F5BE8]" />
         <span>5,000+ Users</span>
       </div>
     </div>

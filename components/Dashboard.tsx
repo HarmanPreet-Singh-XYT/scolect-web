@@ -5,7 +5,7 @@ const Dashboard = () => {
   const stats = [
     { title: 'Total Screen Time', value: '6h 42m', color: 'bg-blue-100 dark:bg-blue-900/80' },
     { title: 'Productive Time', value: '4h 18m', color: 'bg-green-100 dark:bg-green-900/80' },
-    { title: 'Most Used App', value: 'Microsoft Edge', color: 'bg-purple-100 dark:bg-purple-900/80' },
+    { title: 'Most Used App', value: 'Microsoft Edge', color: 'bg-blue-100 dark:bg-blue-900/80' },
     { title: 'Focus Sessions', value: '3', color: 'bg-orange-100 dark:bg-orange-900/80' },
   ];
 
@@ -122,7 +122,7 @@ const Dashboard = () => {
 
           <section className="col-span-2 flex justify-center items-center bg-white dark:bg-[#1e1e1e] p-4 rounded-lg border border-gray-200 dark:border-gray-800/50">
             <div className="relative flex items-center justify-center">
-                <div className="w-40 h-40 rounded-full border-[30px] border-gray-200 dark:border-gray-700 border-t-purple-500 dark:border-t-purple-500 flex items-center justify-center">
+                <div className="w-40 h-40 rounded-full border-[30px] border-gray-200 dark:border-gray-700 border-t-blue-500 dark:border-t-blue-500 flex items-center justify-center">
                 <span className="text-sm text-center font-bold">Screen<br/>Time</span>
                 </div>
             </div>
@@ -130,7 +130,7 @@ const Dashboard = () => {
 
             <section className="col-span-2 flex justify-center items-center bg-white dark:bg-[#1e1e1e] p-4 rounded-lg border border-gray-200 dark:border-gray-800/50">
             <div className="relative flex items-center justify-center">
-                <div className="w-40 h-40 rounded-full border-[30px] border-gray-200 dark:border-gray-700 border-r-purple-500 dark:border-r-purple-500 border-b-purple-500 dark:border-b-purple-500 flex items-center justify-center">
+                <div className="w-40 h-40 rounded-full border-[30px] border-gray-200 dark:border-gray-700 border-r-blue-500 dark:border-r-blue-500 border-b-blue-500 dark:border-b-blue-500 flex items-center justify-center">
                 <span className="text-sm text-center font-bold">Productive<br/>Score</span>
                 </div>
             </div>

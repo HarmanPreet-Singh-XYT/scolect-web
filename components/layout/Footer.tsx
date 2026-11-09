@@ -12,8 +12,8 @@ export default function Footer() {
         
         {/* Decorative Background Elements */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-violet-200/20 dark:bg-violet-900/10 rounded-full blur-3xl animate-float-slow"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-fuchsia-200/20 dark:bg-fuchsia-900/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200/20 dark:bg-blue-900/10 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-100/20 dark:bg-blue-800/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '2s' }}></div>
           <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-teal-200/20 dark:bg-teal-900/10 rounded-full blur-3xl animate-float-slow" style={{ animationDelay: '4s' }}></div>
         </div>
 
@@ -31,7 +31,7 @@ export default function Footer() {
                   height={30}
                   priority
                 />
-                <span className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">
+                <span className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   Scolect - Track Screen Time & App Usage
                 </span>
               </Link>
@@ -43,9 +43,9 @@ export default function Footer() {
               <div className="flex gap-3">
                 <a 
                   href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp" 
-                  className="group relative p-2.5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-[#52525B] dark:text-[#A1A1AA] hover:border-violet-500 hover:text-violet-600 dark:hover:text-violet-400 transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-violet-500/20 overflow-hidden"
+                  className="group relative p-2.5 rounded-xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 text-[#52525B] dark:text-[#A1A1AA] hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-500/20 overflow-hidden"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-violet-500/0 via-violet-500/10 to-violet-500/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-blue-500/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                   <Github size={18} className="relative z-10 group-hover:rotate-12 transition-transform duration-300" />
                 </a>
                 <a 
@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
 
               {/* Open Source Badge */}
-              <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-50 to-fuchsia-50 dark:from-violet-950/30 dark:to-fuchsia-950/30 border border-violet-200 dark:border-violet-800/50 rounded-full text-xs font-semibold text-violet-700 dark:text-violet-400 animate-gradient">
+              <div className="mt-8 inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/30 border border-blue-200 dark:border-blue-800/50 rounded-full text-xs font-semibold text-blue-700 dark:text-blue-400 animate-gradient">
                 <Sparkles size={12} className="animate-pulse-glow" />
                 100% Open Source
               </div>
@@ -75,7 +75,7 @@ export default function Footer() {
             <div className="group">
               <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 flex items-center gap-2">
                 Product
-                <div className="w-8 h-0.5 bg-gradient-to-r from-violet-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </h4>
               <ul className="space-y-3 text-sm text-[#52525B] dark:text-[#A1A1AA]">
                 {[
@@ -88,9 +88,9 @@ export default function Footer() {
                   <li key={link.name} className="transform transition-all duration-300 hover:translate-x-2">
                     <Link 
                       href={link.href} 
-                      className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors inline-flex items-center gap-2 group/link"
+                      className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2 group/link"
                     >
-                      <span className="w-0 h-px bg-violet-600 group-hover/link:w-3 transition-all duration-300"></span>
+                      <span className="w-0 h-px bg-blue-600 group-hover/link:w-3 transition-all duration-300"></span>
                       {link.name}
                       <ArrowUpRight size={14} className="opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
                     </Link>
@@ -131,7 +131,7 @@ export default function Footer() {
             <div className="group">
               <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 flex items-center gap-2">
                 Community
-                <div className="w-8 h-0.5 bg-gradient-to-r from-fuchsia-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </h4>
               <ul className="space-y-3 text-sm text-[#52525B] dark:text-[#A1A1AA]">
                 {[
@@ -145,18 +145,18 @@ export default function Footer() {
                     {link.external ? (
                       <a 
                         href={link.href} 
-                        className="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors inline-flex items-center gap-2 group/link"
+                        className="hover:text-blue-500 dark:hover:text-blue-300 transition-colors inline-flex items-center gap-2 group/link"
                       >
-                        <span className="w-0 h-px bg-fuchsia-600 group-hover/link:w-3 transition-all duration-300"></span>
+                        <span className="w-0 h-px bg-blue-500 group-hover/link:w-3 transition-all duration-300"></span>
                         {link.name}
                         <ArrowUpRight size={14} className="opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
                       </a>
                     ) : (
                       <Link 
                         href={link.href} 
-                        className="hover:text-fuchsia-600 dark:hover:text-fuchsia-400 transition-colors inline-flex items-center gap-2 group/link"
+                        className="hover:text-blue-500 dark:hover:text-blue-300 transition-colors inline-flex items-center gap-2 group/link"
                       >
-                        <span className="w-0 h-px bg-fuchsia-600 group-hover/link:w-3 transition-all duration-300"></span>
+                        <span className="w-0 h-px bg-blue-500 group-hover/link:w-3 transition-all duration-300"></span>
                         {link.name}
                         <ArrowUpRight size={14} className="opacity-0 group-hover/link:opacity-100 transition-opacity duration-300" />
                       </Link>
@@ -171,7 +171,7 @@ export default function Footer() {
           <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#52525B] dark:text-[#A1A1AA]">
             <div className="flex items-center gap-2">
               &copy; {currentYear} Scolect. Open source under 
-              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/blob/main/LICENSE" className="text-violet-600 dark:text-violet-400 hover:underline font-medium">LGPL-2.1 License</a>
+              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/blob/main/LICENSE" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">LGPL-2.1 License</a>
             </div>
             
             <div className="flex items-center gap-2 group cursor-default">
@@ -186,7 +186,7 @@ export default function Footer() {
                 className="hover:text-[#18181B] dark:hover:text-[#FAFAFA] transition-colors duration-300 relative group"
               >
                 Privacy Policy
-                <span className="absolute bottom-0 left-0 w-0 h-px bg-violet-600 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-px bg-blue-600 group-hover:w-full transition-all duration-300"></span>
               </Link>
             </div>
           </div>

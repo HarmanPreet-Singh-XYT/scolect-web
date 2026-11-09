@@ -403,7 +403,7 @@ export default function GalleryPage() {
       <div className="min-h-screen bg-gradient-to-br from-[#FAFAFA] via-[#F4F4F5] to-[#FAFAFA] dark:from-[#09090B] dark:via-[#0F0F12] dark:to-[#09090B]">
         <Navbar />
         <div className="flex items-center justify-center min-h-[60vh]">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#7C3AED]"></div>
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#4F7CFF]"></div>
         </div>
         <Footer />
       </div>
@@ -411,15 +411,15 @@ export default function GalleryPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FAFAFA] via-[#F4F4F5] to-[#FAFAFA] dark:from-[#09090B] dark:via-[#0F0F12] dark:to-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#FAFAFA] via-[#F4F4F5] to-[#FAFAFA] dark:from-[#09090B] dark:via-[#0F0F12] dark:to-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         <div 
-          className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-[#7C3AED]/5 via-transparent to-transparent blur-3xl animate-pulse" 
+          className="absolute -top-1/2 -right-1/2 w-full h-full bg-gradient-to-br from-[#4F7CFF]/5 via-transparent to-transparent blur-3xl animate-pulse" 
           style={{ animationDuration: '8s' }}
         />
         <div 
-          className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-violet-500/5 via-transparent to-transparent blur-3xl animate-pulse" 
+          className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent blur-3xl animate-pulse" 
           style={{ animationDuration: '10s', animationDelay: '2s' }}
         />
       </div>
@@ -432,7 +432,7 @@ export default function GalleryPage() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_60%,transparent_100%)]" />
           
           <div className="max-w-4xl mx-auto relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7C3AED]/10 to-violet-600/10 text-[#7C3AED] dark:text-violet-400 text-sm font-semibold mb-6 border border-[#7C3AED]/20 backdrop-blur-sm shadow-lg shadow-violet-500/10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4F7CFF]/10 to-blue-600/10 text-[#2F5BE8] dark:text-blue-400 text-sm font-semibold mb-6 border border-[#4F7CFF]/20 backdrop-blur-sm shadow-lg shadow-blue-500/10">
               <ImageIcon size={16} className="animate-bounce" style={{ animationDuration: '2s' }} /> 
               Visual Tour
             </div>
@@ -458,8 +458,8 @@ export default function GalleryPage() {
                   className={`
                     px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 relative overflow-hidden
                     ${activeCategory === cat 
-                      ? 'bg-gradient-to-r from-[#7C3AED] to-violet-600 text-white shadow-xl shadow-violet-500/30 scale-105' 
-                      : 'bg-white/80 dark:bg-zinc-900/80 text-[#52525B] dark:text-[#A1A1AA] border border-zinc-200/50 dark:border-zinc-800/50 hover:border-[#7C3AED]/50 hover:text-[#7C3AED] hover:shadow-lg hover:shadow-violet-500/10 backdrop-blur-sm hover:scale-105'}
+                      ? 'bg-gradient-to-r from-[#4F7CFF] to-blue-600 text-white shadow-xl shadow-blue-500/30 scale-105' 
+                      : 'bg-white/80 dark:bg-zinc-900/80 text-[#52525B] dark:text-[#A1A1AA] border border-zinc-200/50 dark:border-zinc-800/50 hover:border-[#4F7CFF]/50 hover:text-[#2F5BE8] hover:shadow-lg hover:shadow-blue-500/10 backdrop-blur-sm hover:scale-105'}
                   `}
                 >
                   {activeCategory === cat && (
@@ -483,9 +483,9 @@ export default function GalleryPage() {
                     onMouseLeave={() => setHoveredCard(null)}
                   >
                     {/* Image Container */}
-                    <div className="relative overflow-hidden rounded-2xl border border-zinc-200/50 dark:border-zinc-800/50 aspect-[4/3] bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 mb-4 shadow-lg hover:shadow-2xl hover:shadow-violet-500/20 transition-all duration-500 group-hover:-translate-y-2">
+                    <div className="relative overflow-hidden rounded-2xl border border-zinc-200/50 dark:border-zinc-800/50 aspect-[4/3] bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 mb-4 shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 group-hover:-translate-y-2">
                       {/* Animated gradient border effect */}
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-violet-500 to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
+                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#4F7CFF] via-blue-500 to-[#4F7CFF] opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl -z-10" />
                       
                       {/* Actual Image - using next/image */}
                       <Image 
@@ -509,14 +509,14 @@ export default function GalleryPage() {
 
                     {/* Caption */}
                     <div className="relative">
-                      <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-[#7C3AED] transition-colors duration-300">
+                      <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-[#2F5BE8] transition-colors duration-300">
                         {item.title}
                       </h3>
                       <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] leading-relaxed group-hover:text-[#18181B] dark:group-hover:text-[#FAFAFA] transition-colors duration-300">
                         {item.description}
                       </p>
                       {/* Animated underline */}
-                      <div className="h-0.5 bg-gradient-to-r from-[#7C3AED] to-violet-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-2" />
+                      <div className="h-0.5 bg-gradient-to-r from-[#4F7CFF] to-blue-600 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left mt-2" />
                     </div>
                   </div>
                 );
@@ -528,8 +528,8 @@ export default function GalleryPage() {
         {/* VIDEO WALKTHROUGH */}
         <section className="py-24 px-6 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl border-y border-zinc-200/50 dark:border-zinc-800/50 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#7C3AED]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s' }} />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4F7CFF]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
           
           <div className="max-w-5xl mx-auto text-center relative z-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 bg-clip-text text-transparent bg-gradient-to-b from-[#18181B] to-[#52525B] dark:from-[#FAFAFA] dark:to-[#A1A1AA]">
@@ -542,12 +542,12 @@ export default function GalleryPage() {
             {/* Custom Video Player */}
             <div 
               ref={containerRef}
-              className="relative aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800/50 group transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(124,58,237,0.5)] bg-black"
+              className="relative aspect-video w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-zinc-800/50 group transform hover:scale-[1.02] transition-all duration-500 hover:shadow-[0_20px_60px_-15px_rgba(79, 124, 255,0.5)] bg-black"
               onMouseMove={handleMouseMove}
               onMouseLeave={() => isPlaying && setShowControls(false)}
             >
               {/* Animated border glow */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#7C3AED] via-violet-500 to-[#7C3AED] opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl -z-10" />
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-[#4F7CFF] via-blue-500 to-[#4F7CFF] opacity-0 group-hover:opacity-50 transition-opacity duration-500 blur-xl -z-10" />
               
               {/* Video Element */}
               <video 
@@ -570,15 +570,15 @@ export default function GalleryPage() {
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-[1px] transition-opacity duration-300">
                   <button 
                     onClick={togglePlay}
-                    className="relative w-24 h-24 rounded-full bg-gradient-to-br from-[#7C3AED] to-violet-600 flex items-center justify-center text-white shadow-2xl shadow-violet-600/50 hover:scale-110 transition-all duration-300 group/play"
+                    className="relative w-24 h-24 rounded-full bg-gradient-to-br from-[#4F7CFF] to-blue-600 flex items-center justify-center text-white shadow-2xl shadow-blue-600/50 hover:scale-110 transition-all duration-300 group/play"
                     aria-label="Play video"
                   >
                     <Play size={36} fill="currentColor" className="ml-1 drop-shadow-lg" />
                     <div className="absolute inset-0 rounded-full bg-white/20 animate-pulse" />
                     
                     {/* Pulsing rings */}
-                    <div className="absolute w-32 h-32 rounded-full bg-[#7C3AED]/20 animate-ping" style={{ animationDuration: '2s' }} />
-                    <div className="absolute w-40 h-40 rounded-full bg-[#7C3AED]/10 animate-ping" style={{ animationDuration: '2s', animationDelay: '0.5s' }} />
+                    <div className="absolute w-32 h-32 rounded-full bg-[#4F7CFF]/20 animate-ping" style={{ animationDuration: '2s' }} />
+                    <div className="absolute w-40 h-40 rounded-full bg-[#4F7CFF]/10 animate-ping" style={{ animationDuration: '2s', animationDelay: '0.5s' }} />
                   </button>
                 </div>
               )}
@@ -603,10 +603,10 @@ export default function GalleryPage() {
                       [&::-webkit-slider-thumb]:h-4 
                       [&::-webkit-slider-thumb]:rounded-full 
                       [&::-webkit-slider-thumb]:bg-gradient-to-r 
-                      [&::-webkit-slider-thumb]:from-[#7C3AED] 
-                      [&::-webkit-slider-thumb]:to-violet-600
+                      [&::-webkit-slider-thumb]:from-[#4F7CFF] 
+                      [&::-webkit-slider-thumb]:to-blue-600
                       [&::-webkit-slider-thumb]:shadow-lg
-                      [&::-webkit-slider-thumb]:shadow-violet-500/50
+                      [&::-webkit-slider-thumb]:shadow-blue-500/50
                       [&::-webkit-slider-thumb]:cursor-pointer
                       [&::-webkit-slider-thumb]:transition-transform
                       [&::-webkit-slider-thumb]:hover:scale-125
@@ -614,16 +614,16 @@ export default function GalleryPage() {
                       [&::-moz-range-thumb]:h-4 
                       [&::-moz-range-thumb]:rounded-full 
                       [&::-moz-range-thumb]:bg-gradient-to-r 
-                      [&::-moz-range-thumb]:from-[#7C3AED] 
-                      [&::-moz-range-thumb]:to-violet-600
+                      [&::-moz-range-thumb]:from-[#4F7CFF] 
+                      [&::-moz-range-thumb]:to-blue-600
                       [&::-moz-range-thumb]:border-0
                       [&::-moz-range-thumb]:shadow-lg
-                      [&::-moz-range-thumb]:shadow-violet-500/50
+                      [&::-moz-range-thumb]:shadow-blue-500/50
                       [&::-moz-range-thumb]:cursor-pointer
                       hover:bg-white/30"
                     style={{
                       background: duration > 0 
-                        ? `linear-gradient(to right, rgb(124, 58, 237) 0%, rgb(124, 58, 237) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
+                        ? `linear-gradient(to right, rgb(79, 124, 255) 0%, rgb(79, 124, 255) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) ${(currentTime / duration) * 100}%, rgba(255,255,255,0.2) 100%)`
                         : 'rgba(255,255,255,0.2)'
                     }}
                     aria-label="Video progress"
@@ -735,25 +735,25 @@ export default function GalleryPage() {
 
             <button 
               onClick={prevImage}
-              className="absolute left-4 md:left-8 p-4 text-zinc-400 hover:text-white hover:bg-gradient-to-r hover:from-[#7C3AED]/20 hover:to-violet-600/20 rounded-full transition-all duration-300 z-50 backdrop-blur-sm border border-white/10 hover:scale-110 hover:-translate-x-1 group"
+              className="absolute left-4 md:left-8 p-4 text-zinc-400 hover:text-white hover:bg-gradient-to-r hover:from-[#4F7CFF]/20 hover:to-blue-600/20 rounded-full transition-all duration-300 z-50 backdrop-blur-sm border border-white/10 hover:scale-110 hover:-translate-x-1 group"
               aria-label="Previous image"
             >
-              <ChevronLeft size={40} className="group-hover:drop-shadow-[0_0_12px_rgba(124,58,237,0.8)]" />
+              <ChevronLeft size={40} className="group-hover:drop-shadow-[0_0_12px_rgba(79, 124, 255,0.8)]" />
             </button>
 
             <button 
               onClick={nextImage}
-              className="absolute right-4 md:right-8 p-4 text-zinc-400 hover:text-white hover:bg-gradient-to-l hover:from-[#7C3AED]/20 hover:to-violet-600/20 rounded-full transition-all duration-300 z-50 backdrop-blur-sm border border-white/10 hover:scale-110 hover:translate-x-1 group"
+              className="absolute right-4 md:right-8 p-4 text-zinc-400 hover:text-white hover:bg-gradient-to-l hover:from-[#4F7CFF]/20 hover:to-blue-600/20 rounded-full transition-all duration-300 z-50 backdrop-blur-sm border border-white/10 hover:scale-110 hover:translate-x-1 group"
               aria-label="Next image"
             >
-              <ChevronRight size={40} className="group-hover:drop-shadow-[0_0_12px_rgba(124,58,237,0.8)]" />
+              <ChevronRight size={40} className="group-hover:drop-shadow-[0_0_12px_rgba(79, 124, 255,0.8)]" />
             </button>
 
             {/* Image Content */}
             <div className="max-w-7xl w-full max-h-full flex flex-col items-center">
-              <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-zinc-900 to-black rounded-2xl overflow-hidden flex items-center justify-center mb-8 border border-zinc-800/50 shadow-2xl shadow-violet-500/20">
+              <div className="relative w-full aspect-[16/10] bg-gradient-to-br from-zinc-900 to-black rounded-2xl overflow-hidden flex items-center justify-center mb-8 border border-zinc-800/50 shadow-2xl shadow-blue-500/20">
                 {/* Animated gradient border */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#7C3AED] via-violet-500 to-[#7C3AED] opacity-30 blur-xl animate-pulse" />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#4F7CFF] via-blue-500 to-[#4F7CFF] opacity-30 blur-xl animate-pulse" />
                 
                 {/* Actual Lightbox Image */}
                 <Image 
@@ -776,7 +776,7 @@ export default function GalleryPage() {
                 
                 <button 
                   onClick={() => handleDownloadScreenshot(filteredItems[lightboxIndex])}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-violet-600 hover:from-[#6D28D9] hover:to-violet-700 text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg shadow-violet-500/30 hover:shadow-xl hover:shadow-violet-500/50 hover:scale-105 backdrop-blur-sm group"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#4F7CFF] to-blue-600 hover:from-[#2547C4] hover:to-blue-700 text-white rounded-xl transition-all duration-300 text-sm font-semibold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/50 hover:scale-105 backdrop-blur-sm group"
                 >
                   <Download size={18} className="group-hover:animate-bounce" /> 
                   <span>Download Screenshot</span>
@@ -784,7 +784,7 @@ export default function GalleryPage() {
               </div>
               
               <div className="mt-6 text-zinc-500 text-sm font-medium px-4 py-2 bg-zinc-900/50 rounded-full backdrop-blur-sm border border-zinc-800/50">
-                Image <span className="text-[#7C3AED] font-bold">{lightboxIndex + 1}</span> of {filteredItems.length}
+                Image <span className="text-[#2F5BE8] font-bold">{lightboxIndex + 1}</span> of {filteredItems.length}
               </div>
             </div>
           </div>
@@ -794,7 +794,7 @@ export default function GalleryPage() {
         <section className="py-28 px-6 text-center bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-950 relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(124,58,237,0.1)_0%,transparent_70%)] blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,rgba(79, 124, 255,0.1)_0%,transparent_70%)] blur-3xl animate-pulse" style={{ animationDuration: '8s' }} />
           </div>
           
           <div className="max-w-3xl mx-auto relative z-10">
@@ -804,7 +804,7 @@ export default function GalleryPage() {
             <p className="text-xl text-[#52525B] dark:text-[#A1A1AA] mb-12 leading-relaxed">
               Screenshots only tell part of the story. Download Scolect and explore every feature firsthand.
             </p>
-            <button onClick={()=>router.push("/download")} className="relative bg-gradient-to-r from-[#7C3AED] to-violet-600 hover:from-[#6D28D9] hover:to-violet-700 text-white font-bold py-5 px-10 rounded-xl shadow-[0_20px_40px_-12px_rgba(124,58,237,0.4)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(124,58,237,0.6)] group overflow-hidden">
+            <button onClick={()=>router.push("/download")} className="relative bg-gradient-to-r from-[#4F7CFF] to-blue-600 hover:from-[#2547C4] hover:to-blue-700 text-white font-bold py-5 px-10 rounded-xl shadow-[0_20px_40px_-12px_rgba(79, 124, 255,0.4)] transition-all duration-300 transform hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(79, 124, 255,0.6)] group overflow-hidden">
               {/* Shimmer effect */}
               <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               <span className="relative z-10 flex items-center gap-2">

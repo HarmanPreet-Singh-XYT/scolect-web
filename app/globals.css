@@ -2,14 +2,31 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* Accent scale derived from the logo blue (#4F7CFF) so blue-500 IS the logo color */
+@theme {
+  --color-blue-50: #EFF4FF;
+  --color-blue-100: #DCE7FF;
+  --color-blue-200: #BED2FF;
+  --color-blue-300: #97B6FF;
+  --color-blue-400: #7296FF;
+  --color-blue-500: #4F7CFF;
+  --color-blue-600: #2F5BE8;
+  --color-blue-700: #2547C4;
+  --color-blue-800: #203C9E;
+  --color-blue-900: #1E357C;
+  --color-blue-950: #161F4D;
+}
+
 :root {
-  /* Light Mode - Zinc & Violet */
+  /* Light Mode - Zinc & Logo Blue */
   --bg-page: #FAFAFA;
   --bg-card: #FFFFFF;
   --text-main: #18181B;
   --text-muted: #52525B;
-  --primary: #7C3AED;
-  --primary-hover: #6D28D9;
+  --primary: #4F7CFF;
+  --primary-ink: #2F5BE8;
+  --primary-hover: #2547C4;
   --success: #14B8A6;
   --danger: #F43F5E;
   --border: #E4E4E7;
@@ -22,8 +39,9 @@
   --bg-card: #18181B;
   --text-main: #FAFAFA;
   --text-muted: #A1A1AA;
-  --primary: #8B5CF6;
-  --primary-hover: #7C3AED;
+  --primary: #7296FF;
+  --primary-ink: #7296FF;
+  --primary-hover: #4F7CFF;
   --success: #2DD4BF;
   --danger: #FB7185;
   --border: #27272A;

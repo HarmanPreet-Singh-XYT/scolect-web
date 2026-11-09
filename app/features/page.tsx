@@ -121,19 +121,19 @@ const FeatureSection = ({
   reverse?: boolean 
 }) => (
   <section id={id} className="py-24 relative overflow-hidden border-b border-zinc-200 dark:border-zinc-800 last:border-0">
-    <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/[0.02] via-transparent to-[#C026D3]/[0.02] dark:from-[#8B5CF6]/[0.03] dark:to-[#C026D3]/[0.03] pointer-events-none" />
+    <div className="absolute inset-0 bg-gradient-to-br from-[#4F7CFF]/[0.02] via-transparent to-[#7296FF]/[0.02] dark:from-[#7296FF]/[0.03] dark:to-[#7296FF]/[0.03] pointer-events-none" />
     
     <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
       <AnimateIn className="max-w-3xl mb-12">
         <div className="flex items-center gap-3 mb-4 group">
-          <div className="p-3 rounded-xl bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/10 text-[#7C3AED] dark:text-[#8B5CF6] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+          <div className="p-3 rounded-xl bg-[#4F7CFF]/10 dark:bg-[#7296FF]/10 text-[#2F5BE8] dark:text-[#7296FF] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
             <Icon size={24} />
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-[#18181B] dark:text-[#FAFAFA] sm:text-4xl">
             {title}
           </h2>
         </div>
-        <p className="text-xl font-medium text-[#7C3AED] dark:text-[#8B5CF6] mb-4">
+        <p className="text-xl font-medium text-[#2F5BE8] dark:text-[#7296FF] mb-4">
           {subtitle}
         </p>
         <p className="text-lg text-[#52525B] dark:text-[#A1A1AA] leading-relaxed">
@@ -150,9 +150,9 @@ const Card = ({ title, children, className = "", delay = 0 }: { title?: string; 
     <div className={`
       bg-[#FFFFFF] dark:bg-[#18181B] 
       rounded-2xl border border-zinc-200 dark:border-zinc-800 
-      shadow-[0_10px_15px_-3px_rgba(124,58,237,0.05)] dark:shadow-none 
-      hover:shadow-[0_20px_25px_-5px_rgba(124,58,237,0.1)] dark:hover:shadow-[0_20px_25px_-5px_rgba(139,92,246,0.15)]
-      hover:border-[#7C3AED]/30 dark:hover:border-[#8B5CF6]/30
+      shadow-[0_10px_15px_-3px_rgba(79, 124, 255,0.05)] dark:shadow-none 
+      hover:shadow-[0_20px_25px_-5px_rgba(79, 124, 255,0.1)] dark:hover:shadow-[0_20px_25px_-5px_rgba(59, 130, 246,0.15)]
+      hover:border-[#4F7CFF]/30 dark:hover:border-[#7296FF]/30
       transition-all duration-300 hover:-translate-y-0.5
       p-6 h-full ${className}
     `}>
@@ -163,8 +163,8 @@ const Card = ({ title, children, className = "", delay = 0 }: { title?: string; 
 );
 
 const InsightBox = ({ text }: { text: string }) => (
-  <div className="flex items-start gap-3 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/30 dark:hover:border-[#8B5CF6]/30 transition-all duration-200 hover:shadow-md group">
-    <Zap className="w-5 h-5 text-[#7C3AED] dark:text-[#8B5CF6] mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-200" />
+  <div className="flex items-start gap-3 p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/30 dark:hover:border-[#7296FF]/30 transition-all duration-200 hover:shadow-md group">
+    <Zap className="w-5 h-5 text-[#2F5BE8] dark:text-[#7296FF] mt-0.5 shrink-0 group-hover:scale-110 transition-transform duration-200" />
     <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] italic">"{text}"</p>
   </div>
 );
@@ -175,7 +175,7 @@ const BulletList = ({ items, title }: { items: string[]; title?: string }) => (
     <ul className="space-y-2">
       {items.map((item, idx) => (
         <li key={idx} className="flex items-start gap-2 text-[#52525B] dark:text-[#A1A1AA] text-sm md:text-base group hover:text-[#18181B] dark:hover:text-[#FAFAFA] transition-colors duration-200">
-          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#7C3AED] dark:bg-[#8B5CF6] shrink-0 group-hover:scale-150 transition-transform duration-200" />
+          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-[#4F7CFF] dark:bg-[#7296FF] shrink-0 group-hover:scale-150 transition-transform duration-200" />
           <span>{item}</span>
         </li>
       ))}
@@ -193,7 +193,7 @@ export default function FeaturesPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] overflow-x-hidden">
       <style jsx global>{`
         @keyframes shimmer {
           0% { background-position: -200% 0; }
@@ -231,7 +231,7 @@ export default function FeaturesPage() {
         }
 
         .shimmer-text {
-          background: linear-gradient(90deg, #7C3AED 0%, #A78BFA 25%, #7C3AED 50%, #A78BFA 75%, #7C3AED 100%);
+          background: linear-gradient(90deg, #4F7CFF 0%, #97B6FF 25%, #4F7CFF 50%, #97B6FF 75%, #4F7CFF 100%);
           background-size: 200% auto;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
@@ -280,15 +280,15 @@ export default function FeaturesPage() {
       
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-12 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" style={{ animationDuration: '4s' } as any} />
-        <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' } as any} />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[600px] h-[600px] bg-blue-400 -top-64 -right-64 animate-pulse" style={{ animationDuration: '4s' } as any} />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 -bottom-32 -left-32 animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' } as any} />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           <div 
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-8 transition-all duration-700 ease-out ${
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-8 transition-all duration-700 ease-out ${
               heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
@@ -327,7 +327,7 @@ export default function FeaturesPage() {
         <StaggeredGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-3">
             <Card title="Core Tracking Capabilities" className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900/50 dark:to-zinc-900/30 overflow-hidden relative">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#7C3AED]/5 dark:bg-[#8B5CF6]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute top-0 right-0 w-64 h-64 bg-[#4F7CFF]/5 dark:bg-[#7296FF]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="grid md:grid-cols-3 gap-8 relative z-10">
                 <div className="group">
                   <h4 className="font-semibold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2">
@@ -406,7 +406,7 @@ export default function FeaturesPage() {
             <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4">
               Your data is yours. Export your usage history at any time in standard formats for deeper analysis. Analyze any custom date range.
             </p>
-            <button className="w-full mt-2 py-2 px-4 rounded-xl border border-zinc-200 dark:border-zinc-700 text-[#52525B] dark:text-[#A1A1AA] hover:border-[#7C3AED] dark:hover:border-[#8B5CF6] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] hover:bg-[#7C3AED]/5 dark:hover:bg-[#8B5CF6]/5 transition-all duration-200 text-sm font-medium flex items-center justify-center gap-2 group">
+            <button className="w-full mt-2 py-2 px-4 rounded-xl border border-zinc-200 dark:border-zinc-700 text-[#52525B] dark:text-[#A1A1AA] hover:border-[#4F7CFF] dark:hover:border-[#7296FF] hover:text-[#2F5BE8] dark:hover:text-[#7296FF] hover:bg-[#4F7CFF]/5 dark:hover:bg-[#7296FF]/5 transition-all duration-200 text-sm font-medium flex items-center justify-center gap-2 group">
               <Download size={16} /> Export Data
             </button>
           </Card>
@@ -454,8 +454,8 @@ export default function FeaturesPage() {
                   <span className="text-[#F43F5E] font-medium">↘️ Decreasing</span>
                   <span className="text-zinc-500">Check distractions</span>
                 </div>
-                <div className="flex justify-between p-2 rounded bg-zinc-50 dark:bg-zinc-900 hover:bg-[#7C3AED]/5 dark:hover:bg-[#8B5CF6]/10 transition-colors duration-200 cursor-default border border-transparent hover:border-[#7C3AED]/20">
-                  <span className="text-[#7C3AED] font-medium">→ Stable</span>
+                <div className="flex justify-between p-2 rounded bg-zinc-50 dark:bg-zinc-900 hover:bg-[#4F7CFF]/5 dark:hover:bg-[#7296FF]/10 transition-colors duration-200 cursor-default border border-transparent hover:border-[#4F7CFF]/20">
+                  <span className="text-[#2F5BE8] font-medium">→ Stable</span>
                   <span className="text-zinc-500">Consistent rhythm</span>
                 </div>
               </div>
@@ -473,9 +473,9 @@ export default function FeaturesPage() {
                    <h4 className="font-semibold text-[#18181B] dark:text-[#FAFAFA] mb-2">Strategic Categorization</h4>
                    <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-3">Think carefully about your goals:</p>
                    <ul className="text-sm space-y-2 text-[#52525B] dark:text-[#A1A1AA]">
-                     <li className="flex gap-2 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors"><CheckCircle2 size={16} className="text-[#7C3AED] mt-0.5 shrink-0" /> Email: Productive 9-5, distraction after 6 PM?</li>
-                     <li className="flex gap-2 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors"><CheckCircle2 size={16} className="text-[#7C3AED] mt-0.5 shrink-0" /> Slack: Collaboration or interruption?</li>
-                     <li className="flex gap-2 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors"><CheckCircle2 size={16} className="text-[#7C3AED] mt-0.5 shrink-0" /> YouTube: Education or entertainment?</li>
+                     <li className="flex gap-2 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-colors"><CheckCircle2 size={16} className="text-[#2F5BE8] mt-0.5 shrink-0" /> Email: Productive 9-5, distraction after 6 PM?</li>
+                     <li className="flex gap-2 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-colors"><CheckCircle2 size={16} className="text-[#2F5BE8] mt-0.5 shrink-0" /> Slack: Collaboration or interruption?</li>
+                     <li className="flex gap-2 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-colors"><CheckCircle2 size={16} className="text-[#2F5BE8] mt-0.5 shrink-0" /> YouTube: Education or entertainment?</li>
                    </ul>
                 </div>
                 <div className="p-4 rounded-xl bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 border border-zinc-200 dark:border-zinc-800">
@@ -486,25 +486,25 @@ export default function FeaturesPage() {
             </Card>
 
             <Card title="Custom Categories" className="overflow-hidden relative" delay={100}>
-              <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#C026D3]/10 dark:bg-[#C026D3]/5 rounded-full blur-3xl" />
+              <div className="absolute -right-20 -top-20 w-40 h-40 bg-[#7296FF]/10 dark:bg-[#7296FF]/5 rounded-full blur-3xl" />
               <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6 relative z-10">
                 Beyond binary productive/non-productive classification, Scolect supports unlimited custom categories. Create as many as you need. Assign apps to multiple categories if they serve different purposes.
               </p>
               
               <div className="grid md:grid-cols-2 gap-4 relative z-10">
-                <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-[#7C3AED]/30 dark:hover:border-[#8B5CF6]/30 transition-all duration-200">
-                  <span className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider">Pre-built</span>
+                <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-[#4F7CFF]/30 dark:hover:border-[#7296FF]/30 transition-all duration-200">
+                  <span className="text-xs font-bold text-[#2F5BE8] uppercase tracking-wider">Pre-built</span>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {['Productivity', 'Development', 'Social Media', 'Entertainment', 'Gaming', 'Communication', 'Creative', 'Education'].map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs text-zinc-600 dark:text-zinc-300 hover:border-[#7C3AED]/50 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-all duration-200 cursor-default">{tag}</span>
+                      <span key={tag} className="px-2 py-1 bg-white dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-md text-xs text-zinc-600 dark:text-zinc-300 hover:border-[#4F7CFF]/50 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-all duration-200 cursor-default">{tag}</span>
                     ))}
                   </div>
                 </div>
-                <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-[#C026D3]/30 transition-all duration-200">
-                  <span className="text-xs font-bold text-[#C026D3] uppercase tracking-wider">Custom Ideas</span>
+                <div className="p-4 rounded-xl border border-zinc-100 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 hover:border-[#7296FF]/30 transition-all duration-200">
+                  <span className="text-xs font-bold text-[#7296FF] uppercase tracking-wider">Custom Ideas</span>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {['Client Work', 'Side Hustle', 'Internal Projects', 'Personal Finance', 'Learning'].map(tag => (
-                      <span key={tag} className="px-2 py-1 bg-white dark:bg-zinc-800 border-dashed border border-zinc-300 dark:border-zinc-600 rounded-md text-xs text-zinc-600 dark:text-zinc-300 hover:border-[#C026D3]/50 hover:text-[#C026D3] transition-all duration-200 cursor-default">{tag}</span>
+                      <span key={tag} className="px-2 py-1 bg-white dark:bg-zinc-800 border-dashed border border-zinc-300 dark:border-zinc-600 rounded-md text-xs text-zinc-600 dark:text-zinc-300 hover:border-[#7296FF]/50 hover:text-[#7296FF] transition-all duration-200 cursor-default">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -535,10 +535,10 @@ export default function FeaturesPage() {
               <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4">
                 Focus Mode implements the classic Pomodoro Technique: work in focused intervals (traditionally 25 minutes), followed by short breaks (5 minutes). After completing 4 work sessions, take a longer break.
               </p>
-              <div className="p-4 rounded-xl bg-gradient-to-br from-[#7C3AED]/5 to-[#C026D3]/5 border border-[#7C3AED]/10 mb-4 hover:border-[#7C3AED]/30 transition-colors duration-200">
-                <h4 className="text-sm font-bold text-[#7C3AED] mb-2 flex items-center gap-2">
+              <div className="p-4 rounded-xl bg-gradient-to-br from-[#4F7CFF]/5 to-[#7296FF]/5 border border-[#4F7CFF]/10 mb-4 hover:border-[#4F7CFF]/30 transition-colors duration-200">
+                <h4 className="text-sm font-bold text-[#2F5BE8] mb-2 flex items-center gap-2">
                   The Science
-                  <div className="w-2 h-2 bg-[#7C3AED] rounded-full animate-pulse" />
+                  <div className="w-2 h-2 bg-[#4F7CFF] rounded-full animate-pulse" />
                 </h4>
                 <p className="text-xs text-[#52525B] dark:text-[#A1A1AA]">The human brain can maintain peak concentration for only 20-30 minutes before attention starts to wane. By working in short bursts, you harness your highest-quality attention repeatedly throughout the day.</p>
               </div>
@@ -546,22 +546,22 @@ export default function FeaturesPage() {
 
             <AnimateIn delay={80}>
               <StaggeredGroup className="grid grid-cols-2 gap-4">
-                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] hover:shadow-lg hover:shadow-[#7C3AED]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
+                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] hover:shadow-lg hover:shadow-[#4F7CFF]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
                   <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Deep Work</h4>
                   <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] mt-1 mb-2">60m Work • 10m Break</p>
                   <p className="text-xs text-zinc-400">Complex projects, coding, writing.</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] hover:shadow-lg hover:shadow-[#7C3AED]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
+                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] hover:shadow-lg hover:shadow-[#4F7CFF]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
                   <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Quick Tasks</h4>
                   <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] mt-1 mb-2">25m Work • 5m Break</p>
                   <p className="text-xs text-zinc-400">Email, routine tasks.</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] hover:shadow-lg hover:shadow-[#7C3AED]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
+                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] hover:shadow-lg hover:shadow-[#4F7CFF]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
                   <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Reading</h4>
                   <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] mt-1 mb-2">45m Work • 10m Break</p>
                   <p className="text-xs text-zinc-400">Research, learning skills.</p>
                 </div>
-                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-dashed border-zinc-300 dark:border-zinc-700 hover:border-[#7C3AED] hover:shadow-lg hover:shadow-[#7C3AED]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
+                <div className="p-4 bg-white dark:bg-zinc-900 rounded-2xl border border-dashed border-zinc-300 dark:border-zinc-700 hover:border-[#4F7CFF] hover:shadow-lg hover:shadow-[#4F7CFF]/10 transition-all duration-200 cursor-default hover:-translate-y-0.5">
                   <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Custom</h4>
                   <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] mt-1 mb-2">Any Duration</p>
                   <p className="text-xs text-zinc-400">Fit your unique rhythm.</p>
@@ -582,21 +582,21 @@ export default function FeaturesPage() {
           <div className="space-y-6">
             {/* Visual Timer Mockup */}
             <Card className="flex flex-col items-center justify-center py-12 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 relative overflow-hidden" delay={60}>
-               <div className="absolute inset-0 bg-gradient-to-br from-[#7C3AED]/5 via-transparent to-[#C026D3]/5 pointer-events-none" />
+               <div className="absolute inset-0 bg-gradient-to-br from-[#4F7CFF]/5 via-transparent to-[#7296FF]/5 pointer-events-none" />
                
                <div className="relative w-64 h-64 group">
                  <div className="absolute inset-0 rounded-full border-[6px] border-zinc-200 dark:border-zinc-800 transition-all duration-300 group-hover:border-zinc-300 dark:group-hover:border-zinc-700"></div>
-                 <div className="absolute inset-0 rounded-full border-[6px] border-[#7C3AED] border-r-transparent border-b-transparent -rotate-45 shadow-[0_0_20px_rgba(124,58,237,0.3)] dark:shadow-[0_0_30px_rgba(139,92,246,0.4)] animate-pulse-slow"></div>
+                 <div className="absolute inset-0 rounded-full border-[6px] border-[#4F7CFF] border-r-transparent border-b-transparent -rotate-45 shadow-[0_0_20px_rgba(79, 124, 255,0.3)] dark:shadow-[0_0_30px_rgba(59, 130, 246,0.4)] animate-pulse-slow"></div>
                  
                  <div className="absolute inset-0 flex flex-col items-center justify-center">
                    <span className="text-5xl font-bold tabular-nums text-[#18181B] dark:text-[#FAFAFA] transition-all duration-300 group-hover:scale-105">25:00</span>
-                   <span className="text-sm font-medium text-[#7C3AED] mt-2 animate-pulse">FOCUS</span>
+                   <span className="text-sm font-medium text-[#2F5BE8] mt-2 animate-pulse">FOCUS</span>
                  </div>
                </div>
                
                <div className="flex items-center gap-6 mt-8 relative z-10">
                  <button className="p-3 rounded-full bg-zinc-200 dark:bg-zinc-800 text-[#52525B] dark:text-[#A1A1AA] hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105 transition-all duration-200"><RotateCcw size={20} /></button>
-                 <button className="p-4 rounded-full bg-[#7C3AED] text-white shadow-lg shadow-violet-500/30 hover:shadow-violet-500/50 hover:scale-105 transition-all duration-200 group">
+                 <button className="p-4 rounded-full bg-[#4F7CFF] text-white shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 hover:scale-105 transition-all duration-200 group">
                    <Play size={24} fill="currentColor" />
                  </button>
                  <button className="p-3 rounded-full bg-zinc-200 dark:bg-zinc-800 text-[#52525B] dark:text-[#A1A1AA] hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:scale-105 transition-all duration-200"><Settings size={20} /></button>
@@ -607,21 +607,21 @@ export default function FeaturesPage() {
               <div className="space-y-4">
                 <div className="p-3 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200">
                   <h4 className="text-sm font-bold text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-[#7C3AED] rounded-full" />
+                    <div className="w-1.5 h-1.5 bg-[#4F7CFF] rounded-full" />
                     Audio Notifications
                   </h4>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] ml-3.5">Gentle chimes to alert you it's break time. No jarring alarms.</p>
                 </div>
                 <div className="p-3 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200">
                   <h4 className="text-sm font-bold text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-[#7C3AED] rounded-full" />
+                    <div className="w-1.5 h-1.5 bg-[#4F7CFF] rounded-full" />
                     Auto-Start Next Session
                   </h4>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] ml-3.5">Maintain momentum by automatically starting breaks when work ends.</p>
                 </div>
                 <div className="p-3 rounded-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors duration-200">
                   <h4 className="text-sm font-bold text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-[#7C3AED] rounded-full animate-pulse" />
+                    <div className="w-1.5 h-1.5 bg-[#4F7CFF] rounded-full animate-pulse" />
                     Distraction Blocking (Planned)
                   </h4>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] ml-3.5">Block or pause notifications from distracting apps during focus sessions.</p>
@@ -656,11 +656,11 @@ export default function FeaturesPage() {
               Set a daily limit (e.g., 8 hours). Scolect tracks usage and alerts you as you approach it.
             </p>
             <div className="space-y-2 text-sm text-[#52525B] dark:text-[#A1A1AA] relative z-10">
-              <p className="p-2 rounded-lg hover:bg-[#7C3AED]/5 transition-colors duration-200"><strong className="text-[#7C3AED]">75% used:</strong> Gentle notification ("2 hours remaining")</p>
+              <p className="p-2 rounded-lg hover:bg-[#4F7CFF]/5 transition-colors duration-200"><strong className="text-[#2F5BE8]">75% used:</strong> Gentle notification ("2 hours remaining")</p>
               <p className="p-2 rounded-lg hover:bg-[#F59E0B]/5 transition-colors duration-200"><strong className="text-[#F59E0B]">90% used:</strong> Warning notification ("48 mins remaining")</p>
               <p className="p-2 rounded-lg hover:bg-[#F43F5E]/5 transition-colors duration-200"><strong className="text-[#F43F5E]">100% used:</strong> Limit reached</p>
             </div>
-            <div className="mt-4 p-3 bg-zinc-50 dark:bg-zinc-900 rounded-lg text-sm border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-colors duration-200 relative z-10">
+            <div className="mt-4 p-3 bg-zinc-50 dark:bg-zinc-900 rounded-lg text-sm border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/30 transition-colors duration-200 relative z-10">
               <strong>Philosophy:</strong> These are limits, not locks. If you need to exceed a limit for a deadline, you can. The goal is intentionality.
             </div>
           </Card>
@@ -670,20 +670,20 @@ export default function FeaturesPage() {
               Set individual daily limits for specific applications. Powerful for managing time-sink apps.
             </p>
             <div className="grid grid-cols-2 gap-3 mb-4">
-              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#7C3AED]/50 hover:shadow-md transition-all duration-200 cursor-default group">
-                <div className="text-xs text-zinc-500 group-hover:text-[#7C3AED] transition-colors">Social Media</div>
+              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#4F7CFF]/50 hover:shadow-md transition-all duration-200 cursor-default group">
+                <div className="text-xs text-zinc-500 group-hover:text-[#2F5BE8] transition-colors">Social Media</div>
                 <div className="font-bold tabular-nums dark:text-white">1h 00m</div>
               </div>
-              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#7C3AED]/50 hover:shadow-md transition-all duration-200 cursor-default group">
-                <div className="text-xs text-zinc-500 group-hover:text-[#7C3AED] transition-colors">YouTube</div>
+              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#4F7CFF]/50 hover:shadow-md transition-all duration-200 cursor-default group">
+                <div className="text-xs text-zinc-500 group-hover:text-[#2F5BE8] transition-colors">YouTube</div>
                 <div className="font-bold tabular-nums dark:text-white">30m</div>
               </div>
-              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#7C3AED]/50 hover:shadow-md transition-all duration-200 cursor-default group">
-                <div className="text-xs text-zinc-500 group-hover:text-[#7C3AED] transition-colors">News</div>
+              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#4F7CFF]/50 hover:shadow-md transition-all duration-200 cursor-default group">
+                <div className="text-xs text-zinc-500 group-hover:text-[#2F5BE8] transition-colors">News</div>
                 <div className="font-bold tabular-nums dark:text-white">45m</div>
               </div>
-              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#7C3AED]/50 hover:shadow-md transition-all duration-200 cursor-default group">
-                <div className="text-xs text-zinc-500 group-hover:text-[#7C3AED] transition-colors">Games</div>
+              <div className="p-2 border border-zinc-200 dark:border-zinc-700 rounded-lg hover:border-[#4F7CFF]/50 hover:shadow-md transition-all duration-200 cursor-default group">
+                <div className="text-xs text-zinc-500 group-hover:text-[#2F5BE8] transition-colors">Games</div>
                 <div className="font-bold tabular-nums dark:text-white">2h 00m</div>
               </div>
             </div>
@@ -693,10 +693,10 @@ export default function FeaturesPage() {
 
           <div className="md:col-span-2">
             <Card title="Notification Customization" className="overflow-hidden relative" delay={100}>
-              <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-[#7C3AED]/5 dark:bg-[#8B5CF6]/5 rounded-full blur-3xl" />
+              <div className="absolute -left-10 -bottom-10 w-40 h-40 bg-[#4F7CFF]/5 dark:bg-[#7296FF]/5 rounded-full blur-3xl" />
               <StaggeredGroup className="grid md:grid-cols-3 gap-6 relative z-10">
-                <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-200 border border-transparent hover:border-[#7C3AED]/20">
-                  <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2"><Bell size={16} className="text-[#7C3AED]" /> Types</h4>
+                <div className="p-4 rounded-xl bg-zinc-50 dark:bg-zinc-900 hover:bg-white dark:hover:bg-zinc-800 transition-all duration-200 border border-transparent hover:border-[#4F7CFF]/20">
+                  <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2"><Bell size={16} className="text-[#2F5BE8]" /> Types</h4>
                   <ul className="text-sm space-y-2 text-[#52525B] dark:text-[#A1A1AA]">
                     <li><strong>Pop-up Alerts:</strong> Small, non-intrusive windows.</li>
                     <li><strong>Frequent Alerts:</strong> Periodic reminders (every 15/30 mins) to prevent time blindness.</li>
@@ -749,9 +749,9 @@ export default function FeaturesPage() {
                 <div>
                   <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Search & Filter</h3>
                   <div className="flex gap-2 mb-2 flex-wrap">
-                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#7C3AED]/10 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-all duration-200 cursor-default"><Search size={12}/> Instant Search</span>
-                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#7C3AED]/10 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-all duration-200 cursor-default"><Filter size={12}/> By Category</span>
-                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#7C3AED]/10 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-all duration-200 cursor-default"><Filter size={12}/> By Productivity</span>
+                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#4F7CFF]/10 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-all duration-200 cursor-default"><Search size={12}/> Instant Search</span>
+                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#4F7CFF]/10 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-all duration-200 cursor-default"><Filter size={12}/> By Category</span>
+                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 gap-1 hover:bg-[#4F7CFF]/10 hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-all duration-200 cursor-default"><Filter size={12}/> By Productivity</span>
                   </div>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">
                     With hundreds of applications potentially in your list, finding specific apps is easy. Filter by Category, Productivity Status, Tracking Status (tracked vs ignored), or Visibility (hidden from reports).
@@ -763,20 +763,20 @@ export default function FeaturesPage() {
                 <div>
                   <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Detailed Application Editing</h3>
                   <ul className="space-y-3 text-sm text-[#52525B] dark:text-[#A1A1AA]">
-                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 hover:shadow-md transition-all duration-200 group">
-                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">1. Category Assignment</strong>
+                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 hover:shadow-md transition-all duration-200 group">
+                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">1. Category Assignment</strong>
                       Select from pre-built categories or create Custom ones (e.g., "Client Work", "Health & Fitness").
                     </li>
-                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 hover:shadow-md transition-all duration-200 group">
-                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">2. Productivity Status</strong>
+                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 hover:shadow-md transition-all duration-200 group">
+                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">2. Productivity Status</strong>
                       Toggle "Is Productive". Directly impacts your Productive Score.
                     </li>
-                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 hover:shadow-md transition-all duration-200 group">
-                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">3. Visibility & Tracking</strong>
+                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 hover:shadow-md transition-all duration-200 group">
+                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">3. Visibility & Tracking</strong>
                       Disable tracking for background processes. Hide apps from reports without stopping tracking.
                     </li>
-                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 hover:shadow-md transition-all duration-200 group">
-                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">4. Time Limits</strong>
+                    <li className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 hover:shadow-md transition-all duration-200 group">
+                      <strong className="block text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">4. Time Limits</strong>
                       Enable daily time limits directly from the app properties.
                     </li>
                   </ul>
@@ -787,7 +787,7 @@ export default function FeaturesPage() {
             <AnimateIn delay={80} direction="left" className="w-full md:w-1/3">
               <div className="sticky top-24">
                 <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4">App Statistics Modal</h3>
-                <div className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-4 hover:shadow-lg hover:border-[#7C3AED]/30 transition-all duration-300">
+                <div className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-900/50 p-4 rounded-xl border border-zinc-200 dark:border-zinc-800 space-y-4 hover:shadow-lg hover:border-[#4F7CFF]/30 transition-all duration-300">
                   <div>
                                         <div className="text-xs text-zinc-500 uppercase">Usage Summary</div>
                     <div className="font-bold dark:text-white text-lg">Chrome</div>
@@ -798,7 +798,7 @@ export default function FeaturesPage() {
                   </div>
                   <div className="pt-3 border-t border-zinc-200 dark:border-zinc-800">
                     <div className="text-xs text-zinc-500 uppercase mb-2">Pattern Analysis</div>
-                    <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] italic mt-1 p-2 bg-[#7C3AED]/5 rounded">
+                    <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] italic mt-1 p-2 bg-[#4F7CFF]/5 rounded">
                       "You primarily use Chrome during Evening (5-9)"
                     </p>
                     <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] italic mt-2 p-2 bg-[#14B8A6]/5 rounded">
@@ -806,14 +806,14 @@ export default function FeaturesPage() {
                     </p>
                   </div>
                   <div className="pt-2">
-                    <button className="w-full py-2 bg-[#7C3AED] text-white text-xs font-bold rounded-lg hover:bg-[#6D28D9] transition-all duration-200 hover:shadow-lg hover:shadow-[#7C3AED]/30 hover:-translate-y-0.5">View Full Details</button>
+                    <button className="w-full py-2 bg-[#4F7CFF] text-white text-xs font-bold rounded-lg hover:bg-[#2547C4] transition-all duration-200 hover:shadow-lg hover:shadow-[#4F7CFF]/30 hover:-translate-y-0.5">View Full Details</button>
                   </div>
                 </div>
                 
-                <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-[#7C3AED]/5 to-[#C026D3]/5 border border-[#7C3AED]/20 hover:border-[#7C3AED]/40 transition-colors duration-200">
-                  <h4 className="text-sm font-bold text-[#7C3AED] mb-1 flex items-center gap-2">
+                <div className="mt-6 p-4 rounded-xl bg-gradient-to-br from-[#4F7CFF]/5 to-[#7296FF]/5 border border-[#4F7CFF]/20 hover:border-[#4F7CFF]/40 transition-colors duration-200">
+                  <h4 className="text-sm font-bold text-[#2F5BE8] mb-1 flex items-center gap-2">
                     Bulk Actions (Coming Soon)
-                    <div className="w-2 h-2 bg-[#7C3AED] rounded-full animate-pulse" />
+                    <div className="w-2 h-2 bg-[#4F7CFF] rounded-full animate-pulse" />
                   </h4>
                   <p className="text-xs text-[#52525B] dark:text-[#A1A1AA]">Select multiple apps to categorize, hide, or limit them all at once.</p>
                 </div>
@@ -833,7 +833,7 @@ export default function FeaturesPage() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card title="Password-Protected & Locked by Default" className="relative overflow-hidden">
-            <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/5 rounded-full blur-2xl" />
+            <div className="absolute -right-10 -top-10 w-32 h-32 bg-[#4F7CFF]/10 dark:bg-[#7296FF]/5 rounded-full blur-2xl" />
             <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4 relative z-10">
               Set a password once to enable Private Mode. Mark any app or website as private, and it's hidden from Overview, Applications, Browser, Reports, and Alerts & Limits the moment the session locks.
             </p>
@@ -846,7 +846,7 @@ export default function FeaturesPage() {
 
           <Card title="Recovery, Built In" delay={80}>
             <div className="flex items-center gap-2 mb-3">
-              <KeyRound size={16} className="text-[#7C3AED] dark:text-[#8B5CF6]" />
+              <KeyRound size={16} className="text-[#2F5BE8] dark:text-[#7296FF]" />
               <h4 className="text-sm font-bold text-[#18181B] dark:text-[#FAFAFA]">Backup Code & Security Question</h4>
             </div>
             <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4">
@@ -862,11 +862,11 @@ export default function FeaturesPage() {
                 Private Mode is about visibility, not about breaking your data. Marking something private only changes whether it appears in lists and charts—by default, it's still counted in your overall screen time, category breakdowns, and productivity metrics, so your daily totals always reflect reality.
               </p>
               <div className="grid sm:grid-cols-2 gap-3 relative z-10">
-                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-colors duration-200">
+                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 transition-colors duration-200">
                   <strong className="block text-[#18181B] dark:text-[#FAFAFA] mb-1">Hidden from lists</strong>
                   Private apps and sites are filtered out of Applications, Browser, and Reports until unlocked.
                 </div>
-                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-colors duration-200">
+                <div className="p-3 rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-100 dark:border-zinc-800 hover:border-[#4F7CFF]/30 transition-colors duration-200">
                   <strong className="block text-[#18181B] dark:text-[#FAFAFA] mb-1">Counted in totals</strong>
                   Overall screen time and productivity scores stay accurate—nothing silently vanishes from your stats.
                 </div>
@@ -878,9 +878,9 @@ export default function FeaturesPage() {
 
       {/* --- FINAL CTA --- */}
       <section className="py-24 px-6 lg:px-8 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950 dark:via-zinc-900 dark:to-zinc-950 text-center border-t border-zinc-200 dark:border-zinc-800 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(124,58,237,0.05)_0%,_transparent_70%)] dark:bg-[radial-gradient(circle_at_center,_rgba(139,92,246,0.08)_0%,_transparent_70%)]" />
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-[#7C3AED]/10 dark:bg-[#8B5CF6]/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#C026D3]/10 dark:bg-[#C026D3]/5 rounded-full blur-3xl animate-float-delayed" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(79, 124, 255,0.05)_0%,_transparent_70%)] dark:bg-[radial-gradient(circle_at_center,_rgba(59, 130, 246,0.08)_0%,_transparent_70%)]" />
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-[#4F7CFF]/10 dark:bg-[#7296FF]/5 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-[#7296FF]/10 dark:bg-[#7296FF]/5 rounded-full blur-3xl animate-float-delayed" />
         
         <AnimateIn className="max-w-3xl mx-auto relative z-10">
           <h2 className="text-3xl font-bold tracking-tight text-[#18181B] dark:text-[#FAFAFA] sm:text-4xl mb-6">
@@ -892,7 +892,7 @@ export default function FeaturesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => router.push("/download")} 
-              className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-semibold py-4 px-8 rounded-xl shadow-[0_10px_15px_-3px_rgba(124,58,237,0.3)] hover:shadow-[0_20px_25px_-5px_rgba(124,58,237,0.5)] transition-all duration-200 hover:-translate-y-0.5 text-lg group"
+              className="bg-[#4F7CFF] hover:bg-[#2547C4] text-white font-semibold py-4 px-8 rounded-xl shadow-[0_10px_15px_-3px_rgba(79, 124, 255,0.3)] hover:shadow-[0_20px_25px_-5px_rgba(79, 124, 255,0.5)] transition-all duration-200 hover:-translate-y-0.5 text-lg group"
             >
               Download Now
               <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform duration-200">→</span>

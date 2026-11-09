@@ -86,7 +86,7 @@ export default function Navbar() {
           animation: slideDown 0.3s ease-out forwards;
         }
         .shimmer-effect {
-          background: linear-gradient(90deg, transparent, rgba(124, 58, 237, 0.1), transparent);
+          background: linear-gradient(90deg, transparent, rgba(79, 124, 255, 0.1), transparent);
           background-size: 200% 100%;
           animation: shimmer 3s infinite;
         }
@@ -110,7 +110,7 @@ export default function Navbar() {
                 height={30}
                 priority
               />
-              <span className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] tracking-tight group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">
+              <span className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                 Scolect
               </span>
             </Link>
@@ -124,15 +124,15 @@ export default function Navbar() {
                   className={`
                     relative px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300
                     ${pathname === link.href 
-                      ? 'text-violet-600 dark:text-violet-400' 
-                      : 'text-[#52525B] dark:text-[#A1A1AA] hover:text-violet-600 dark:hover:text-violet-400'
+                      ? 'text-blue-600 dark:text-blue-400' 
+                      : 'text-[#52525B] dark:text-[#A1A1AA] hover:text-blue-600 dark:hover:text-blue-400'
                     }
-                    hover:bg-violet-50 dark:hover:bg-violet-500/10 group
+                    hover:bg-blue-50 dark:hover:bg-blue-500/10 group
                   `}
                 >
                   {link.name}
                   <span className={`
-                    absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-violet-600 to-fuchsia-600 
+                    absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-blue-500 
                     transition-all duration-300 rounded-full
                     ${pathname === link.href ? 'w-1/2' : 'group-hover:w-1/2'}
                   `}></span>
@@ -156,7 +156,7 @@ export default function Navbar() {
                 className="relative p-2.5 rounded-xl hover:bg-zinc-100 dark:hover:bg-zinc-800 text-[#52525B] dark:text-[#A1A1AA] transition-all duration-300 group overflow-hidden"
                 aria-label="Toggle Theme"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 shimmer-effect"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 shimmer-effect"></div>
                 {isDark ? <Sun size={20} /> : <Moon size={20} />}
               </button>
 
@@ -203,7 +203,7 @@ export default function Navbar() {
                       className={`
                         font-medium text-lg px-4 py-3 rounded-xl transition-all duration-300 border-l-4
                         ${pathname === link.href
-                          ? 'text-violet-600 dark:text-violet-400 bg-violet-50 dark:bg-violet-500/10 border-violet-600'
+                          ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 border-blue-600'
                           : 'text-[#18181B] dark:text-[#FAFAFA] border-transparent hover:bg-zinc-100 dark:hover:bg-zinc-800'
                         }
                         animate-slideDown
@@ -237,7 +237,7 @@ export default function Navbar() {
                   <Link 
                     href="/download"
                     onClick={() => setIsOpen(false)}
-                    className="w-full text-center bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-4 rounded-xl font-bold mt-4 shadow-lg flex items-center justify-center gap-2 animate-slideDown"
+                    className="w-full text-center bg-gradient-to-r from-blue-600 to-blue-500 text-white py-4 rounded-xl font-bold mt-4 shadow-lg flex items-center justify-center gap-2 animate-slideDown"
                     style={{ animationDelay: `${(navLinks.length + 2) * 0.05}s` }}
                   >
                     <Download size={20} />

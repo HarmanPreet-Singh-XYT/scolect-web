@@ -34,7 +34,7 @@ import Footer from '@/components/layout/Footer';
 import Navbar from '@/components/layout/Navbar';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import Dashboard from '@/components/Dashboard';
+// import Dashboard from '@/components/Dashboard';
 import {releases} from "./changelog-data";
 
 // --- Intersection Observer Hook ---
@@ -159,7 +159,7 @@ const Doodle = ({
   delay?: number;
 }) => (
   <div
-    className={`hidden lg:block absolute text-violet-500 dark:text-violet-300 animate-float pointer-events-none select-none ${className}`}
+    className={`hidden lg:block absolute text-blue-500 dark:text-blue-300 animate-float pointer-events-none select-none ${className}`}
     style={{ transform: `rotate(${rotate}deg)`, animationDelay: `${delay}s` }}
   >
     <Icon size={size} strokeWidth={2} />
@@ -207,9 +207,9 @@ const Section = ({ className, children, id }: { className?: string, children: Re
   </section>
 );
 
-const Badge = ({ children, color = "violet" }: { children: React.ReactNode, color?: "violet" | "teal" | "amber" | "rose" }) => {
+const Badge = ({ children, color = "blue" }: { children: React.ReactNode, color?: "blue" | "teal" | "amber" | "rose" }) => {
   const styles = {
-    violet: "bg-violet-100 text-violet-700 border-violet-200 dark:bg-violet-500/10 dark:text-violet-300 dark:border-violet-500/20",
+    blue: "bg-blue-100 text-blue-700 border-blue-200 dark:bg-blue-500/10 dark:text-blue-300 dark:border-blue-500/20",
     teal: "bg-teal-100 text-teal-700 border-teal-200 dark:bg-teal-500/10 dark:text-teal-300 dark:border-teal-500/20",
     amber: "bg-amber-100 text-amber-700 border-amber-200 dark:bg-amber-500/10 dark:text-amber-300 dark:border-amber-500/20",
     rose: "bg-rose-100 text-rose-700 border-rose-200 dark:bg-rose-500/10 dark:text-rose-300 dark:border-rose-500/20",
@@ -226,9 +226,9 @@ const Button = ({ children, variant = "primary", className, icon: Icon, ...props
   const baseStyle = "inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 active:scale-95";
   
   const variants = {
-    primary: "bg-violet-600 text-white hover:bg-violet-700 shadow-lg shadow-violet-600/25 hover:shadow-xl hover:shadow-violet-600/40 border border-transparent dark:bg-violet-600 dark:hover:bg-violet-500",
+    primary: "bg-blue-600 text-white hover:bg-blue-700 shadow-lg shadow-blue-600/25 hover:shadow-xl hover:shadow-blue-600/40 border border-transparent dark:bg-blue-600 dark:hover:bg-blue-500",
     secondary: "bg-white text-zinc-700 border border-zinc-200 hover:bg-zinc-50 hover:border-zinc-300 shadow-sm hover:shadow-md dark:bg-zinc-800 dark:text-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-700",
-    ghost: "text-zinc-600 hover:text-violet-600 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-violet-400 dark:hover:bg-zinc-800",
+    ghost: "text-zinc-600 hover:text-blue-600 hover:bg-zinc-100 dark:text-zinc-400 dark:hover:text-blue-400 dark:hover:bg-zinc-800",
   };
   
   return (
@@ -241,11 +241,11 @@ const Button = ({ children, variant = "primary", className, icon: Icon, ...props
 
 const FeatureCard = ({ icon: Icon, title, description, points, explanation, index = 0 }: any) => (
   <AnimateOnScroll delay={index * 100} direction="up">
-    <div className="bg-white/70 dark:bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl dark:shadow-none transition-all duration-300 hover:border-violet-300 dark:hover:border-violet-500/50 hover:-translate-y-1 group flex flex-col h-full relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-violet-500/10 to-transparent rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
+    <div className="bg-white/70 dark:bg-zinc-900/50 backdrop-blur-sm p-8 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl dark:shadow-none transition-all duration-300 hover:border-blue-300 dark:hover:border-blue-500/50 hover:-translate-y-1 group flex flex-col h-full relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-transparent rounded-bl-full -mr-4 -mt-4 transition-transform group-hover:scale-150 duration-500"></div>
       
-      <div className="w-12 h-12 bg-violet-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-violet-600 dark:group-hover:bg-violet-600 transition-all duration-300 shadow-inner group-hover:scale-110 group-hover:rotate-3">
-        <Icon className="text-violet-600 dark:text-violet-400 group-hover:text-white transition-colors duration-300" size={24} />
+      <div className="w-12 h-12 bg-blue-50 dark:bg-zinc-800 rounded-xl flex items-center justify-center mb-6 group-hover:bg-blue-600 dark:group-hover:bg-blue-600 transition-all duration-300 shadow-inner group-hover:scale-110 group-hover:rotate-3">
+        <Icon className="text-blue-600 dark:text-blue-400 group-hover:text-white transition-colors duration-300" size={24} />
       </div>
       <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-50 mb-3">{title}</h3>
       <p className="text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed text-sm">{description}</p>
@@ -275,7 +275,7 @@ const AccordionItem = ({ question, answer }: { question: string, answer: string 
   return (
     <div className="border-b border-zinc-200 dark:border-zinc-800 last:border-0 transition-all duration-300 hover:bg-zinc-50/50 dark:hover:bg-zinc-800/30 rounded-lg px-4">
       <button 
-        className="w-full py-5 flex items-center justify-between text-left text-zinc-900 dark:text-zinc-100 font-medium hover:text-violet-600 dark:hover:text-violet-400 transition-colors group"
+        className="w-full py-5 flex items-center justify-between text-left text-zinc-900 dark:text-zinc-100 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors group"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="pr-4">{question}</span>
@@ -421,11 +421,11 @@ export default function ScolectLanding() {
         .shimmer-text {
           background: linear-gradient(
             90deg,
-            #7C3AED 0%,
-            #A78BFA 25%,
-            #7C3AED 50%,
-            #A78BFA 75%,
-            #7C3AED 100%
+            #4F7CFF 0%,
+            #97B6FF 25%,
+            #4F7CFF 50%,
+            #97B6FF 75%,
+            #4F7CFF 100%
           );
           background-size: 200% auto;
           -webkit-background-clip: text;
@@ -449,9 +449,9 @@ export default function ScolectLanding() {
 
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-40 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" />
-        <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[600px] h-[600px] bg-blue-400 -top-64 -right-64 animate-pulse" />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 -bottom-32 -left-32 animate-pulse" />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
 
@@ -474,7 +474,7 @@ export default function ScolectLanding() {
 
         <div className="max-w-4xl mx-auto relative z-10">
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-4"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-4"
             style={{ animation: 'fadeInUp 0.6s ease-out forwards' }}
           >
             <Sparkles size={14} className="animate-pulse" />
@@ -500,7 +500,7 @@ export default function ScolectLanding() {
             style={{ animation: 'fadeInUp 0.6s ease-out 0.45s forwards', opacity: 0 }}
           >
             <Link href="/download">
-              <Button variant="primary" icon={Download} className="w-full sm:w-auto text-base px-8 py-3.5 shadow-lg shadow-violet-500/25 hover:shadow-violet-500/40 transition-shadow">
+              <Button variant="primary" icon={Download} className="w-full sm:w-auto text-base px-8 py-3.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-shadow">
                 Download for Free
               </Button>
             </Link>
@@ -535,25 +535,42 @@ export default function ScolectLanding() {
 
       {/* Visual Analytics Preview */}
       <div className="px-4 mb-32 relative z-10">
+        {/* Coded dashboard preview (replaced with real app screenshots below) */}
+        {/*
         <AnimateOnScroll direction="up" delay={200}>
           <div className="max-w-7xl mx-auto -mt-32 hidden lg:block">
             <Dashboard/>
           </div>
         </AnimateOnScroll>
-        
+        */}
+
         <AnimateOnScroll direction="up" delay={200}>
-          <div className="max-w-7xl mx-auto -mt-32 lg:hidden">
-            <div className="overflow-hidden shadow-2xl rounded-lg border border-zinc-200 dark:border-zinc-800">
-              <img 
-                src="/light_window.png" 
-                alt="Scolect Dashboard Preview" 
-                className="w-full h-auto dark:hidden"
-              />
-              <img 
-                src="/dark_window.png" 
-                alt="Scolect Dashboard Preview" 
-                className="w-full h-auto hidden dark:block"
-              />
+          <div className="max-w-7xl mx-auto -mt-32">
+            <div className="overflow-hidden shadow-2xl rounded-3xl border border-zinc-200 dark:border-zinc-800">
+              <picture className="block dark:hidden">
+                <source srcSet="/app-preview/dashboard-light.avif" type="image/avif" />
+                <source srcSet="/app-preview/dashboard-light.webp" type="image/webp" />
+                <img
+                  src="/app-preview/dashboard-light.webp"
+                  alt="Scolect Dashboard Preview"
+                  width={2560}
+                  height={1628}
+                  className="w-full h-auto"
+                  decoding="async"
+                />
+              </picture>
+              <picture className="hidden dark:block">
+                <source srcSet="/app-preview/dashboard-dark.avif" type="image/avif" />
+                <source srcSet="/app-preview/dashboard-dark.webp" type="image/webp" />
+                <img
+                  src="/app-preview/dashboard-dark.webp"
+                  alt="Scolect Dashboard Preview"
+                  width={2560}
+                  height={1628}
+                  className="w-full h-auto"
+                  decoding="async"
+                />
+              </picture>
             </div>
           </div>
         </AnimateOnScroll>
@@ -591,9 +608,9 @@ export default function ScolectLanding() {
                 </AnimateOnScroll>
                 
                 <AnimateOnScroll direction="left" delay={400}>
-                  <div className="bg-violet-500/10 dark:bg-violet-500/5 p-6 rounded-2xl border-l-4 border-violet-500">
+                  <div className="bg-blue-500/10 dark:bg-blue-500/5 p-6 rounded-2xl border-l-4 border-blue-500">
                     <p className="text-base font-medium text-zinc-900 dark:text-white leading-relaxed">
-                      <span className="text-violet-600 dark:text-violet-400 font-bold">Scolect changes that.</span> By automatically tracking your application usage in real-time, Scolect gives you the clarity you need to make informed decisions about your digital life.
+                      <span className="text-blue-600 dark:text-blue-400 font-bold">Scolect changes that.</span> By automatically tracking your application usage in real-time, Scolect gives you the clarity you need to make informed decisions about your digital life.
                     </p>
                   </div>
                 </AnimateOnScroll>
@@ -601,12 +618,12 @@ export default function ScolectLanding() {
 
               {/* Right Stats */}
               <div className="bg-zinc-900 dark:bg-black p-8 md:p-12 lg:p-16 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 to-fuchsia-600/10 pointer-events-none"></div>
-                <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/20 blur-3xl rounded-full pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-fuchsia-500/20 blur-3xl rounded-full pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-blue-500/10 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500/20 blur-3xl rounded-full pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-400/20 blur-3xl rounded-full pointer-events-none"></div>
                 
                 <StaggerChildren className="relative z-10 grid grid-cols-1 gap-6 w-full max-w-xs" staggerDelay={150} direction="right">
-                  <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 group text-center">
+                  <div className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 group text-center">
                     <div className="text-5xl md:text-6xl font-bold text-white mb-2 tabular-nums group-hover:scale-110 transition-transform duration-300">
                       <AnimatedCounter end={7} suffix="h" />
                     </div>
@@ -637,7 +654,7 @@ export default function ScolectLanding() {
       <Section id="features">
         <AnimateOnScroll direction="up">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <Badge color="violet">Features</Badge>
+            <Badge color="blue">Features</Badge>
             <h2 className="mt-4 text-3xl md:text-4xl font-bold text-zinc-900 dark:text-white">Everything You Need to Master Your Screen Time</h2>
             <p className="mt-4 text-zinc-600 dark:text-zinc-400 text-lg">
               Scolect isn't just another tracker. It's a comprehensive productivity ecosystem designed to help you understand, improve, and optimize how you spend your digital time.
@@ -767,10 +784,10 @@ export default function ScolectLanding() {
         </AnimateOnScroll>
 
         <div className="grid md:grid-cols-4 gap-8 relative">
-          <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-violet-200 via-violet-400 to-violet-200 dark:from-violet-800 dark:via-violet-600 dark:to-violet-800 -z-10"></div>
+          <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-blue-200 via-blue-400 to-blue-200 dark:from-blue-800 dark:via-blue-600 dark:to-blue-800 -z-10"></div>
 
           {[
-            { icon: Download, title: "1. Download & Install", text: "Download Scolect for your platform. The installation is automatic—no technical knowledge required.", color: "violet" },
+            { icon: Download, title: "1. Download & Install", text: "Download Scolect for your platform. The installation is automatic—no technical knowledge required.", color: "blue" },
             { icon: Play, title: "2. Automatic Tracking", text: "Launch Scolect and it starts tracking instantly in the background. Intelligently monitoring usage with zero config.", color: "teal" },
             { icon: BarChart3, title: "3. Review Insights", text: "Open dashboard to see total usage, most-used apps, productivity score, and visual breakdowns.", color: "green" },
             { icon: Zap, title: "4. Optimize & Improve", text: "Use insights to set goals. Batch communications, plan deep work, and enable Focus Mode to soar.", color: "amber" },
@@ -780,7 +797,7 @@ export default function ScolectLanding() {
                 <div className={`w-16 h-16 bg-white dark:bg-zinc-950 border-2 border-${step.color}-100 dark:border-${step.color}-900/30 rounded-2xl flex items-center justify-center shadow-sm dark:shadow-none mb-6 text-${step.color}-600 dark:text-${step.color}-400 z-10 transition-all duration-500 group-hover:scale-125 group-hover:rotate-12 group-hover:shadow-xl bg-gradient-to-br from-white to-${step.color}-50 dark:from-zinc-950 dark:to-${step.color}-950`}>
                   <step.icon size={32} />
                 </div>
-                <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-3 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300">{step.title}</h3>
+                <h3 className="text-lg font-bold text-zinc-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">{step.title}</h3>
                 <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">{step.text}</p>
               </div>
             </AnimateOnScroll>
@@ -794,11 +811,11 @@ export default function ScolectLanding() {
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-zinc-900 dark:text-white">Join Thousands Who've Reclaimed Their Time</h2>
             <div className="flex justify-center gap-6 mt-6 text-sm font-semibold text-zinc-500 dark:text-zinc-400">
-               <span className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300">★★★★★ User Rated</span>
+               <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">★★★★★ User Rated</span>
                <span>•</span>
-               <span className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300">1000+ Active Users</span>
+               <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">1000+ Active Users</span>
                <span>•</span>
-               <span className="hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300">Zero Data Collection</span>
+               <span className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300">Zero Data Collection</span>
             </div>
           </div>
         </AnimateOnScroll>
@@ -810,8 +827,8 @@ export default function ScolectLanding() {
             { quote: "Focus Mode + time limits = game changer. I used to procrastinate for hours on YouTube before starting homework. Now I set a 2-hour study goal in Deep Work mode and actually hit it.", role: "University Student", name: "James Kim" },
           ].map((t, i) => (
             <AnimateOnScroll key={i} delay={i * 150} direction="up">
-              <div className="bg-zinc-50 dark:bg-zinc-900 p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 relative hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-violet-300 dark:hover:border-violet-700 group h-full">
-                <div className="text-4xl text-violet-200 dark:text-violet-900 absolute top-4 left-4 font-serif leading-none group-hover:scale-125 group-hover:text-violet-400 dark:group-hover:text-violet-600 transition-all duration-300">"</div>
+              <div className="bg-zinc-50 dark:bg-zinc-900 p-8 rounded-2xl border border-zinc-100 dark:border-zinc-800 relative hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-blue-300 dark:hover:border-blue-700 group h-full">
+                <div className="text-4xl text-blue-200 dark:text-blue-900 absolute top-4 left-4 font-serif leading-none group-hover:scale-125 group-hover:text-blue-400 dark:group-hover:text-blue-600 transition-all duration-300">"</div>
                 <p className="text-zinc-700 dark:text-zinc-300 relative z-10 mb-6 italic leading-relaxed pt-2">{t.quote}</p>
                 <div>
                   <div className="font-bold text-zinc-900 dark:text-white">{t.name}</div>
@@ -837,7 +854,7 @@ export default function ScolectLanding() {
               <thead>
                 <tr className="bg-zinc-50 dark:bg-zinc-950 border-b-2 border-zinc-100 dark:border-zinc-800">
                   <th className="p-4 text-left text-zinc-500 dark:text-zinc-400 font-medium">Feature</th>
-                  <th className="p-4 text-center text-violet-700 dark:text-violet-400 font-bold bg-violet-50 dark:bg-violet-900/10">Scolect</th>
+                  <th className="p-4 text-center text-blue-700 dark:text-blue-400 font-bold bg-blue-50 dark:bg-blue-900/10">Scolect</th>
                   <th className="p-4 text-center text-zinc-500 dark:text-zinc-400 font-medium">Commercial Apps</th>
                   <th className="p-4 text-center text-zinc-500 dark:text-zinc-400 font-medium">Built-in OS Tools</th>
                 </tr>
@@ -857,7 +874,7 @@ export default function ScolectLanding() {
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-all duration-300">
                     <td className="p-4 text-zinc-700 dark:text-zinc-300 font-medium">{row[0]}</td>
-                    <td className="p-4 text-center bg-violet-50/30 dark:bg-violet-900/5">
+                    <td className="p-4 text-center bg-blue-50/30 dark:bg-blue-900/5">
                       {typeof row[1] === 'boolean' ? (row[1] ? <Check size={20} className="inline text-teal-500 dark:text-teal-400" /> : <X size={20} className="inline text-rose-300" />) : <span className="font-semibold text-zinc-900 dark:text-white">{row[1]}</span>}
                     </td>
                     <td className="p-4 text-center text-zinc-500 dark:text-zinc-500">
@@ -905,7 +922,7 @@ export default function ScolectLanding() {
         </AnimateOnScroll>
         <AnimateOnScroll direction="up" delay={200}>
           <div className="text-center mt-8">
-            <a href="/faq" className="text-violet-600 dark:text-violet-400 font-semibold hover:underline inline-flex items-center gap-2 group">
+            <a href="/faq" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline inline-flex items-center gap-2 group">
               View All FAQs 
               <span className="transition-transform duration-300 group-hover:translate-x-2">→</span>
             </a>
@@ -915,12 +932,12 @@ export default function ScolectLanding() {
 
       {/* Open Source & Tech Stack */}
       <Section id="opensource" className="bg-zinc-900 text-white rounded-3xl overflow-hidden relative shadow-2xl dark:shadow-none dark:border dark:border-zinc-800">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-violet-600/20 blur-3xl rounded-full pointer-events-none animate-float"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 blur-3xl rounded-full pointer-events-none animate-float"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-teal-600/20 blur-3xl rounded-full pointer-events-none animate-float" style={{ animationDelay: '3s' }}></div>
         <div className="relative z-10 grid lg:grid-cols-2 gap-12 p-8 md:p-12">
           <div>
             <AnimateOnScroll direction="left">
-              <Badge color="violet">Open Source</Badge>
+              <Badge color="blue">Open Source</Badge>
               <h2 className="mt-4 text-3xl font-bold text-white">Built by the Community, For the Community</h2>
             </AnimateOnScroll>
             <AnimateOnScroll direction="left" delay={100}>
@@ -982,8 +999,8 @@ export default function ScolectLanding() {
             </AnimateOnScroll>
             
             <StaggerChildren className="grid sm:grid-cols-2 gap-4" staggerDelay={100} direction="right">
-              <div className="bg-zinc-800 p-4 rounded-xl flex items-center gap-3 border border-zinc-700 hover:border-violet-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-violet-500/20 group">
-                <Monitor className="text-violet-400 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="bg-zinc-800 p-4 rounded-xl flex items-center gap-3 border border-zinc-700 hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20 group">
+                <Monitor className="text-blue-400 group-hover:rotate-12 transition-transform duration-300" />
                 <div>
                   <div className="text-white font-semibold">Flutter</div>
                   <div className="text-xs text-zinc-400">UI Framework</div>
@@ -996,8 +1013,8 @@ export default function ScolectLanding() {
                   <div className="text-xs text-zinc-400">Local DB</div>
                 </div>
               </div>
-              <div className="bg-zinc-800 p-4 rounded-xl flex items-center gap-3 border border-zinc-700 hover:border-fuchsia-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-fuchsia-500/20 group">
-                <Code2 className="text-fuchsia-400 group-hover:rotate-12 transition-transform duration-300" />
+              <div className="bg-zinc-800 p-4 rounded-xl flex items-center gap-3 border border-zinc-700 hover:border-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/20 group">
+                <Code2 className="text-blue-300 group-hover:rotate-12 transition-transform duration-300" />
                 <div>
                   <div className="text-white font-semibold">Dart</div>
                   <div className="text-xs text-zinc-400">Language</div>
@@ -1017,23 +1034,23 @@ export default function ScolectLanding() {
 
       {/* Final CTA */}
       <AnimateOnScroll direction="up">
-        <div className="bg-gradient-to-r from-violet-600 via-fuchsia-600 to-violet-600 dark:from-violet-700 dark:via-fuchsia-800 dark:to-violet-700 py-24 px-4 text-center text-white mt-20 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 dark:from-blue-700 dark:via-blue-700 dark:to-blue-700 py-24 px-4 text-center text-white mt-20 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-30"></div>
           <div className="relative z-10">
             <h2 className="text-4xl font-bold mb-4">Ready to Take Back Your Time?</h2>
-            <p className="text-violet-100 text-lg max-w-2xl mx-auto mb-10">
+            <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-10">
               Join thousands of users who've transformed their digital habits with Scolect. 
               <br />No credit card. No account. No catches.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <button onClick={()=>router.push("/download")} className="bg-white text-violet-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-violet-50 transition-all duration-300 shadow-xl flex items-center justify-center gap-2 hover:scale-105 active:scale-95 group">
+              <button onClick={()=>router.push("/download")} className="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-50 transition-all duration-300 shadow-xl flex items-center justify-center gap-2 hover:scale-105 active:scale-95 group">
                 <Download size={20} className="group-hover:animate-bounce" /> Download for Free
               </button>
-              <button onClick={()=>router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp")} className="bg-violet-900/30 backdrop-blur-md text-white border border-violet-400/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-violet-900/50 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 active:scale-95 group">
+              <button onClick={()=>router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp")} className="bg-blue-900/30 backdrop-blur-md text-white border border-blue-400/50 px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-900/50 transition-all duration-300 flex items-center justify-center gap-2 hover:scale-105 active:scale-95 group">
                 <Github size={20} className="group-hover:rotate-12 transition-transform duration-300" /> Star on GitHub
               </button>
             </div>
-            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-violet-100 opacity-90">
+            <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm font-medium text-blue-100 opacity-90">
                <span className="hover:scale-110 transition-transform duration-300 cursor-default">100% Free Forever</span>
                <span>•</span>
                <span className="hover:scale-110 transition-transform duration-300 cursor-default">Privacy Guaranteed</span>

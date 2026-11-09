@@ -22,7 +22,7 @@ import Footer from '@/components/layout/Footer';
 import { useRouter } from 'next/navigation';
 
 // --- Visual Identity Constants ---
-// Primary: #7C3AED (Violet 600)
+// Primary: #4F7CFF (Logo Blue)
 // Background: #FAFAFA (Zinc 50) / #09090B (Zinc 950)
 // Text: #18181B (Zinc 900) / #FAFAFA (Zinc 50)
 
@@ -41,7 +41,7 @@ const FAQItem = ({ question, children, defaultOpen = false, index, isVisible = t
 
   return (
     <div 
-      className={`mb-4 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-900/80 overflow-hidden transition-all duration-500 ease-out backdrop-blur-sm hover:shadow-lg hover:shadow-violet-500/5 dark:hover:shadow-violet-500/10 hover:border-violet-300/50 dark:hover:border-violet-700/50 group`}
+      className={`mb-4 rounded-2xl border border-zinc-200/80 dark:border-zinc-800/80 bg-white dark:bg-zinc-900/80 overflow-hidden transition-all duration-500 ease-out backdrop-blur-sm hover:shadow-lg hover:shadow-blue-500/5 dark:hover:shadow-blue-500/10 hover:border-blue-300/50 dark:hover:border-blue-700/50 group`}
       style={{ 
         animationDelay: `${index * 50}ms`,
         animation: 'fadeInUp 0.5s ease-out forwards',
@@ -50,12 +50,12 @@ const FAQItem = ({ question, children, defaultOpen = false, index, isVisible = t
     >
       <button 
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full flex items-center justify-between p-6 text-left bg-transparent hover:bg-gradient-to-r hover:from-violet-50/50 hover:to-transparent dark:hover:from-violet-950/30 dark:hover:to-transparent transition-all duration-300"
+        className="w-full flex items-center justify-between p-6 text-left bg-transparent hover:bg-gradient-to-r hover:from-blue-50/50 hover:to-transparent dark:hover:from-blue-950/30 dark:hover:to-transparent transition-all duration-300"
       >
-        <span className="text-lg font-semibold text-[#18181B] dark:text-[#FAFAFA] pr-8 group-hover:text-violet-700 dark:group-hover:text-violet-300 transition-colors duration-300">
+        <span className="text-lg font-semibold text-[#18181B] dark:text-[#FAFAFA] pr-8 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors duration-300">
           {question}
         </span>
-        <span className={`p-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-[#7C3AED] dark:text-[#8B5CF6] transition-all duration-300 ${isOpen ? 'rotate-180 bg-violet-200 dark:bg-violet-800/50' : ''}`}>
+        <span className={`p-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-[#2F5BE8] dark:text-[#7296FF] transition-all duration-300 ${isOpen ? 'rotate-180 bg-blue-200 dark:bg-blue-800/50' : ''}`}>
           <ChevronDown size={18} />
         </span>
       </button>
@@ -81,15 +81,15 @@ const CategoryHeader = ({ title, icon: Icon, isVisible = true }: { title: string
   
   return (
     <div className="flex items-center gap-4 mb-8 mt-16 relative">
-      <div className="absolute inset-0 -left-4 -right-4 h-full bg-gradient-to-r from-violet-100/50 via-transparent to-transparent dark:from-violet-900/20 dark:via-transparent rounded-2xl -z-10" />
-      <div className="p-3 rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] text-white shadow-lg shadow-violet-500/30 transform hover:scale-110 transition-transform duration-300">
+      <div className="absolute inset-0 -left-4 -right-4 h-full bg-gradient-to-r from-blue-100/50 via-transparent to-transparent dark:from-blue-900/20 dark:via-transparent rounded-2xl -z-10" />
+      <div className="p-3 rounded-xl bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] text-white shadow-lg shadow-blue-500/30 transform hover:scale-110 transition-transform duration-300">
         <Icon size={24} />
       </div>
       <div>
         <h2 className="text-2xl font-bold text-[#18181B] dark:text-[#FAFAFA] tracking-tight">
           {title}
         </h2>
-        <div className="h-1 w-16 bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] rounded-full mt-2" />
+        <div className="h-1 w-16 bg-gradient-to-r from-[#4F7CFF] to-[#7296FF] rounded-full mt-2" />
       </div>
     </div>
   );
@@ -135,7 +135,7 @@ export default function FAQPage() {
               <li>File names or folders you access</li>
             </ul>
           </div>
-          <p>We only track <strong className="text-violet-600 dark:text-violet-400">which application</strong> is active and <strong className="text-violet-600 dark:text-violet-400">for how long</strong>. This gives you complete usage insights while protecting your privacy.</p>
+          <p>We only track <strong className="text-blue-600 dark:text-blue-400">which application</strong> is active and <strong className="text-blue-600 dark:text-blue-400">for how long</strong>. This gives you complete usage insights while protecting your privacy.</p>
         </>
       )
     },
@@ -146,7 +146,7 @@ export default function FAQPage() {
         <>
           <p>You decide! There's no universal definition of productivity—it depends entirely on your goals and work.</p>
           <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mt-4 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 text-xs">✓</span>
+            <span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xs">✓</span>
             How to mark apps as productive:
           </h4>
           <ol className="list-decimal pl-5 space-y-2">
@@ -155,10 +155,10 @@ export default function FAQPage() {
             <li className="pl-2">Toggle the 'Is Productive' switch</li>
             <li className="pl-2">Your Productive Score updates automatically</li>
           </ol>
-          <p className="mt-4"><strong className="text-violet-600 dark:text-violet-400">Productive apps contribute to your Productive Score</strong>, which calculates the percentage of screen time spent on work-related or goal-aligned activities.</p>
+          <p className="mt-4"><strong className="text-blue-600 dark:text-blue-400">Productive apps contribute to your Productive Score</strong>, which calculates the percentage of screen time spent on work-related or goal-aligned activities.</p>
           <p className="italic text-sm mt-2 text-zinc-500">Examples: VS Code for developers, Figma for designers, Scrivener for writers, Notion for students.</p>
-          <div className="mt-4 p-4 bg-gradient-to-r from-violet-50 to-transparent dark:from-violet-950/50 dark:to-transparent border-l-4 border-[#7C3AED] rounded-r-xl text-sm">
-            <strong className="text-violet-700 dark:text-violet-300">💡 Pro tip:</strong> Review your productive classifications quarterly. Your work changes, and what was productive last month might not be productive now.
+          <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-transparent dark:from-blue-950/50 dark:to-transparent border-l-4 border-[#4F7CFF] rounded-r-xl text-sm">
+            <strong className="text-blue-700 dark:text-blue-300">💡 Pro tip:</strong> Review your productive classifications quarterly. Your work changes, and what was productive last month might not be productive now.
           </div>
         </>
       )
@@ -187,7 +187,7 @@ export default function FAQPage() {
               <span>Not tracking when computer is locked or in sleep mode</span>
             </div>
           </div>
-          <p className="mt-4">The margin of error is minimal (less than 1% of total usage). One important note: Scolect tracks <strong className="text-violet-600 dark:text-violet-400">active</strong> application time, not just time with the app open.</p>
+          <p className="mt-4">The margin of error is minimal (less than 1% of total usage). One important note: Scolect tracks <strong className="text-blue-600 dark:text-blue-400">active</strong> application time, not just time with the app open.</p>
         </>
       )
     },
@@ -197,9 +197,9 @@ export default function FAQPage() {
       content: (
         <>
           <p>Absolutely! Scolect gives you complete control over categories.</p>
-          <p className="mt-2">You can use the <strong className="text-violet-600 dark:text-violet-400">10 pre-built categories</strong> (Productivity, Development, Social Media, etc.) or create your own.</p>
+          <p className="mt-2">You can use the <strong className="text-blue-600 dark:text-blue-400">10 pre-built categories</strong> (Productivity, Development, Social Media, etc.) or create your own.</p>
           <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mt-4 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 text-xs">⚙</span>
+            <span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 text-xs">⚙</span>
             Creating Custom Categories:
           </h4>
           <ol className="list-decimal pl-5 space-y-2">
@@ -220,9 +220,9 @@ export default function FAQPage() {
         <>
           <p>Scolect provides comprehensive insights that help you understand and improve your digital habits:</p>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
-            <div className="group bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-800/50 p-5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1">
+            <div className="group bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-800/50 p-5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
               <strong className="block mb-3 text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">📊</span>
+                <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center">📊</span>
                 Dashboard (Overview)
               </strong>
               <ul className="text-sm list-disc pl-4 space-y-2">
@@ -232,9 +232,9 @@ export default function FAQPage() {
                 <li>Focus Sessions count</li>
               </ul>
             </div>
-            <div className="group bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-800/50 p-5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/10 hover:-translate-y-1">
+            <div className="group bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-800/50 p-5 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1">
               <strong className="block mb-3 text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-                <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center">📈</span>
+                <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center">📈</span>
                 Analytics (Reports)
               </strong>
               <ul className="text-sm list-disc pl-4 space-y-2">
@@ -257,8 +257,8 @@ export default function FAQPage() {
       content: (
         <>
           <p>In the 'Applications' section, you can toggle the visibility of apps. This allows you to keep certain apps out of your reports while still tracking overall usage patterns.</p>
-          <div className="mt-4 p-4 bg-gradient-to-r from-violet-50 to-transparent dark:from-violet-950/50 dark:to-transparent border-l-4 border-[#7C3AED] rounded-r-xl text-sm">
-            <strong className="text-violet-700 dark:text-violet-300">💡 Pro tip:</strong> This is useful for hiding system apps or personal apps you don't want visible in reports but still want to count toward your total screen time.
+          <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-transparent dark:from-blue-950/50 dark:to-transparent border-l-4 border-[#4F7CFF] rounded-r-xl text-sm">
+            <strong className="text-blue-700 dark:text-blue-300">💡 Pro tip:</strong> This is useful for hiding system apps or personal apps you don't want visible in reports but still want to count toward your total screen time.
           </div>
         </>
       )
@@ -271,35 +271,35 @@ export default function FAQPage() {
           <p>Yes! The Applications section includes powerful search and filtering capabilities:</p>
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5">🔍</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5">🔍</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Search Bar:</strong>
                 <p className="text-sm">Instant filtering, partial matches work (e.g., 'chrom' finds 'Chrome').</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5">📁</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5">📁</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Filter by Category:</strong>
                 <p className="text-sm">View only Social Media, Development, etc.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5">⚡</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5">⚡</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Filter by Productivity:</strong>
                 <p className="text-sm">Quickly review productive vs. non-productive apps.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5">📊</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5">📊</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Filter by Tracking Status:</strong>
                 <p className="text-sm">See which apps are being tracked or ignored.</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0 mt-0.5">👁</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5">👁</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Filter by Visibility:</strong>
                 <p className="text-sm">Find apps hidden from reports.</p>
@@ -316,23 +316,23 @@ export default function FAQPage() {
         <>
           <p>For each application, you can edit multiple properties to customize your tracking experience:</p>
           <div className="space-y-3 mt-4">
-            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500 hover:pl-6 transition-all duration-300">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500 hover:pl-6 transition-all duration-300">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">1. Category Assignment:</strong>
               <p className="text-sm mt-1">Choose from default or custom categories.</p>
             </div>
-            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500 hover:pl-6 transition-all duration-300">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500 hover:pl-6 transition-all duration-300">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">2. Productivity Status:</strong>
               <p className="text-sm mt-1">Toggle "Is Productive" (affects Score immediately).</p>
             </div>
-            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500 hover:pl-6 transition-all duration-300">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500 hover:pl-6 transition-all duration-300">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">3. Track Usage:</strong>
               <p className="text-sm mt-1">Enable/Disable monitoring for this app.</p>
             </div>
-            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500 hover:pl-6 transition-all duration-300">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500 hover:pl-6 transition-all duration-300">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">4. Visible in Reports:</strong>
               <p className="text-sm mt-1">Show/Hide from charts and analytics.</p>
             </div>
-            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500 hover:pl-6 transition-all duration-300">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500 hover:pl-6 transition-all duration-300">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">5. Daily Time Limit:</strong>
               <p className="text-sm mt-1">Set maximum hours and minutes per day.</p>
             </div>
@@ -411,28 +411,28 @@ export default function FAQPage() {
           <p>Yes! Scolect provides powerful trend analysis:</p>
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">📈</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">📈</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Week-over-Week Comparisons:</strong>
                 <p className="text-sm">See graphs of usage over past weeks with trend indicators</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">📊</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">📊</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Average Daily Usage:</strong>
                 <p className="text-sm">Calculate your typical daily patterns</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">⏱️</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">⏱️</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Longest Sessions:</strong>
                 <p className="text-sm">Identify your peak usage periods</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">📅</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">📅</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Weekly Totals:</strong>
                 <p className="text-sm">Track your overall digital habits week by week</p>
@@ -461,13 +461,13 @@ export default function FAQPage() {
               </strong>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">Mid-day activity</p>
             </div>
-            <div className="p-4 bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-zinc-900 rounded-xl border border-purple-200 dark:border-purple-800">
+            <div className="p-4 bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-zinc-900 rounded-xl border border-blue-200 dark:border-blue-800">
               <strong className="text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
                 <span className="text-xl">🌆</span> Evening
               </strong>
               <p className="text-sm text-zinc-600 dark:text-zinc-400">After-work usage</p>
             </div>
-            <div className="p-4 bg-gradient-to-br from-indigo-50 to-white dark:from-indigo-900/20 dark:to-zinc-900 rounded-xl border border-indigo-200 dark:border-indigo-800">
+            <div className="p-4 bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-zinc-900 rounded-xl border border-blue-200 dark:border-blue-800">
               <strong className="text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
                 <span className="text-xl">🌙</span> Night
               </strong>
@@ -490,7 +490,7 @@ export default function FAQPage() {
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Overall Daily Limits:</strong>
               <p className="text-sm mt-1">Set total screen time goals for the entire day</p>
             </div>
-            <div className="p-4 rounded-xl bg-gradient-to-r from-purple-50 to-transparent dark:from-purple-950/30 dark:to-transparent border-l-4 border-purple-500">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-blue-50 to-transparent dark:from-blue-950/30 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Individual App Limits:</strong>
               <p className="text-sm mt-1">Configure specific limits for each application</p>
             </div>
@@ -525,7 +525,7 @@ export default function FAQPage() {
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🎯</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🎯</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Focus Mode Notifications:</strong>
                 <p className="text-sm">Alerts for focus session start, break, and completion</p>
@@ -614,35 +614,35 @@ export default function FAQPage() {
           <p>The Pomodoro Timer is highly customizable to fit your personal productivity style:</p>
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">⏱️</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">⏱️</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Adjustable Work Duration:</strong>
                 <p className="text-sm">Set custom work session lengths to match your concentration span</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">☕</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">☕</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Short Break Length:</strong>
                 <p className="text-sm">Configure the duration of short breaks between work sessions</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🌴</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🌴</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Long Break Duration:</strong>
                 <p className="text-sm">Set extended break periods after multiple work sessions</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🔄</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🔄</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Auto-Start Option:</strong>
                 <p className="text-sm">Automatically begin the next session without manual intervention</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🔔</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🔔</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Notification Settings:</strong>
                 <p className="text-sm">Control alerts for session transitions</p>
@@ -659,23 +659,23 @@ export default function FAQPage() {
         <>
           <p>Focus Mode history provides detailed tracking of your focused work sessions:</p>
           <div className="space-y-3 mt-4">
-            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500">
+            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Daily Focus Sessions:</strong>
               <p className="text-sm mt-1">Number of completed sessions per day</p>
             </div>
-            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500">
+            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Trends Graph:</strong>
               <p className="text-sm mt-1">Visual representation of your focus patterns over time</p>
             </div>
-            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500">
+            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Average Session Duration:</strong>
               <p className="text-sm mt-1">Calculate your typical focus session length</p>
             </div>
-            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500">
+            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Total Focus Time:</strong>
               <p className="text-sm mt-1">Cumulative focused work time</p>
             </div>
-            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-violet-500">
+            <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-800/50 dark:to-transparent border-l-4 border-blue-500">
               <strong className="text-[#18181B] dark:text-[#FAFAFA]">Time Distribution Pie Chart:</strong>
               <p className="text-sm mt-1">Breakdown of work sessions, short breaks, and long breaks</p>
             </div>
@@ -723,35 +723,35 @@ export default function FAQPage() {
           <p>Scolect provides extensive customization to personalize your experience:</p>
           <ul className="mt-4 space-y-3">
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🎨</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🎨</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Theme Selection:</strong>
                 <p className="text-sm">Choose between System, Light, or Dark themes</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🌐</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🌐</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Language Settings:</strong>
                 <p className="text-sm">Multiple language options available</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🚀</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🚀</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Startup Behavior:</strong>
                 <p className="text-sm">Configure how Scolect launches on system start</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">🔔</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">🔔</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Notification Controls:</strong>
                 <p className="text-sm">Comprehensive settings for all alert types</p>
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <span className="w-8 h-8 rounded-lg bg-violet-100 dark:bg-violet-900/50 flex items-center justify-center text-violet-600 dark:text-violet-400 flex-shrink-0">💾</span>
+              <span className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">💾</span>
               <div>
                 <strong className="text-[#18181B] dark:text-[#FAFAFA]">Data Management:</strong>
                 <p className="text-sm">Options for clearing data or resetting settings</p>
@@ -835,7 +835,7 @@ export default function FAQPage() {
               <li>• Resetting after experimental configurations</li>
             </ul>
           </div>
-          <p className="mt-4 text-sm"><strong className="text-violet-600 dark:text-violet-400">Important:</strong> This action cannot be undone. Consider exporting your data first if you want to keep a backup.</p>
+          <p className="mt-4 text-sm"><strong className="text-blue-600 dark:text-blue-400">Important:</strong> This action cannot be undone. Consider exporting your data first if you want to keep a backup.</p>
         </>
       )
     },
@@ -868,8 +868,8 @@ export default function FAQPage() {
               </div>
             </div>
           </div>
-          <div className="mt-4 p-4 bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 rounded-xl">
-            <strong className="text-violet-700 dark:text-violet-300 flex items-center gap-2 mb-2">
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+            <strong className="text-blue-700 dark:text-blue-300 flex items-center gap-2 mb-2">
               <span className="text-xl">💡</span> Pro Tips:
             </strong>
             <ul className="text-sm space-y-1">
@@ -951,8 +951,8 @@ export default function FAQPage() {
             </ol>
           </div>
 
-          <div className="mt-4 p-4 bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-800 rounded-xl">
-            <strong className="text-violet-700 dark:text-violet-300">ℹ️ What This Does:</strong>
+          <div className="mt-4 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl">
+            <strong className="text-blue-700 dark:text-blue-300">ℹ️ What This Does:</strong>
             <p className="text-sm mt-1">When enabled, Scolect will launch minimized to the system tray on startup instead of opening a full window. The app continues tracking in the background, but won't interrupt your workflow.</p>
           </div>
 
@@ -1028,7 +1028,7 @@ export default function FAQPage() {
   }, [filteredFAQs]);
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] overflow-x-hidden">
       <style jsx global>{`
         @keyframes fadeInUp {
           from {
@@ -1061,21 +1061,21 @@ export default function FAQPage() {
         
         @keyframes glow {
           0%, 100% {
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+            box-shadow: 0 0 20px rgba(79, 124, 255, 0.3);
           }
           50% {
-            box-shadow: 0 0 40px rgba(124, 58, 237, 0.5);
+            box-shadow: 0 0 40px rgba(79, 124, 255, 0.5);
           }
         }
 
         .shimmer-text {
           background: linear-gradient(
             90deg,
-            #7C3AED 0%,
-            #A78BFA 25%,
-            #7C3AED 50%,
-            #A78BFA 75%,
-            #7C3AED 100%
+            #4F7CFF 0%,
+            #97B6FF 25%,
+            #4F7CFF 50%,
+            #97B6FF 75%,
+            #4F7CFF 100%
           );
           background-size: 200% auto;
           -webkit-background-clip: text;
@@ -1090,16 +1090,16 @@ export default function FAQPage() {
       {/* HERO SECTION */}
       <div className="relative bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 pt-32 pb-20 px-6 overflow-hidden">
         {/* Background Effects */}
-        <FloatingOrb className="w-96 h-96 bg-violet-400 -top-48 -right-48" />
-        <FloatingOrb className="w-64 h-64 bg-indigo-400 -bottom-32 -left-32" />
-        <FloatingOrb className="w-48 h-48 bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-96 h-96 bg-blue-400 -top-48 -right-48" />
+        <FloatingOrb className="w-64 h-64 bg-blue-400 -bottom-32 -left-32" />
+        <FloatingOrb className="w-48 h-48 bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
         
         <div className="max-w-3xl mx-auto text-center relative z-10">
           <div 
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-6"
             style={{ animation: 'fadeInUp 0.5s ease-out forwards' }}
           >
             <Sparkles size={16} className="animate-pulse" />
@@ -1126,10 +1126,10 @@ export default function FAQPage() {
             className="relative max-w-lg mx-auto"
             style={{ animation: 'fadeInUp 0.5s ease-out 0.3s forwards', opacity: 0 }}
           >
-            <div className={`absolute -inset-1 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 rounded-2xl blur-lg transition-opacity duration-500 ${searchFocused ? 'opacity-50' : 'opacity-0'}`} />
+            <div className={`absolute -inset-1 bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 rounded-2xl blur-lg transition-opacity duration-500 ${searchFocused ? 'opacity-50' : 'opacity-0'}`} />
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
-                <Search className={`h-5 w-5 transition-colors duration-300 ${searchFocused ? 'text-violet-500' : 'text-zinc-400'}`} />
+                <Search className={`h-5 w-5 transition-colors duration-300 ${searchFocused ? 'text-blue-500' : 'text-zinc-400'}`} />
               </div>
               <input
                 type="text"
@@ -1137,7 +1137,7 @@ export default function FAQPage() {
                 onChange={(e) => setSearchValue(e.target.value)}
                 onFocus={() => setSearchFocused(true)}
                 onBlur={() => setSearchFocused(false)}
-                className="block w-full pl-12 pr-5 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl text-[#18181B] dark:text-[#FAFAFA] placeholder-zinc-400 focus:outline-none focus:border-violet-500 dark:focus:border-violet-500 transition-all duration-300 shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50"
+                className="block w-full pl-12 pr-5 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl text-[#18181B] dark:text-[#FAFAFA] placeholder-zinc-400 focus:outline-none focus:border-blue-500 dark:focus:border-blue-500 transition-all duration-300 shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50"
                 placeholder="Search for answers..."
               />
               {searchValue && (
@@ -1154,7 +1154,7 @@ export default function FAQPage() {
 
       <div className="max-w-3xl mx-auto px-6 pb-24 relative">
         {/* Decorative side line */}
-        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-violet-300 dark:via-violet-700 to-transparent opacity-50 hidden lg:block" style={{ left: '-40px' }} />
+        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-blue-300 dark:via-blue-700 to-transparent opacity-50 hidden lg:block" style={{ left: '-40px' }} />
         
         {/* Show message when no results */}
         {searchValue && filteredFAQs.length === 0 && (
@@ -1166,11 +1166,11 @@ export default function FAQPage() {
               No results found
             </h3>
             <p className="text-[#52525B] dark:text-[#A1A1AA] mb-6">
-              We couldn't find any FAQs matching "<span className="font-semibold text-violet-600 dark:text-violet-400">{searchValue}</span>"
+              We couldn't find any FAQs matching "<span className="font-semibold text-blue-600 dark:text-blue-400">{searchValue}</span>"
             </p>
             <button
               onClick={() => setSearchValue('')}
-              className="px-6 py-3 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] text-white rounded-xl hover:shadow-lg hover:shadow-violet-500/30 transition-all duration-300"
+              className="px-6 py-3 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] text-white rounded-xl hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
             >
               Clear search
             </button>
@@ -1207,15 +1207,15 @@ export default function FAQPage() {
       {/* FOOTER / HELP CTA */}
       <div className="relative bg-gradient-to-b from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900 border-t border-zinc-200 dark:border-zinc-800 py-20 px-6 text-center overflow-hidden">
         {/* Background Effects */}
-        <FloatingOrb className="w-72 h-72 bg-violet-400 -top-36 left-1/4" />
-        <FloatingOrb className="w-56 h-56 bg-indigo-400 -bottom-28 right-1/4" />
+        <FloatingOrb className="w-72 h-72 bg-blue-400 -top-36 left-1/4" />
+        <FloatingOrb className="w-56 h-56 bg-blue-400 -bottom-28 right-1/4" />
         
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]" />
         
         <div className="max-w-2xl mx-auto relative z-10">
           <div 
-            className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-violet-100 to-violet-200 dark:from-violet-900/50 dark:to-violet-800/50 text-[#7C3AED] dark:text-[#8B5CF6] mb-8 shadow-lg shadow-violet-500/20"
+            className="inline-flex p-4 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-800/50 text-[#2F5BE8] dark:text-[#7296FF] mb-8 shadow-lg shadow-blue-500/20"
             style={{ animation: 'glow 3s ease-in-out infinite' }}
           >
             <HelpCircle size={36} />
@@ -1227,19 +1227,19 @@ export default function FAQPage() {
             Can't find the answer you're looking for? We're here to help you get the most out of Scolect.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button onClick={()=>router.push("/community")} className="group flex items-center gap-3 px-6 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl hover:border-violet-400 dark:hover:border-violet-600 transition-all duration-300 font-medium text-[#18181B] dark:text-[#FAFAFA] shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-1">
-              <span className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/50 transition-colors duration-300">
-                <MessageSquare size={20} className="group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300" />
+            <button onClick={()=>router.push("/community")} className="group flex items-center gap-3 px-6 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 font-medium text-[#18181B] dark:text-[#FAFAFA] shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
+              <span className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
+                <MessageSquare size={20} className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
               </span>
               Community Discussions
             </button>
-            <button onClick={()=>router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect")} className="group flex items-center gap-3 px-6 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl hover:border-violet-400 dark:hover:border-violet-600 transition-all duration-300 font-medium text-[#18181B] dark:text-[#FAFAFA] shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-1">
-              <span className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-violet-100 dark:group-hover:bg-violet-900/50 transition-colors duration-300">
-                <Github size={20} className="group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors duration-300" />
+            <button onClick={()=>router.push("https://github.com/HarmanPreet-Singh-XYT/Scolect")} className="group flex items-center gap-3 px-6 py-4 bg-white dark:bg-zinc-900 border-2 border-zinc-200 dark:border-zinc-700 rounded-2xl hover:border-blue-400 dark:hover:border-blue-600 transition-all duration-300 font-medium text-[#18181B] dark:text-[#FAFAFA] shadow-lg shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-1">
+              <span className="w-10 h-10 rounded-xl bg-zinc-100 dark:bg-zinc-800 flex items-center justify-center group-hover:bg-blue-100 dark:group-hover:bg-blue-900/50 transition-colors duration-300">
+                <Github size={20} className="group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
               </span>
               GitHub Issues
             </button>
-            <button onClick={()=>router.push("/contact")} className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white rounded-2xl shadow-lg shadow-violet-500/30 hover:shadow-xl hover:shadow-violet-500/40 transition-all duration-300 font-medium hover:-translate-y-1">
+            <button onClick={()=>router.push("/contact")} className="group flex items-center gap-3 px-6 py-4 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] text-white rounded-2xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 font-medium hover:-translate-y-1">
               <span className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
                 <Mail size={20} />
               </span>

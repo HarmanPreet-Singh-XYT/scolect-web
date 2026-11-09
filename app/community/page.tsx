@@ -130,11 +130,11 @@ const AnimatedCounter = ({ end, suffix = "" }: { end: number; suffix?: string })
 
 const SectionHeader = ({ title, subtitle }: { title: string, subtitle?: string }) => (
   <Reveal className="mb-16 text-center">
-    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7C3AED]/10 to-[#14B8A6]/10 border border-[#7C3AED]/20 mb-4">
-      <Sparkles size={14} className="text-[#7C3AED]" />
-      <span className="text-xs font-semibold text-[#7C3AED] uppercase tracking-wider">Section</span>
+    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4F7CFF]/10 to-[#14B8A6]/10 border border-[#4F7CFF]/20 mb-4">
+      <Sparkles size={14} className="text-[#2F5BE8]" />
+      <span className="text-xs font-semibold text-[#2F5BE8] uppercase tracking-wider">Section</span>
     </div>
-    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#18181B] via-[#7C3AED] to-[#18181B] dark:from-[#FAFAFA] dark:via-[#8B5CF6] dark:to-[#FAFAFA] bg-clip-text text-transparent mb-6 bg-[length:200%_auto] animate-gradient">
+    <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#18181B] via-[#4F7CFF] to-[#18181B] dark:from-[#FAFAFA] dark:via-[#7296FF] dark:to-[#FAFAFA] bg-clip-text text-transparent mb-6 bg-[length:200%_auto] animate-gradient">
       {title}
     </h2>
     {subtitle && (
@@ -151,22 +151,22 @@ const BenefitCard = ({ icon: Icon, title, items, index }: { icon: any, title: st
   return (
     <Reveal delay={index * 80}>
       <div 
-        className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm p-8 rounded-3xl border border-zinc-200/80 dark:border-zinc-800/80 hover:border-[#7C3AED]/60 transition-all duration-500 h-full overflow-hidden"
+        className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm p-8 rounded-3xl border border-zinc-200/80 dark:border-zinc-800/80 hover:border-[#4F7CFF]/60 transition-all duration-500 h-full overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={`absolute inset-0 bg-gradient-to-br from-[#7C3AED]/5 via-transparent to-[#14B8A6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-        <div className={`absolute -top-20 -right-20 w-40 h-40 bg-[#7C3AED]/20 rounded-full blur-3xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-br from-[#4F7CFF]/5 via-transparent to-[#14B8A6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+        <div className={`absolute -top-20 -right-20 w-40 h-40 bg-[#4F7CFF]/20 rounded-full blur-3xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
         
         <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#8B5CF6] flex items-center justify-center text-white mb-6 shadow-lg shadow-[#7C3AED]/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4F7CFF] to-[#7296FF] flex items-center justify-center text-white mb-6 shadow-lg shadow-[#4F7CFF]/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
             <Icon size={26} />
           </div>
-          <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-5 group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">{title}</h3>
+          <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-5 group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">{title}</h3>
           <ul className="space-y-3">
             {items.map((item, idx) => (
               <li key={idx} className="flex items-start gap-3 text-sm text-[#52525B] dark:text-[#A1A1AA] group-hover:text-[#3F3F46] dark:group-hover:text-[#D4D4D8] transition-colors">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#14B8A6] shrink-0 group-hover:scale-150 transition-transform" />
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#4F7CFF] to-[#14B8A6] shrink-0 group-hover:scale-150 transition-transform" />
                 {item}
               </li>
             ))}
@@ -193,17 +193,17 @@ const ContributionSection = ({
   extraContent?: React.ReactNode 
 }) => (
   <Reveal className="mb-12 scroll-mt-24" id={title.toLowerCase().replace(/\s/g, '-')}>
-    <div className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-[2rem] border border-zinc-200/80 dark:border-zinc-800/80 overflow-hidden hover:border-[#7C3AED]/40 transition-all duration-500 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-[#7C3AED]/10">
-      <div className="absolute inset-0 rounded-[2rem] p-[1px] bg-gradient-to-r from-transparent via-[#7C3AED]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-[2rem] border border-zinc-200/80 dark:border-zinc-800/80 overflow-hidden hover:border-[#4F7CFF]/40 transition-all duration-500 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-[#4F7CFF]/10">
+      <div className="absolute inset-0 rounded-[2rem] p-[1px] bg-gradient-to-r from-transparent via-[#4F7CFF]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       
       <div className="relative p-8 md:p-10 border-b border-zinc-200 dark:border-zinc-800 bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-950/80 dark:via-zinc-900/50 dark:to-zinc-950/80">
         <div className="flex items-center gap-5 mb-3">
-          <div className="p-3 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] text-white shadow-lg shadow-[#7C3AED]/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+          <div className="p-3 rounded-2xl bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] text-white shadow-lg shadow-[#4F7CFF]/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
             <Icon size={28} />
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-[#18181B] dark:text-[#FAFAFA]">{title}</h3>
         </div>
-        <p className="text-lg text-[#7C3AED] dark:text-[#8B5CF6] font-medium ml-[72px]">{headline}</p>
+        <p className="text-lg text-[#2F5BE8] dark:text-[#7296FF] font-medium ml-[72px]">{headline}</p>
       </div>
       
       <div className="p-8 md:p-10 grid lg:grid-cols-2 gap-12">
@@ -226,8 +226,8 @@ const ContributionSection = ({
         </div>
 
         <div>
-          <h4 className="text-sm font-bold uppercase tracking-wider text-[#18181B] dark:text-[#FAFAFA] mb-6 border-l-4 pl-4 flex items-center gap-2" style={{ borderColor: '#7C3AED' }}>
-            <span className="w-2 h-2 rounded-full bg-[#7C3AED] animate-pulse" />
+          <h4 className="text-sm font-bold uppercase tracking-wider text-[#18181B] dark:text-[#FAFAFA] mb-6 border-l-4 pl-4 flex items-center gap-2" style={{ borderColor: '#4F7CFF' }}>
+            <span className="w-2 h-2 rounded-full bg-[#4F7CFF] animate-pulse" />
             Getting Started
           </h4>
           <div className="text-[#52525B] dark:text-[#A1A1AA] space-y-4">
@@ -252,7 +252,7 @@ const CodeBlock = ({ children }: { children: React.ReactNode }) => (
 
 export default function CommunityPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] overflow-x-hidden">
       <style jsx global>{`
         @keyframes shimmer {
           0% {
@@ -270,21 +270,21 @@ export default function CommunityPage() {
 
         @keyframes pulse-glow {
           0%, 100% {
-            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+            box-shadow: 0 0 20px rgba(79, 124, 255, 0.3);
           }
           50% {
-            box-shadow: 0 0 40px rgba(124, 58, 237, 0.6);
+            box-shadow: 0 0 40px rgba(79, 124, 255, 0.6);
           }
         }
 
         .shimmer-text {
           background: linear-gradient(
             90deg,
-            #7C3AED 0%,
-            #A78BFA 25%,
-            #7C3AED 50%,
-            #A78BFA 75%,
-            #7C3AED 100%
+            #4F7CFF 0%,
+            #97B6FF 25%,
+            #4F7CFF 50%,
+            #97B6FF 75%,
+            #4F7CFF 100%
           );
           background-size: 200% auto;
           -webkit-background-clip: text;
@@ -312,15 +312,15 @@ export default function CommunityPage() {
       
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-32 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" />
-        <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[600px] h-[600px] bg-blue-400 -top-64 -right-64 animate-pulse" />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 -bottom-32 -left-32 animate-pulse" />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-8">
               <Users size={14} className="animate-pulse" />
               Open Source Community
             </div>
@@ -340,14 +340,14 @@ export default function CommunityPage() {
 
           <Reveal delay={300}>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="#1.-code-contributions" className="group relative px-8 py-4 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] text-white rounded-2xl font-bold shadow-xl shadow-violet-500/30 hover:shadow-violet-500/50 transition-all duration-300 overflow-hidden">
+              <a href="#1.-code-contributions" className="group relative px-8 py-4 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] text-white rounded-2xl font-bold shadow-xl shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300 overflow-hidden">
                 <span className="relative z-10 flex items-center gap-2">
                   Start Contributing
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#6D28D9] to-[#7C3AED] opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#2547C4] to-[#4F7CFF] opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp" target="_blank" className="group px-8 py-4 bg-white dark:bg-zinc-900/80 backdrop-blur-sm border-2 border-zinc-200 dark:border-zinc-800 text-[#18181B] dark:text-[#FAFAFA] rounded-2xl font-bold hover:border-[#7C3AED] hover:bg-[#7C3AED]/5 transition-all duration-300 flex items-center gap-3 shadow-lg">
+              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp" target="_blank" className="group px-8 py-4 bg-white dark:bg-zinc-900/80 backdrop-blur-sm border-2 border-zinc-200 dark:border-zinc-800 text-[#18181B] dark:text-[#FAFAFA] rounded-2xl font-bold hover:border-[#4F7CFF] hover:bg-[#4F7CFF]/5 transition-all duration-300 flex items-center gap-3 shadow-lg">
                 <Github size={20} className="group-hover:rotate-12 transition-transform" />
                 GitHub Repo
               </a>
@@ -358,7 +358,7 @@ export default function CommunityPage() {
 
       {/* WHY CONTRIBUTE */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-950 overflow-hidden">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7C3AED]/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4F7CFF]/30 to-transparent" />
         
         <div className="max-w-7xl mx-auto">
           <SectionHeader title="What's in It for You?" subtitle="Contributing to open-source projects like Scolect offers benefits beyond altruism." />
@@ -425,7 +425,7 @@ export default function CommunityPage() {
 
       {/* WAYS TO CONTRIBUTE */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-white via-zinc-50/50 to-white dark:from-zinc-950 dark:via-zinc-900/30 dark:to-zinc-950 border-y border-zinc-200 dark:border-zinc-800">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-[#7C3AED]/10 rounded-full blur-[100px] z-0" />
+        <div className="absolute top-20 right-10 w-80 h-80 bg-[#4F7CFF]/10 rounded-full blur-[100px] z-0" />
         <div className="absolute bottom-40 left-10 w-60 h-60 bg-[#14B8A6]/10 rounded-full blur-[80px] z-0" />
         
         <div className="max-w-6xl mx-auto relative z-10">
@@ -453,15 +453,15 @@ export default function CommunityPage() {
                     flutter run
                   </CodeBlock>
                 </div>
-                <p>3. <strong className="text-[#18181B] dark:text-[#FAFAFA]">Create Branch:</strong> <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-lg text-[#7C3AED]">git checkout -b feature/my-feature</code></p>
+                <p>3. <strong className="text-[#18181B] dark:text-[#FAFAFA]">Create Branch:</strong> <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-lg text-[#2F5BE8]">git checkout -b feature/my-feature</code></p>
                 <p>4. <strong className="text-[#18181B] dark:text-[#FAFAFA]">Code & Test:</strong> Make changes and write tests.</p>
                 <p>5. <strong className="text-[#18181B] dark:text-[#FAFAFA]">Pull Request:</strong> Submit with a clear description.</p>
               </div>
             }
             extraContent={
               <div className="mt-8 bg-gradient-to-br from-zinc-50 to-zinc-100/50 dark:from-zinc-950 dark:to-zinc-900/50 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-inner">
-                <h5 className="font-bold text-sm uppercase mb-3 bg-gradient-to-r from-[#7C3AED] to-[#14B8A6] bg-clip-text text-transparent flex items-center gap-2">
-                  <Sparkles size={14} className="text-[#7C3AED]" />
+                <h5 className="font-bold text-sm uppercase mb-3 bg-gradient-to-r from-[#4F7CFF] to-[#14B8A6] bg-clip-text text-transparent flex items-center gap-2">
+                  <Sparkles size={14} className="text-[#2F5BE8]" />
                   Need Ideas?
                 </h5>
                 <ul className="text-sm space-y-2">
@@ -494,8 +494,8 @@ export default function CommunityPage() {
               </ol>
             }
             extraContent={
-              <div className="mt-6 text-sm p-4 bg-[#7C3AED]/5 rounded-xl border border-[#7C3AED]/20">
-                <strong className="text-[#7C3AED]">Tools We Use:</strong> <span className="text-[#52525B] dark:text-[#A1A1AA]">Figma, Material Design widgets, Lucide Icons.</span>
+              <div className="mt-6 text-sm p-4 bg-[#4F7CFF]/5 rounded-xl border border-[#4F7CFF]/20">
+                <strong className="text-[#2F5BE8]">Tools We Use:</strong> <span className="text-[#52525B] dark:text-[#A1A1AA]">Figma, Material Design widgets, Lucide Icons.</span>
               </div>
             }
           />
@@ -517,7 +517,7 @@ export default function CommunityPage() {
                 <li>Identify documentation gaps by reading current docs.</li>
                 <li>Write clear content in Markdown.</li>
                 <li>Include screenshots for visual learners.</li>
-                <li>Submit via Pull Request to the <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#7C3AED]">docs</code> folder.</li>
+                <li>Submit via Pull Request to the <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#2F5BE8]">docs</code> folder.</li>
               </ol>
             }
           />
@@ -537,7 +537,7 @@ export default function CommunityPage() {
               <div className="space-y-3 text-sm">
                 <p>1. Check supported languages in the repo.</p>
                 <p>2. Request new language via Issue if needed.</p>
-                <p>3. Translate the ARB file: <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#7C3AED]">app_en.arb</code> → <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#14B8A6]">app_es.arb</code></p>
+                <p>3. Translate the ARB file: <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#2F5BE8]">app_en.arb</code> → <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-0.5 rounded-lg text-[#14B8A6]">app_es.arb</code></p>
                 <p>4. Test your translation in the app.</p>
                 <p>5. Submit Pull Request.</p>
               </div>
@@ -585,11 +585,11 @@ export default function CommunityPage() {
               <div className="text-sm">
                 <p className="mb-4 font-semibold text-[#18181B] dark:text-[#FAFAFA]">Where to Help:</p>
                 <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#7C3AED] transition-colors cursor-pointer">GitHub Discussions</span>
-                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#7C3AED] transition-colors cursor-pointer">Reddit</span>
-                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#7C3AED] transition-colors cursor-pointer">Discord</span>
+                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#4F7CFF] transition-colors cursor-pointer">GitHub Discussions</span>
+                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#4F7CFF] transition-colors cursor-pointer">Reddit</span>
+                  <span className="px-4 py-2 bg-gradient-to-r from-zinc-100 to-zinc-50 dark:from-zinc-800 dark:to-zinc-800/50 rounded-xl border border-zinc-200 dark:border-zinc-700 hover:border-[#4F7CFF] transition-colors cursor-pointer">Discord</span>
                 </div>
-                <p className="mt-6 italic text-[#7C3AED] dark:text-[#8B5CF6] bg-[#7C3AED]/5 px-4 py-3 rounded-xl">Be patient and kind—everyone starts as a beginner.</p>
+                <p className="mt-6 italic text-[#2F5BE8] dark:text-[#7296FF] bg-[#4F7CFF]/5 px-4 py-3 rounded-xl">Be patient and kind—everyone starts as a beginner.</p>
               </div>
             }
           />
@@ -610,11 +610,11 @@ export default function CommunityPage() {
                 <p className="mb-3 font-semibold text-[#18181B] dark:text-[#FAFAFA]">Content Ideas:</p>
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#7C3AED]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4F7CFF]" />
                     &quot;How I Doubled My Productive Time&quot;
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#8B5CF6]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#7296FF]" />
                     &quot;Privacy-Friendly Screen Time Tracking Review&quot;
                   </li>
                   <li className="flex items-center gap-2">
@@ -630,7 +630,7 @@ export default function CommunityPage() {
 
       {/* RECOGNITION */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-950 overflow-hidden">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#F59E0B]/10 to-[#7C3AED]/10 blur-[150px] rounded-full z-0" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-r from-[#F59E0B]/10 to-[#4F7CFF]/10 blur-[150px] rounded-full z-0" />
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <Reveal>
@@ -645,7 +645,7 @@ export default function CommunityPage() {
           
           <Reveal delay={200}>
             <p className="text-lg text-[#52525B] dark:text-[#A1A1AA] mb-12 max-w-2xl mx-auto">
-              All contributors are recognized in our <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-lg text-[#7C3AED]">CONTRIBUTORS.md</code> file on GitHub. Your contributions—no matter how small—make Scolect better for everyone.
+              All contributors are recognized in our <code className="bg-zinc-100 dark:bg-zinc-800 px-2 py-1 rounded-lg text-[#2F5BE8]">CONTRIBUTORS.md</code> file on GitHub. Your contributions—no matter how small—make Scolect better for everyone.
             </p>
           </Reveal>
           
@@ -664,7 +664,7 @@ export default function CommunityPage() {
                   </div>
                 ))}
               </div>
-              <p className="mt-10 text-sm font-semibold bg-gradient-to-r from-[#7C3AED] to-[#F59E0B] bg-clip-text text-transparent">
+              <p className="mt-10 text-sm font-semibold bg-gradient-to-r from-[#4F7CFF] to-[#F59E0B] bg-clip-text text-transparent">
                 Want to be featured? Start contributing today!
               </p>
             </div>
@@ -763,7 +763,7 @@ export default function CommunityPage() {
           <Reveal direction="left">
             <div>
               <h2 className="text-3xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-10 flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] text-white">
+                <div className="p-2 rounded-xl bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] text-white">
                   <ArrowRight size={24} />
                 </div>
                 Your First Contribution
@@ -776,8 +776,8 @@ export default function CommunityPage() {
                   { step: 4, title: "Pull Request", desc: "Submit your work and celebrate when merged!" },
                 ].map((item, idx) => (
                   <div key={idx} className="relative pl-10 pb-8 last:pb-0">
-                    <div className={`absolute left-0 top-0 bottom-0 w-px ${idx === 3 ? '' : 'bg-gradient-to-b from-[#7C3AED] to-zinc-200 dark:to-zinc-800'}`} />
-                    <div className={`absolute -left-[10px] top-0 w-5 h-5 rounded-full ring-4 ring-[#FAFAFA] dark:ring-[#09090B] ${item.active ? 'bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] shadow-lg shadow-[#7C3AED]/30' : 'bg-zinc-300 dark:bg-zinc-700'}`} />
+                    <div className={`absolute left-0 top-0 bottom-0 w-px ${idx === 3 ? '' : 'bg-gradient-to-b from-[#4F7CFF] to-zinc-200 dark:to-zinc-800'}`} />
+                    <div className={`absolute -left-[10px] top-0 w-5 h-5 rounded-full ring-4 ring-[#FAFAFA] dark:ring-[#09090B] ${item.active ? 'bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] shadow-lg shadow-[#4F7CFF]/30' : 'bg-zinc-300 dark:bg-zinc-700'}`} />
                     <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Step {item.step}: {item.title}</h4>
                     <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">{item.desc}</p>
                   </div>
@@ -800,12 +800,12 @@ export default function CommunityPage() {
                   { title: "Flutter Docs", external: true, link:"https://docs.flutter.dev/" },
                   { title: "Dart Language Tour", external: true, link:"https://dart.dev/overview" },
                 ].map((item, idx) => (
-                  <a key={idx} href={item.link} className="group p-5 bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] hover:shadow-lg hover:shadow-[#7C3AED]/10 transition-all duration-300 flex items-center justify-between">
-                    <span className="text-[#18181B] dark:text-[#FAFAFA] font-medium group-hover:text-[#7C3AED] transition-colors">{item.title}</span>
+                  <a key={idx} href={item.link} className="group p-5 bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] hover:shadow-lg hover:shadow-[#4F7CFF]/10 transition-all duration-300 flex items-center justify-between">
+                    <span className="text-[#18181B] dark:text-[#FAFAFA] font-medium group-hover:text-[#2F5BE8] transition-colors">{item.title}</span>
                     {item.external ? (
-                      <ExternalLink size={18} className="text-zinc-400 group-hover:text-[#7C3AED] group-hover:scale-110 transition-all" />
+                      <ExternalLink size={18} className="text-zinc-400 group-hover:text-[#2F5BE8] group-hover:scale-110 transition-all" />
                     ) : (
-                      <ArrowRight size={18} className="text-zinc-400 group-hover:text-[#7C3AED] group-hover:translate-x-1 transition-all" />
+                      <ArrowRight size={18} className="text-zinc-400 group-hover:text-[#2F5BE8] group-hover:translate-x-1 transition-all" />
                     )}
                   </a>
                 ))}
@@ -818,7 +818,7 @@ export default function CommunityPage() {
       {/* FINAL CTA */}
       <section className="relative py-32 px-6 text-center bg-gradient-to-br from-zinc-50 via-zinc-100 to-zinc-50 dark:from-zinc-900 dark:via-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-white overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#7C3AED]/20 dark:bg-[#7C3AED]/30 rounded-full blur-[150px] animate-pulse" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4F7CFF]/20 dark:bg-[#4F7CFF]/30 rounded-full blur-[150px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#14B8A6]/15 dark:bg-[#14B8A6]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
         
@@ -827,13 +827,13 @@ export default function CommunityPage() {
         <div className="max-w-3xl mx-auto relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/5 dark:bg-white/5 border border-zinc-900/10 dark:border-white/10 backdrop-blur-sm mb-8">
-              <Heart size={16} className="text-[#7C3AED]" />
+              <Heart size={16} className="text-[#2F5BE8]" />
               <span className="text-sm text-zinc-600 dark:text-zinc-400">Every contribution matters</span>
             </div>
           </Reveal>
           
           <Reveal delay={100}>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zinc-900 via-[#8B5CF6] to-zinc-900 dark:from-white dark:via-[#8B5CF6] dark:to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zinc-900 via-[#7296FF] to-zinc-900 dark:from-white dark:via-[#7296FF] dark:to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
               Ready to Make an Impact?
             </h2>
           </Reveal>
@@ -846,7 +846,7 @@ export default function CommunityPage() {
           
           <Reveal delay={300}>
             <div className="flex flex-col sm:flex-row justify-center gap-5">
-              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/issues" target='_blank' className="group relative px-10 py-5 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] rounded-2xl font-bold text-white transition-all duration-300 shadow-2xl shadow-violet-500/20 dark:shadow-violet-900/40 overflow-hidden">
+              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/issues" target='_blank' className="group relative px-10 py-5 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] rounded-2xl font-bold text-white transition-all duration-300 shadow-2xl shadow-blue-500/20 dark:shadow-blue-900/40 overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   Browse Open Issues
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />

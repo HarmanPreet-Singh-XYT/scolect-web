@@ -28,7 +28,7 @@ import Footer from '@/components/layout/Footer';
 import BugReportForm from '@/components/ReportForm';
 
 // --- Visual Identity Constants ---
-// Primary: #7C3AED (Violet 600)
+// Primary: #4F7CFF (Logo Blue)
 // Background: #FAFAFA (Zinc 50) / #09090B (Zinc 950)
 // Text: #18181B (Zinc 900) / #FAFAFA (Zinc 50)
 
@@ -134,9 +134,9 @@ const TemplateBlock = () => {
   };
 
   return (
-    <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-[#18181B] shadow-lg hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-500 group">
+    <div className="relative rounded-xl overflow-hidden border border-zinc-800 bg-[#18181B] shadow-lg hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 group">
       {/* Glow effect on hover */}
-      <div className="absolute inset-0 bg-gradient-to-r from-violet-500/0 via-violet-500/5 to-violet-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
       
       <div className="flex items-center justify-between px-4 py-2 bg-zinc-800 border-b border-zinc-700">
         <div className="flex items-center gap-2">
@@ -192,7 +192,7 @@ export default function ReportBugPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED]">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8]">
       {/* Global Styles */}
       <style jsx global>{`
         @keyframes fade-in {
@@ -279,7 +279,7 @@ export default function ReportBugPage() {
       <div className="pt-32 pb-20 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 relative overflow-hidden">
         {/* Background gradient orbs */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#F43F5E]/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#7C3AED]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#4F7CFF]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         
         <FloatingParticles />
         
@@ -336,7 +336,7 @@ export default function ReportBugPage() {
 
       {/* CHECKLIST */}
       <section className="py-20 px-6 bg-white dark:bg-zinc-950 border-y border-zinc-200 dark:border-zinc-800 relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-violet-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           <SectionHeader title="Quick Checklist Before Reporting" subtitle="Checking these items helps us fix the issue faster and avoids duplicate reports." />
@@ -421,9 +421,9 @@ export default function ReportBugPage() {
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900 text-[#18181B] dark:text-[#FAFAFA] shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:scale-110 transition-transform duration-300 font-bold">
                 1
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#7C3AED]/50 transition-all duration-300 group-hover:-translate-y-1">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#4F7CFF]/50 transition-all duration-300 group-hover:-translate-y-1">
                 <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#7C3AED] group-hover:animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#4F7CFF] group-hover:animate-pulse" />
                   Describe clearly
                 </h3>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">
@@ -437,9 +437,9 @@ export default function ReportBugPage() {
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900 text-[#18181B] dark:text-[#FAFAFA] shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:scale-110 transition-transform duration-300 font-bold">
                 2
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#7C3AED]/50 transition-all duration-300 group-hover:-translate-y-1">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#4F7CFF]/50 transition-all duration-300 group-hover:-translate-y-1">
                 <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#7C3AED] group-hover:animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#4F7CFF] group-hover:animate-pulse" />
                   Steps to Reproduce
                 </h3>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">
@@ -453,9 +453,9 @@ export default function ReportBugPage() {
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-900 text-[#18181B] dark:text-[#FAFAFA] shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:scale-110 transition-transform duration-300 font-bold">
                 3
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#7C3AED]/50 transition-all duration-300 group-hover:-translate-y-1">
+              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#4F7CFF]/50 transition-all duration-300 group-hover:-translate-y-1">
                 <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-[#7C3AED] group-hover:animate-pulse" />
+                  <span className="w-2 h-2 rounded-full bg-[#4F7CFF] group-hover:animate-pulse" />
                   Screenshots & Info
                 </h3>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">
@@ -473,18 +473,18 @@ export default function ReportBugPage() {
         {/* Animated grid background */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(124, 58, 237, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 58, 237, 0.3) 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(rgba(79, 124, 255, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(79, 124, 255, 0.3) 1px, transparent 1px)',
             backgroundSize: '50px 50px'
           }} />
         </div>
         
         {/* Gradient orbs */}
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#7C3AED]/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-[#4F7CFF]/20 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#F43F5E]/10 rounded-full blur-3xl" />
         
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-300 text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium mb-6">
               <Sparkles size={14} /> Pro Tip
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Bug Report Template</h2>
@@ -516,7 +516,7 @@ export default function ReportBugPage() {
 
       {/* ALTERNATIVE SUBMISSION OPTIONS */}
       <section className="py-20 px-6 bg-[#FAFAFA] dark:bg-[#09090B] relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <SectionHeader title="Alternative Submission Methods" subtitle="Prefer a different approach? We've got you covered." center />
@@ -542,14 +542,14 @@ export default function ReportBugPage() {
 
             {/* Email */}
             <a href="mailto:bugs@scolect.com">
-              <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] transition-all duration-500 group hover:shadow-2xl hover:shadow-violet-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
-                <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <Mail size={48} className="text-[#7C3AED] mb-6 group-hover:scale-110 transition-transform duration-300" />
+              <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] transition-all duration-500 group hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <Mail size={48} className="text-[#2F5BE8] mb-6 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Email Report</h3>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6">
                   For bugs containing personal data or if you prefer email.
                 </p>
-                <p className="inline-flex items-center gap-2 font-bold text-[#7C3AED] hover:gap-4 transition-all duration-300 group/link">
+                <p className="inline-flex items-center gap-2 font-bold text-[#2F5BE8] hover:gap-4 transition-all duration-300 group/link">
                   Email Bug Report <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
                 </p>
               </div>
@@ -595,7 +595,7 @@ export default function ReportBugPage() {
               >
                 <div className={`w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg ${
                   step.highlight 
-                    ? 'bg-[#7C3AED]/10 text-[#7C3AED] group-hover:shadow-violet-500/20' 
+                    ? 'bg-[#4F7CFF]/10 text-[#2F5BE8] group-hover:shadow-blue-500/20' 
                     : 'bg-zinc-100 dark:bg-zinc-900 text-zinc-500 group-hover:shadow-zinc-500/10'
                 }`}>
                   <step.icon size={32} className="group-hover:animate-pulse" />
@@ -632,7 +632,7 @@ export default function ReportBugPage() {
             ].map((issue, idx) => (
               <div 
                 key={idx}
-                className="p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-[#7C3AED]/50 hover:shadow-lg transition-all duration-300 group cursor-default animate-slide-up"
+                className="p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-[#4F7CFF]/50 hover:shadow-lg transition-all duration-300 group cursor-default animate-slide-up"
                 style={{ animationDelay: `${idx * 100}ms` }}
               >
                 <div>
@@ -646,7 +646,7 @@ export default function ReportBugPage() {
                     >
                       {issue.status}
                     </span>
-                    <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] transition-colors">{issue.title}</h4>
+                    <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] transition-colors">{issue.title}</h4>
                   </div>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">{issue.workaround}</p>
                 </div>
@@ -660,7 +660,7 @@ export default function ReportBugPage() {
       <section className="py-24 px-6 text-center bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 text-white relative overflow-hidden">
         {/* Animated background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#7C3AED]/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#4F7CFF]/20 rounded-full blur-3xl animate-pulse" />
         </div>
         
         {/* Grid pattern */}
@@ -672,7 +672,7 @@ export default function ReportBugPage() {
         </div>
         
         <div className="max-w-3xl mx-auto relative z-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-violet-500 to-violet-600 mb-8 shadow-lg shadow-violet-500/30 animate-bounce">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mb-8 shadow-lg shadow-blue-500/30 animate-bounce">
             <Check size={32} />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-zinc-200 to-white bg-clip-text text-transparent">
@@ -684,7 +684,7 @@ export default function ReportBugPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a 
               href="https://github.com/scolect/issues" 
-              className="px-8 py-4 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] rounded-xl font-bold transition-all duration-300 shadow-lg shadow-violet-900/30 hover:shadow-xl hover:shadow-violet-900/40 hover:-translate-y-1 flex items-center justify-center gap-2 group"
+              className="px-8 py-4 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-900/30 hover:shadow-xl hover:shadow-blue-900/40 hover:-translate-y-1 flex items-center justify-center gap-2 group"
             >
               <Github size={20} />
               Report on GitHub

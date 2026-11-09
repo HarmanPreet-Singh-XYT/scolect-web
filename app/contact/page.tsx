@@ -224,25 +224,25 @@ const ContactPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative pt-24 pb-16 px-6 text-center max-w-4xl mx-auto overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--primary)]/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }} />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }} />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s', animationDelay: '2s' }} />
         
         <FloatingParticles />
         
         <div className={`relative z-10 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-6 border border-[var(--primary)]/20 backdrop-blur-sm hover:bg-[var(--primary)]/20 transition-all duration-300 cursor-default group">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--primary)]/10 text-[var(--primary-ink)] text-sm font-medium mb-6 border border-[var(--primary)]/20 backdrop-blur-sm hover:bg-[var(--primary)]/20 transition-all duration-300 cursor-default group">
             <Mail size={16} className="group-hover:rotate-12 transition-transform duration-300" />
             We'd Love to Hear From You
           </div>
           
           <h1 className={`text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[var(--text-main)] transition-all duration-1000 ease-out delay-150 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-fuchsia-500 animate-gradient relative">
+            Get in <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-blue-400 animate-gradient relative">
               Touch
               <svg className="absolute -bottom-2 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
                 <path d="M0,5 Q25,0 50,5 T100,5" stroke="url(#gradient)" strokeWidth="2" fill="none" />
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
                     <stop offset="0%" stopColor="var(--primary)" />
-                    <stop offset="100%" stopColor="#D946EF" />
+                    <stop offset="100%" stopColor="#7296FF" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -306,11 +306,11 @@ const ContactPage: React.FC = () => {
         <div className="absolute top-10 left-10 w-20 h-20 border border-[var(--border)] rounded-full opacity-30" />
         <div className="absolute bottom-10 right-10 w-32 h-32 border border-[var(--border)] rounded-full opacity-30" />
         <div className="absolute top-1/2 left-0 w-40 h-40 bg-[var(--primary)]/5 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 right-0 w-40 h-40 bg-fuchsia-500/5 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 right-0 w-40 h-40 bg-blue-400/5 rounded-full blur-3xl" />
         
         <div className="max-w-3xl mx-auto relative z-10">
           <AnimatedSection className="text-center mb-10">
-            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[var(--primary)] to-fuchsia-500 mb-6 shadow-lg shadow-[var(--primary)]/30 animate-gentle-bounce">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-[var(--primary)] to-blue-400 mb-6 shadow-lg shadow-[var(--primary)]/30 animate-gentle-bounce">
               <Send className="w-7 h-7 text-white" />
             </div>
             <h2 className="text-3xl font-bold mb-3">Send Us a Message</h2>
@@ -421,7 +421,7 @@ const ContactPage: React.FC = () => {
                   name="newsletter"
                   checked={formData.newsletter}
                   onChange={handleInputChange}
-                  className="mt-1 rounded border-[var(--border)] text-[var(--primary)] focus:ring-[var(--primary)] cursor-pointer" 
+                  className="mt-1 rounded border-[var(--border)] text-[var(--primary-ink)] focus:ring-[var(--primary)] cursor-pointer" 
                 />
                 <label htmlFor="newsletter" className="text-sm text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-main)] transition-colors">Keep me updated with Scolect news and releases</label>
               </div>
@@ -430,7 +430,7 @@ const ContactPage: React.FC = () => {
                 <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-[var(--primary)] to-fuchsia-600 hover:from-[var(--primary-hover)] hover:to-fuchsia-700 text-white rounded-xl font-semibold shadow-lg shadow-[var(--primary)]/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[var(--primary)]/40 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                  className="w-full md:w-auto px-8 py-3 bg-gradient-to-r from-[var(--primary)] to-blue-500 hover:from-[var(--primary-hover)] hover:to-blue-600 text-white rounded-xl font-semibold shadow-lg shadow-[var(--primary)]/30 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl hover:shadow-[var(--primary)]/40 flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                 >
                   {isSubmitting ? (
                     <>
@@ -457,7 +457,7 @@ const ContactPage: React.FC = () => {
       <section className="px-6 py-16 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Mail className="w-6 h-6 text-[var(--primary)]" />
+            <Mail className="w-6 h-6 text-[var(--primary-ink)]" />
             Prefer Email?
           </h2>
           <p className="text-[var(--text-muted)] mb-8">You can reach us directly at these addresses:</p>
@@ -511,7 +511,7 @@ const ContactPage: React.FC = () => {
         <AnimatedSection delay={150}>
           <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-500 group">
             <h3 className="font-bold text-lg mb-4 flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-[var(--primary)]" />
+              <Sparkles className="w-5 h-5 text-[var(--primary-ink)]" />
               Email Tips for Faster Response
             </h3>
             
@@ -565,7 +565,7 @@ const ContactPage: React.FC = () => {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <AnimatedSection className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary)] text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--primary)]/10 text-[var(--primary-ink)] text-sm font-medium mb-4">
               <MessageSquare size={14} /> Join Our Community
             </div>
             <h2 className="text-3xl font-bold mb-4">Join the Community</h2>
@@ -608,7 +608,7 @@ const ContactPage: React.FC = () => {
       <section className="px-6 py-16 max-w-5xl mx-auto">
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-8 text-center flex items-center justify-center gap-2">
-            <Clock className="w-6 h-6 text-[var(--primary)]" />
+            <Clock className="w-6 h-6 text-[var(--primary-ink)]" />
             When Can You Expect a Response?
           </h2>
         </AnimatedSection>
@@ -616,10 +616,10 @@ const ContactPage: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <AnimatedSection>
             <div className="bg-[var(--bg-page)] border border-[var(--border)] rounded-xl p-6 hover:shadow-lg transition-shadow duration-300 h-full">
-              <h3 className="font-bold mb-4 flex items-center gap-2"><Clock className="w-5 h-5 text-[var(--primary)]"/> Typical Response Times</h3>
+              <h3 className="font-bold mb-4 flex items-center gap-2"><Clock className="w-5 h-5 text-[var(--primary-ink)]"/> Typical Response Times</h3>
               <div className="space-y-4">
                 <ResponseRow label="Critical Bugs" time="Within 24 hrs" priority="Highest" color="text-[var(--danger)]" index={0} />
-                <ResponseRow label="General Support" time="1-3 business days" priority="High" color="text-[var(--primary)]" index={1} />
+                <ResponseRow label="General Support" time="1-3 business days" priority="High" color="text-[var(--primary-ink)]" index={1} />
                 <ResponseRow label="Feature Requests" time="2-5 business days" priority="Medium" color="text-[var(--text-muted)]" index={2} />
                 <ResponseRow label="Partnerships" time="3-5 business days" priority="Medium" color="text-[var(--text-muted)]" index={3} />
               </div>
@@ -659,7 +659,7 @@ const ContactPage: React.FC = () => {
           
           <StaggeredGrid className="grid md:grid-cols-3 gap-6">
             <CheckFirstCard 
-              icon={<HelpCircle className="w-6 h-6 text-[var(--primary)]"/>} 
+              icon={<HelpCircle className="w-6 h-6 text-[var(--primary-ink)]"/>} 
               title="1. Check the FAQ" 
               desc="Setup, configuration, and troubleshooting guides."
               index={0}
@@ -673,7 +673,7 @@ const ContactPage: React.FC = () => {
               link="/docs"
             />
             <CheckFirstCard 
-              icon={<Search className="w-6 h-6 text-fuchsia-500"/>} 
+              icon={<Search className="w-6 h-6 text-blue-400"/>} 
               title="3. Search GitHub" 
               desc="See if your issue is already being discussed."
               index={2}
@@ -731,17 +731,17 @@ const ContactPage: React.FC = () => {
                 <span className="text-[var(--text-muted)]">Subject:</span> Focus Mode Timer Not Starting (v1.2.0)<br/><br/>
                 Hi Scolect Team,<br/><br/>
                 I'm experiencing an issue with Focus Mode.<br/><br/>
-                <span className="text-[var(--primary)] font-bold">PROBLEM:</span><br/>
+                <span className="text-[var(--primary-ink)] font-bold">PROBLEM:</span><br/>
                 When I click the Play button... timer displays 00:00...<br/><br/>
-                <span className="text-[var(--primary)] font-bold">MY SETUP:</span><br/>
+                <span className="text-[var(--primary-ink)] font-bold">MY SETUP:</span><br/>
                 - Scolect Version: 1.2.0<br/>
                 - Operating System: macOS Sonoma 14.2 / Windows 11 Pro 22H2 / Ubuntu 22.04<br/>
                 - RAM: 16 GB<br/><br/>
-                <span className="text-[var(--primary)] font-bold">STEPS TO REPRODUCE:</span><br/>
+                <span className="text-[var(--primary-ink)] font-bold">STEPS TO REPRODUCE:</span><br/>
                 1. Open Scolect<br/>
                 2. Click "Focus Mode"<br/>
                 3. ...<br/><br/>
-                <span className="text-[var(--primary)] font-bold">WHAT I'VE TRIED:</span><br/>
+                <span className="text-[var(--primary-ink)] font-bold">WHAT I'VE TRIED:</span><br/>
                 ✓ Restarted app - didn't help<br/>
                 ✓ Restarted computer - didn't help<br/><br/>
                 [Attached: screenshot.png]
@@ -765,7 +765,7 @@ const ContactPage: React.FC = () => {
       <section className="px-6 py-12 max-w-4xl mx-auto border-t border-[var(--border)]">
         <AnimatedSection>
           <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
-            <Shield className="w-5 h-5 text-[var(--primary)]" />
+            <Shield className="w-5 h-5 text-[var(--primary-ink)]" />
             Your Privacy Matters
           </h2>
           <div className="bg-[var(--bg-card)] border border-[var(--border)] rounded-xl p-6 grid md:grid-cols-2 gap-8 hover:shadow-lg transition-shadow duration-300">
@@ -800,7 +800,7 @@ const ContactPage: React.FC = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2 className="text-2xl font-bold mb-8 flex items-center gap-2">
-              <HelpCircle className="w-6 h-6 text-[var(--primary)]" />
+              <HelpCircle className="w-6 h-6 text-[var(--primary-ink)]" />
               Common Questions
             </h2>
           </AnimatedSection>
@@ -818,7 +818,7 @@ const ContactPage: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[var(--primary)]/5 to-transparent" />
         
         <AnimatedSection className="max-w-2xl text-center mx-auto relative z-10">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--primary)] to-fuchsia-500 mb-6 shadow-lg">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-br from-[var(--primary)] to-blue-400 mb-6 shadow-lg">
             <Mail className="w-6 h-6 text-white" />
           </div>
           
@@ -840,7 +840,7 @@ const ContactPage: React.FC = () => {
             
             <button 
               onClick={() => router.push("mailto:support@scolect.com")} 
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-medium bg-gradient-to-r from-[var(--primary)] to-fuchsia-600 text-white hover:shadow-lg hover:shadow-[var(--primary)]/25 transition-all duration-200 group"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-medium bg-gradient-to-r from-[var(--primary)] to-blue-500 text-white hover:shadow-lg hover:shadow-[var(--primary)]/25 transition-all duration-200 group"
             >
               <Mail className="w-4 h-4" />
               Email Support
@@ -849,7 +849,7 @@ const ContactPage: React.FC = () => {
             
             <button 
               onClick={() => router.push("/faq")} 
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary)] transition-all duration-200 group"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-medium bg-[var(--bg-card)] border border-[var(--border)] text-[var(--text-main)] hover:border-[var(--primary)] hover:text-[var(--primary-ink)] transition-all duration-200 group"
             >
               <HelpCircle className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
               Visit FAQ
@@ -907,7 +907,7 @@ const ContactOption: React.FC<ContactOptionProps> = ({ icon, title, desc, exampl
     <div className="bg-[var(--bg-page)] w-12 h-12 rounded-xl flex items-center justify-center border border-[var(--border)] mb-4 group-hover:scale-105 group-hover:border-[var(--primary)]/20 transition-all duration-300 relative z-10">
       {icon}
     </div>
-    <h3 className="text-xl font-bold mb-2 text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-200 relative z-10">{title}</h3>
+    <h3 className="text-xl font-bold mb-2 text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-200 relative z-10">{title}</h3>
     <p className="text-[var(--text-muted)] text-sm mb-4 min-h-[40px] relative z-10">{desc}</p>
     
     <div className="flex-grow mb-6 relative z-10">
@@ -924,7 +924,7 @@ const ContactOption: React.FC<ContactOptionProps> = ({ icon, title, desc, exampl
 
     <div className="mt-auto relative z-10">
       <div className="flex items-center gap-2 text-xs font-medium text-[var(--text-muted)] mb-4">
-        <Clock className="w-3 h-3 group-hover:text-[var(--primary)] transition-colors duration-200" />
+        <Clock className="w-3 h-3 group-hover:text-[var(--primary-ink)] transition-colors duration-200" />
         {time}
       </div>
       {subText && <p className="text-xs text-[var(--warning)] mb-2 font-medium flex items-center gap-1"><Sparkles className="w-3 h-3"/>{subText}</p>}
@@ -940,13 +940,13 @@ const EmailRow: React.FC<{ email: string, label: string, desc?: string, icon?: R
     className={`flex ${simple ? 'flex-col' : 'flex-col sm:flex-row sm:items-center'} justify-between p-3 rounded-lg border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)]/40 transition-all duration-200 group hover:shadow-md cursor-default`}
   >
     <div className="flex items-center gap-3">
-      {icon && <div className="text-[var(--text-muted)] group-hover:text-[var(--primary)] transition-colors duration-200">{icon}</div>}
+      {icon && <div className="text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] transition-colors duration-200">{icon}</div>}
       <div>
-        <div className="font-semibold text-sm text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-200">{label}</div>
+        <div className="font-semibold text-sm text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-200">{label}</div>
         {!simple && <div className="text-xs text-[var(--text-muted)]">{desc}</div>}
       </div>
     </div>
-    <a href={`mailto:${email}`} className={`text-sm font-mono text-[var(--primary)] hover:underline ${simple ? 'mt-1' : 'mt-2 sm:mt-0'}`}>
+    <a href={`mailto:${email}`} className={`text-sm font-mono text-[var(--primary-ink)] hover:underline ${simple ? 'mt-1' : 'mt-2 sm:mt-0'}`}>
       {email}
     </a>
   </div>
@@ -959,12 +959,12 @@ const CommunityCard: React.FC<{ icon: React.ReactNode, title: string, desc: stri
     <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--primary)]/3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     
     <div className="flex justify-center mb-4 relative z-10 group-hover:scale-105 transition-transform duration-300">{icon}</div>
-    <h3 className="font-bold text-lg mb-2 relative z-10 group-hover:text-[var(--primary)] transition-colors duration-200">{title}</h3>
+    <h3 className="font-bold text-lg mb-2 relative z-10 group-hover:text-[var(--primary-ink)] transition-colors duration-200">{title}</h3>
     <p className="text-sm text-[var(--text-muted)] mb-4 relative z-10">{desc}</p>
-    <span className="inline-block px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-[var(--text-muted)] mb-4 relative z-10 group-hover:bg-[var(--primary)]/10 group-hover:text-[var(--primary)] transition-all duration-200">
+    <span className="inline-block px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-[var(--text-muted)] mb-4 relative z-10 group-hover:bg-[var(--primary)]/10 group-hover:text-[var(--primary-ink)] transition-all duration-200">
       {meta}
     </span>
-    <a href={btnLink} className="block w-full py-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] text-sm font-medium hover:text-[var(--primary)] hover:border-[var(--primary)] transition-all duration-200 relative z-10 group/link flex items-center justify-center gap-1">
+    <a href={btnLink} className="block w-full py-2 rounded-lg bg-[var(--bg-card)] border border-[var(--border)] text-sm font-medium hover:text-[var(--primary-ink)] hover:border-[var(--primary)] transition-all duration-200 relative z-10 group/link flex items-center justify-center gap-1">
       {linkText}
       <ArrowRight className="w-4 h-4 opacity-0 -ml-4 group-hover/link:opacity-100 group-hover/link:ml-0 transition-all duration-200" />
     </a>
@@ -990,7 +990,7 @@ const CheckFirstCard: React.FC<{ icon: React.ReactNode, title: string, desc: str
   >
     <div className="mt-1 group-hover:scale-105 transition-transform duration-200">{icon}</div>
     <div>
-      <h3 className="font-bold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-200 flex items-center gap-2">
+      <h3 className="font-bold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-200 flex items-center gap-2">
         {title}
         <ArrowRight className="w-4 h-4 opacity-0 -ml-2 group-hover:opacity-100 group-hover:ml-0 transition-all duration-200" />
       </h3>
@@ -1003,8 +1003,8 @@ const FaqItem: React.FC<{ q: string, a: string, index: number }> = ({ q, a, inde
   <div 
     className="p-4 rounded-xl bg-[var(--bg-page)] border border-[var(--border)] hover:border-[var(--primary)]/20 hover:shadow-md transition-all duration-200 group cursor-default"
   >
-    <h4 className="font-bold text-[var(--text-main)] mb-2 flex items-start gap-2 group-hover:text-[var(--primary)] transition-colors duration-200">
-      <HelpCircle className="w-5 h-5 text-[var(--primary)] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200" />
+    <h4 className="font-bold text-[var(--text-main)] mb-2 flex items-start gap-2 group-hover:text-[var(--primary-ink)] transition-colors duration-200">
+      <HelpCircle className="w-5 h-5 text-[var(--primary-ink)] flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-200" />
       {q}
     </h4>
     <p className="text-sm text-[var(--text-muted)] pl-7 group-hover:text-[var(--text-main)] transition-colors duration-200">{a}</p>

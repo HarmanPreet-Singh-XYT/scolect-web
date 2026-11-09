@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
               padding: 20px;
             }
             .header {
-              background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+              background: linear-gradient(135deg, #4F7CFF 0%, #2547C4 100%);
               color: white;
               padding: 30px;
               border-radius: 10px 10px 0 0;
@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
             }
             .field-label {
               font-weight: bold;
-              color: #7C3AED;
+              color: #4F7CFF;
               font-size: 12px;
               text-transform: uppercase;
               letter-spacing: 0.5px;
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
               background: #f9fafb;
               padding: 15px;
               border-radius: 8px;
-              border-left: 3px solid #7C3AED;
+              border-left: 3px solid #4F7CFF;
               white-space: pre-wrap;
               word-wrap: break-word;
             }
@@ -170,7 +170,7 @@ export async function POST(request: NextRequest) {
               <div class="contact-info">
                 <div class="field-label" style="margin-bottom: 10px;">Contact Information</div>
                 ${body.name ? `<p><strong>Name:</strong> ${body.name}</p>` : ''}
-                ${body.email ? `<p><strong>Email:</strong> <a href="mailto:${body.email}" style="color: #7C3AED;">${body.email}</a></p>` : ''}
+                ${body.email ? `<p><strong>Email:</strong> <a href="mailto:${body.email}" style="color: #4F7CFF;">${body.email}</a></p>` : ''}
               </div>
             ` : ''}
             

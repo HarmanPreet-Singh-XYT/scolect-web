@@ -156,8 +156,8 @@ const StatusIcon = ({ status }: { status: 'yes' | 'no' | 'partial' | 'dev' }) =>
       );
     case 'dev':
       return (
-        <div className="flex items-center justify-center gap-1 text-[#7C3AED] font-medium">
-          <div className="p-1 rounded-full bg-[#7C3AED]/10 animate-pulse">
+        <div className="flex items-center justify-center gap-1 text-[#2F5BE8] font-medium">
+          <div className="p-1 rounded-full bg-[#4F7CFF]/10 animate-pulse">
             <RefreshCw size={16} />
           </div>
         </div>
@@ -172,7 +172,7 @@ const ComparisonRow = ({ feature, scolect, rescue, os, cold, focusme, isHeader =
     return (
       <div className="grid grid-cols-6 gap-4 p-5 border-b border-zinc-200 dark:border-zinc-800 bg-gradient-to-r from-zinc-100 via-zinc-50 to-zinc-100 dark:from-zinc-900 dark:via-zinc-900/80 dark:to-zinc-900 font-bold text-sm md:text-base text-[#18181B] dark:text-[#FAFAFA] items-center text-center sticky top-0 z-10 backdrop-blur-sm">
         <div className="text-left pl-4">Feature</div>
-        <div className="text-[#7C3AED] dark:text-[#8B5CF6] flex items-center justify-center gap-2">
+        <div className="text-[#2F5BE8] dark:text-[#7296FF] flex items-center justify-center gap-2">
           <Sparkles size={14} className="animate-pulse" />
           Scolect
         </div>
@@ -188,11 +188,11 @@ const ComparisonRow = ({ feature, scolect, rescue, os, cold, focusme, isHeader =
 
   return (
     <div 
-      className="grid grid-cols-6 gap-4 p-4 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-gradient-to-r hover:from-[#7C3AED]/5 hover:via-transparent hover:to-transparent dark:hover:from-[#7C3AED]/10 text-sm items-center text-center transition-all duration-300 group"
+      className="grid grid-cols-6 gap-4 p-4 border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-gradient-to-r hover:from-[#4F7CFF]/5 hover:via-transparent hover:to-transparent dark:hover:from-[#4F7CFF]/10 text-sm items-center text-center transition-all duration-300 group"
     >
-      <div className="text-left font-medium text-[#18181B] dark:text-[#FAFAFA] pl-4 group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">{feature}</div>
-      <div className="font-bold bg-gradient-to-br from-[#7C3AED]/10 to-[#7C3AED]/5 dark:from-[#7C3AED]/20 dark:to-[#7C3AED]/10 py-3 rounded-xl text-[#18181B] dark:text-[#FAFAFA] border border-[#7C3AED]/20 shadow-sm group-hover:shadow-[#7C3AED]/20 group-hover:border-[#7C3AED]/40 transition-all">
-        {isStatusValue(scolect) ? <StatusIcon status={scolect} /> : <span className="text-[#7C3AED] dark:text-[#8B5CF6] font-semibold">{scolect}</span>}
+      <div className="text-left font-medium text-[#18181B] dark:text-[#FAFAFA] pl-4 group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">{feature}</div>
+      <div className="font-bold bg-gradient-to-br from-[#4F7CFF]/10 to-[#4F7CFF]/5 dark:from-[#4F7CFF]/20 dark:to-[#4F7CFF]/10 py-3 rounded-xl text-[#18181B] dark:text-[#FAFAFA] border border-[#4F7CFF]/20 shadow-sm group-hover:shadow-[#4F7CFF]/20 group-hover:border-[#4F7CFF]/40 transition-all">
+        {isStatusValue(scolect) ? <StatusIcon status={scolect} /> : <span className="text-[#2F5BE8] dark:text-[#7296FF] font-semibold">{scolect}</span>}
       </div>
       <div className="text-[#52525B] dark:text-[#A1A1AA]">{isStatusValue(rescue) ? <StatusIcon status={rescue} /> : rescue}</div>
       <div className="hidden md:block text-[#52525B] dark:text-[#A1A1AA]">{isStatusValue(os) ? <StatusIcon status={os} /> : os}</div>
@@ -208,16 +208,16 @@ const CompetitorCard = ({ title, advantages, disadvantages, summary, icon: Icon,
   return (
     <Reveal delay={index * 100}>
       <div 
-        className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-3xl border border-zinc-200 dark:border-zinc-800 p-8 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-2xl hover:shadow-[#7C3AED]/10 transition-all duration-500 overflow-hidden"
+        className="group relative bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-3xl border border-zinc-200 dark:border-zinc-800 p-8 shadow-xl shadow-zinc-200/50 dark:shadow-zinc-900/50 hover:shadow-2xl hover:shadow-[#4F7CFF]/10 transition-all duration-500 overflow-hidden"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={`absolute inset-0 bg-gradient-to-br from-[#7C3AED]/5 via-transparent to-[#14B8A6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-        <div className={`absolute -top-20 -right-20 w-40 h-40 bg-[#7C3AED]/20 rounded-full blur-3xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
+        <div className={`absolute inset-0 bg-gradient-to-br from-[#4F7CFF]/5 via-transparent to-[#14B8A6]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+        <div className={`absolute -top-20 -right-20 w-40 h-40 bg-[#4F7CFF]/20 rounded-full blur-3xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
         
         <div className="relative z-10">
           <div className="flex items-center gap-4 mb-8">
-            <div className="p-4 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700 rounded-2xl text-[#52525B] dark:text-[#A1A1AA] group-hover:from-[#7C3AED]/20 group-hover:to-[#7C3AED]/10 group-hover:text-[#7C3AED] transition-all duration-300 shadow-inner">
+            <div className="p-4 bg-gradient-to-br from-zinc-100 to-zinc-200 dark:from-zinc-800 dark:to-zinc-700 rounded-2xl text-[#52525B] dark:text-[#A1A1AA] group-hover:from-[#4F7CFF]/20 group-hover:to-[#4F7CFF]/10 group-hover:text-[#2F5BE8] transition-all duration-300 shadow-inner">
               <Icon size={28} />
             </div>
             <h3 className="text-2xl md:text-3xl font-bold text-[#18181B] dark:text-[#FAFAFA]">vs. {title}</h3>
@@ -271,19 +271,19 @@ const FeatureHighlight = ({ icon: Icon, title, description, index = 0 }: { icon:
   return (
     <Reveal delay={index * 80}>
       <div 
-        className="group relative flex gap-5 p-6 bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/40 transition-all duration-500 overflow-hidden hover:shadow-xl hover:shadow-[#7C3AED]/10 h-full"
+        className="group relative flex gap-5 p-6 bg-white dark:bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/40 transition-all duration-500 overflow-hidden hover:shadow-xl hover:shadow-[#4F7CFF]/10 h-full"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className={`absolute -top-10 -left-10 w-20 h-20 bg-[#7C3AED]/30 rounded-full blur-2xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
+        <div className={`absolute -top-10 -left-10 w-20 h-20 bg-[#4F7CFF]/30 rounded-full blur-2xl transition-all duration-500 ${isHovered ? 'opacity-100 scale-150' : 'opacity-0 scale-100'}`} />
         
         <div className="shrink-0 relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] flex items-center justify-center text-white shadow-lg shadow-[#7C3AED]/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#4F7CFF] to-[#2547C4] flex items-center justify-center text-white shadow-lg shadow-[#4F7CFF]/25 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
             <Icon size={26} />
           </div>
         </div>
         <div className="relative z-10">
-          <h4 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-[#7C3AED] dark:group-hover:text-[#8B5CF6] transition-colors">{title}</h4>
+          <h4 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 group-hover:text-[#2F5BE8] dark:group-hover:text-[#7296FF] transition-colors">{title}</h4>
           <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] leading-relaxed">{description}</p>
         </div>
       </div>
@@ -295,7 +295,7 @@ export default function ComparisonPage() {
   const router = useRouter();
   
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED] overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8] overflow-x-hidden">
       <style jsx global>{`
         @keyframes shimmer {
           0% {
@@ -314,11 +314,11 @@ export default function ComparisonPage() {
         .shimmer-text {
           background: linear-gradient(
             90deg,
-            #7C3AED 0%,
-            #A78BFA 25%,
-            #7C3AED 50%,
-            #A78BFA 75%,
-            #7C3AED 100%
+            #4F7CFF 0%,
+            #97B6FF 25%,
+            #4F7CFF 50%,
+            #97B6FF 75%,
+            #4F7CFF 100%
           );
           background-size: 200% auto;
           -webkit-background-clip: text;
@@ -342,15 +342,15 @@ export default function ComparisonPage() {
       
       {/* HERO SECTION */}
       <div className="relative pt-32 pb-32 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[600px] h-[600px] bg-violet-400 -top-64 -right-64 animate-pulse" />
-        <FloatingOrb className="w-[400px] h-[400px] bg-indigo-400 -bottom-32 -left-32 animate-pulse" />
-        <FloatingOrb className="w-[300px] h-[300px] bg-purple-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <FloatingOrb className="w-[600px] h-[600px] bg-blue-400 -top-64 -right-64 animate-pulse" />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 -bottom-32 -left-32 animate-pulse" />
+        <FloatingOrb className="w-[300px] h-[300px] bg-blue-400 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-violet-100 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm font-medium mb-8">
               <ShieldCheck size={14} className="animate-pulse" />
               Honest Comparison
             </div>
@@ -376,8 +376,8 @@ export default function ComparisonPage() {
                 { value: 0, prefix: "$", suffix: "", label: "Monthly Cost" },
                 { value: 100, suffix: "%", label: "Open Source" }
               ].map((stat, idx) => (
-                <div key={idx} className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#7C3AED]/10">
-                  <div className="text-3xl font-bold text-[#7C3AED] dark:text-[#8B5CF6]">
+                <div key={idx} className="p-4 rounded-2xl bg-zinc-50 dark:bg-zinc-900/50 border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/40 transition-all duration-300 hover:shadow-lg hover:shadow-[#4F7CFF]/10">
+                  <div className="text-3xl font-bold text-[#2F5BE8] dark:text-[#7296FF]">
                     <AnimatedCounter end={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                   </div>
                   <div className="text-sm text-[#52525B] dark:text-[#A1A1AA]">{stat.label}</div>
@@ -390,13 +390,13 @@ export default function ComparisonPage() {
 
       {/* COMPARISON TABLE */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-950">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#7C3AED]/30 to-transparent" />
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4F7CFF]/30 to-transparent" />
         
         <div className="max-w-7xl mx-auto">
           <Reveal className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7C3AED]/10 to-[#14B8A6]/10 border border-[#7C3AED]/20 mb-4">
-              <Sparkles size={14} className="text-[#7C3AED]" />
-              <span className="text-xs font-semibold text-[#7C3AED] uppercase tracking-wider">Feature Comparison</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4F7CFF]/10 to-[#14B8A6]/10 border border-[#4F7CFF]/20 mb-4">
+              <Sparkles size={14} className="text-[#2F5BE8]" />
+              <span className="text-xs font-semibold text-[#2F5BE8] uppercase tracking-wider">Feature Comparison</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4">
               Side-by-Side <span className="shimmer-text">Comparison</span>
@@ -438,7 +438,7 @@ export default function ComparisonPage() {
                 Not Available
               </span>
               <span className="flex items-center gap-2 px-4 py-2 bg-white dark:bg-zinc-900 rounded-full border border-zinc-200 dark:border-zinc-800">
-                <div className="p-1 rounded-full bg-[#7C3AED]/10"><RefreshCw size={14} className="text-[#7C3AED]"/></div>
+                <div className="p-1 rounded-full bg-[#4F7CFF]/10"><RefreshCw size={14} className="text-[#2F5BE8]"/></div>
                 In Development
               </span>
             </div>
@@ -448,14 +448,14 @@ export default function ComparisonPage() {
 
       {/* DETAILED COMPARISONS */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-white via-zinc-50/50 to-white dark:from-zinc-950 dark:via-zinc-900/30 dark:to-zinc-950 border-y border-zinc-200 dark:border-zinc-800">
-        <div className="absolute top-20 right-10 w-80 h-80 bg-[#7C3AED]/10 rounded-full blur-[100px] z-0" />
+        <div className="absolute top-20 right-10 w-80 h-80 bg-[#4F7CFF]/10 rounded-full blur-[100px] z-0" />
         <div className="absolute bottom-40 left-10 w-60 h-60 bg-[#14B8A6]/10 rounded-full blur-[80px] z-0" />
         
         <div className="max-w-5xl mx-auto space-y-12 relative z-10">
           <Reveal className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7C3AED]/10 to-[#14B8A6]/10 border border-[#7C3AED]/20 mb-4">
-              <Sparkles size={14} className="text-[#7C3AED]" />
-              <span className="text-xs font-semibold text-[#7C3AED] uppercase tracking-wider">Detailed Analysis</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4F7CFF]/10 to-[#14B8A6]/10 border border-[#4F7CFF]/20 mb-4">
+              <Sparkles size={14} className="text-[#2F5BE8]" />
+              <span className="text-xs font-semibold text-[#2F5BE8] uppercase tracking-wider">Detailed Analysis</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4">
               In-Depth <span className="shimmer-text">Comparisons</span>
@@ -502,7 +502,7 @@ export default function ComparisonPage() {
             ]}
             summary={
               <p>
-                <strong className="text-[#18181B] dark:text-[#FAFAFA]">The Verdict:</strong> OS tools are great for basic awareness (&quot;I used my laptop for 4 hours&quot;). Scolect is for <em className="text-[#7C3AED]">optimization</em> (&quot;I was 75% productive and my peak hours were 9-11 AM&quot;).
+                <strong className="text-[#18181B] dark:text-[#FAFAFA]">The Verdict:</strong> OS tools are great for basic awareness (&quot;I used my laptop for 4 hours&quot;). Scolect is for <em className="text-[#2F5BE8]">optimization</em> (&quot;I was 75% productive and my peak hours were 9-11 AM&quot;).
               </p>
             }
             index={1}
@@ -534,13 +534,13 @@ export default function ComparisonPage() {
 
       {/* WHY CHOOSE SCOLECT */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-[#FAFAFA] to-white dark:from-[#09090B] dark:to-zinc-950 overflow-hidden">
-        <FloatingOrb className="w-[400px] h-[400px] bg-violet-400 top-1/2 -right-32 animate-pulse" />
+        <FloatingOrb className="w-[400px] h-[400px] bg-blue-400 top-1/2 -right-32 animate-pulse" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <Reveal className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#7C3AED]/10 to-[#14B8A6]/10 border border-[#7C3AED]/20 mb-4">
-              <Heart size={14} className="text-[#7C3AED] animate-pulse" />
-              <span className="text-xs font-semibold text-[#7C3AED] uppercase tracking-wider">Why Scolect</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4F7CFF]/10 to-[#14B8A6]/10 border border-[#4F7CFF]/20 mb-4">
+              <Heart size={14} className="text-[#2F5BE8] animate-pulse" />
+              <span className="text-xs font-semibold text-[#2F5BE8] uppercase tracking-wider">Why Scolect</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4">Why Choose <span className="shimmer-text">Scolect</span>?</h2>
             <p className="text-lg text-[#52525B] dark:text-[#A1A1AA] max-w-2xl mx-auto">Six reasons we believe this is the best tool for digital autonomy.</p>
@@ -646,9 +646,9 @@ export default function ComparisonPage() {
           </div>
           
           <Reveal delay={200}>
-            <div className="mt-10 text-center p-8 rounded-2xl bg-gradient-to-br from-[#7C3AED]/5 to-[#14B8A6]/5 border border-[#7C3AED]/10 shadow-inner">
+            <div className="mt-10 text-center p-8 rounded-2xl bg-gradient-to-br from-[#4F7CFF]/5 to-[#14B8A6]/5 border border-[#4F7CFF]/10 shadow-inner">
               <p className="text-sm font-medium text-[#18181B] dark:text-[#FAFAFA]">
-                <strong className="text-[#7C3AED]">Pro Tip:</strong> Scolect plays well with others. Use it for desktop tracking and combine it with RescueTime for mobile or Cold Turkey for blocking.
+                <strong className="text-[#2F5BE8]">Pro Tip:</strong> Scolect plays well with others. Use it for desktop tracking and combine it with RescueTime for mobile or Cold Turkey for blocking.
               </p>
             </div>
           </Reveal>
@@ -658,7 +658,7 @@ export default function ComparisonPage() {
       {/* FINAL CTA */}
       <section className="relative py-32 px-6 text-center bg-gradient-to-br from-zinc-50 via-white to-zinc-50 dark:from-zinc-900 dark:via-zinc-950 dark:to-zinc-900 text-zinc-900 dark:text-white overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#7C3AED]/10 dark:bg-[#7C3AED]/30 rounded-full blur-[150px] animate-pulse" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#4F7CFF]/10 dark:bg-[#4F7CFF]/30 rounded-full blur-[150px] animate-pulse" />
           <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#14B8A6]/10 dark:bg-[#14B8A6]/20 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />
         </div>
         
@@ -667,13 +667,13 @@ export default function ComparisonPage() {
         <div className="max-w-3xl mx-auto relative z-10">
           <Reveal>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-zinc-900/5 dark:bg-white/5 border border-zinc-900/10 dark:border-white/10 backdrop-blur-sm mb-8">
-              <Download size={16} className="text-[#7C3AED]" />
+              <Download size={16} className="text-[#2F5BE8]" />
               <span className="text-sm text-zinc-600 dark:text-zinc-400">Free Download</span>
             </div>
           </Reveal>
           
           <Reveal delay={100}>
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zinc-900 via-[#7C3AED] to-zinc-900 dark:from-white dark:via-[#8B5CF6] dark:to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-zinc-900 via-[#4F7CFF] to-zinc-900 dark:from-white dark:via-[#7296FF] dark:to-white bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
               Ready to Try Scolect?
             </h2>
           </Reveal>
@@ -687,7 +687,7 @@ export default function ComparisonPage() {
           <Reveal delay={300}>
             <button 
               onClick={() => router.push('/download')}
-              className="group relative flex items-center justify-center gap-3 mx-auto bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white font-bold py-5 px-10 rounded-2xl shadow-2xl shadow-violet-500/30 dark:shadow-violet-900/40 transition-all duration-300 overflow-hidden"
+              className="group relative flex items-center justify-center gap-3 mx-auto bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] text-white font-bold py-5 px-10 rounded-2xl shadow-2xl shadow-blue-500/30 dark:shadow-blue-900/40 transition-all duration-300 overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-3">
                 <Download size={22} />

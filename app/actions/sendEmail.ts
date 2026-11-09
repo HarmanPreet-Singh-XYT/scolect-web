@@ -39,7 +39,7 @@ export async function sendContactEmail(data: EmailData) {
               padding: 20px;
             }
             .header {
-              background: linear-gradient(135deg, #7c3aed 0%, #d946ef 100%);
+              background: linear-gradient(135deg, #4F7CFF 0%, #7296FF 100%);
               color: white;
               padding: 30px;
               border-radius: 10px 10px 0 0;
@@ -61,7 +61,7 @@ export async function sendContactEmail(data: EmailData) {
             }
             .label {
               font-weight: 600;
-              color: #7c3aed;
+              color: #4F7CFF;
               margin-bottom: 5px;
               font-size: 12px;
               text-transform: uppercase;
@@ -92,7 +92,7 @@ export async function sendContactEmail(data: EmailData) {
             .badge {
               display: inline-block;
               padding: 4px 12px;
-              background: #7c3aed;
+              background: #4F7CFF;
               color: white;
               border-radius: 12px;
               font-size: 12px;
@@ -113,7 +113,7 @@ export async function sendContactEmail(data: EmailData) {
             
             <div class="field">
               <div class="label">Email Address</div>
-              <div class="value"><a href="mailto:${data.email}" style="color: #7c3aed; text-decoration: none;">${data.email}</a></div>
+              <div class="value"><a href="mailto:${data.email}" style="color: #4F7CFF; text-decoration: none;">${data.email}</a></div>
             </div>
             
             <div class="field">
@@ -175,7 +175,7 @@ export async function sendContactEmail(data: EmailData) {
               padding: 20px;
             }
             .header {
-              background: linear-gradient(135deg, #7c3aed 0%, #d946ef 100%);
+              background: linear-gradient(135deg, #4F7CFF 0%, #7296FF 100%);
               color: white;
               padding: 40px 30px;
               border-radius: 10px 10px 0 0;
@@ -215,7 +215,7 @@ export async function sendContactEmail(data: EmailData) {
               color: #6b7280;
             }
             a {
-              color: #7c3aed;
+              color: #4F7CFF;
               text-decoration: none;
             }
             a:hover {

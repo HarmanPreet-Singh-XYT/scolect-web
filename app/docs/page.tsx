@@ -74,7 +74,7 @@ const SectionHeading = ({ children, id }: { children: React.ReactNode; id: strin
     >
       <span className="relative">
         {children}
-        <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] group-hover:w-full transition-all duration-500 ease-out"></span>
+        <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-[#4F7CFF] to-[#7296FF] group-hover:w-full transition-all duration-500 ease-out"></span>
       </span>
     </h2>
   </Reveal>
@@ -83,9 +83,9 @@ const SectionHeading = ({ children, id }: { children: React.ReactNode; id: strin
 const SubHeading = ({ children, id }: { children: React.ReactNode; id?: string }) => (
   <h3 
     id={id} 
-    className="scroll-mt-24 text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mt-8 mb-4 flex items-center gap-2 group hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors duration-300"
+    className="scroll-mt-24 text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mt-8 mb-4 flex items-center gap-2 group hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-colors duration-300"
   >
-    <span className="w-1 h-6 bg-gradient-to-b from-[#7C3AED] to-[#8B5CF6] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+    <span className="w-1 h-6 bg-gradient-to-b from-[#4F7CFF] to-[#7296FF] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
     {children}
   </h3>
 );
@@ -103,7 +103,7 @@ const List = ({ items }: { items: React.ReactNode[] }) => (
         key={idx} 
         className="flex items-start gap-2 text-[#52525B] dark:text-[#A1A1AA] text-sm md:text-base leading-relaxed group hover:translate-x-1 transition-transform duration-200"
       >
-        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#7C3AED] dark:bg-[#8B5CF6] shrink-0 group-hover:scale-150 transition-transform duration-200" />
+        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#4F7CFF] dark:bg-[#7296FF] shrink-0 group-hover:scale-150 transition-transform duration-200" />
         <span>{item}</span>
       </li>
     ))}
@@ -112,7 +112,7 @@ const List = ({ items }: { items: React.ReactNode[] }) => (
 
 const Callout = ({ type = 'info', title, children }: { type?: 'info' | 'warning' | 'tip' | 'success', title?: string, children: React.ReactNode }) => {
   const styles = {
-    info: "bg-gradient-to-br from-[#7C3AED]/5 to-[#7C3AED]/10 border-[#7C3AED]/30 text-[#7C3AED] dark:text-[#8B5CF6] shadow-lg shadow-[#7C3AED]/5",
+    info: "bg-gradient-to-br from-[#4F7CFF]/5 to-[#4F7CFF]/10 border-[#4F7CFF]/30 text-[#2F5BE8] dark:text-[#7296FF] shadow-lg shadow-[#4F7CFF]/5",
     warning: "bg-gradient-to-br from-[#F59E0B]/10 to-[#F59E0B]/5 border-[#F59E0B]/30 text-[#F59E0B] dark:text-[#FBBF24] shadow-lg shadow-[#F59E0B]/5",
     tip: "bg-gradient-to-br from-[#14B8A6]/10 to-[#14B8A6]/5 border-[#14B8A6]/30 text-[#14B8A6] dark:text-[#2DD4BF] shadow-lg shadow-[#14B8A6]/5",
     success: "bg-gradient-to-br from-[#14B8A6]/10 to-[#14B8A6]/5 border-[#14B8A6]/30 text-[#14B8A6] dark:text-[#2DD4BF] shadow-lg shadow-[#14B8A6]/5"
@@ -184,11 +184,11 @@ export default function DocumentationPage() {
         className={`
           block w-full text-left py-1.5 px-3 rounded-md text-sm transition-all duration-300 relative overflow-hidden group
           ${depth === 0 ? 'font-medium text-[#18181B] dark:text-[#FAFAFA]' : 'text-[#52525B] dark:text-[#A1A1AA] pl-6'}
-          ${isActive ? 'bg-[#7C3AED]/10 text-[#7C3AED] dark:text-[#8B5CF6] font-semibold' : 'hover:bg-[#7C3AED]/5 hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]'}
+          ${isActive ? 'bg-[#4F7CFF]/10 text-[#2F5BE8] dark:text-[#7296FF] font-semibold' : 'hover:bg-[#4F7CFF]/5 hover:text-[#2F5BE8] dark:hover:text-[#7296FF]'}
         `}
       >
         {isActive && (
-          <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#7C3AED] to-[#8B5CF6] rounded-r-full animate-pulse"></span>
+          <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-[#4F7CFF] to-[#7296FF] rounded-r-full animate-pulse"></span>
         )}
         <span className="relative z-10">{label}</span>
       </button>
@@ -196,24 +196,24 @@ export default function DocumentationPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED]">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8]">
       <Navbar/>
       
       {/* Decorative background gradient */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#7C3AED]/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#8B5CF6]/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#4F7CFF]/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#7296FF]/5 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
       </div>
 
       {/* Mobile Header */}
       <div className="lg:hidden fixed top-16 left-0 right-0 z-40 bg-[#FAFAFA]/95 dark:bg-[#09090B]/95 backdrop-blur-xl border-b border-zinc-200 dark:border-zinc-800 p-4 flex items-center justify-between shadow-lg">
         <span className="font-bold text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2">
-          <Book size={18} className="text-[#7C3AED]" />
+          <Book size={18} className="text-[#2F5BE8]" />
           Documentation
         </span>
         <button 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
-          className="p-2 text-[#52525B] dark:text-[#A1A1AA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6] transition-colors duration-200 hover:bg-[#7C3AED]/5 rounded-lg"
+          className="p-2 text-[#52525B] dark:text-[#A1A1AA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF] transition-colors duration-200 hover:bg-[#4F7CFF]/5 rounded-lg"
           aria-label="Toggle documentation navigation"
         >
           {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -231,15 +231,15 @@ export default function DocumentationPage() {
           ${mobileMenuOpen ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 lg:translate-x-0 lg:opacity-100'}
         `}>
           <div className="mb-8 hidden lg:block">
-            <h1 className="text-xl font-bold text-[#7C3AED] dark:text-[#8B5CF6] flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+            <h1 className="text-xl font-bold text-[#2F5BE8] dark:text-[#7296FF] flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <Book size={20} className="animate-pulse" style={{ animationDuration: '3s' }} /> Docs
             </h1>
           </div>
 
           <nav className="space-y-1">
             <div className="mb-4">
-              <h4 className="text-xs font-bold text-[#7C3AED] uppercase tracking-wider mb-2 flex items-center gap-2">
-                <span className="w-4 h-0.5 bg-gradient-to-r from-[#7C3AED] to-transparent"></span>
+              <h4 className="text-xs font-bold text-[#2F5BE8] uppercase tracking-wider mb-2 flex items-center gap-2">
+                <span className="w-4 h-0.5 bg-gradient-to-r from-[#4F7CFF] to-transparent"></span>
                 Table of Contents
               </h4>
               <NavLink id="getting-started" label="1. Getting Started" />
@@ -324,9 +324,9 @@ export default function DocumentationPage() {
           <SubHeading id="interface">1.3 Understanding the Interface</SubHeading>
           <Reveal>
             <div className="grid md:grid-cols-2 gap-8 mb-6">
-              <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-[#7C3AED]/10 transition-all duration-500 hover:-translate-y-1 hover:border-[#7C3AED]/30">
+              <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:shadow-2xl hover:shadow-[#4F7CFF]/10 transition-all duration-500 hover:-translate-y-1 hover:border-[#4F7CFF]/30">
                 <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] animate-pulse"></span>
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#4F7CFF] to-[#7296FF] animate-pulse"></span>
                   Navigation Bar (Left Side)
                 </h4>
                 <List items={[
@@ -339,9 +339,9 @@ export default function DocumentationPage() {
                   <span key="help"><strong>Help:</strong> Access documentation and support</span>
                 ]} />
               </div>
-              <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 h-fit hover:shadow-2xl hover:shadow-[#7C3AED]/10 transition-all duration-500 hover:-translate-y-1 hover:border-[#7C3AED]/30">
+              <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 h-fit hover:shadow-2xl hover:shadow-[#4F7CFF]/10 transition-all duration-500 hover:-translate-y-1 hover:border-[#4F7CFF]/30">
                 <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#8B5CF6] animate-pulse"></span>
+                  <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#4F7CFF] to-[#7296FF] animate-pulse"></span>
                   Status Bar (Top)
                 </h4>
                 <List items={[
@@ -390,7 +390,7 @@ export default function DocumentationPage() {
           <SubHeading id="feature-productivity">2.2 Productivity Tracking</SubHeading>
           <Paragraph><strong>Marking Apps as Productive:</strong> Navigate to Applications → Click any app → Toggle &apos;Is Productive&apos;.</Paragraph>
           <Reveal>
-            <div className="bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 my-4 hover:shadow-xl transition-all duration-500 hover:border-[#7C3AED]/30">
+            <div className="bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-zinc-950 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 my-4 hover:shadow-xl transition-all duration-500 hover:border-[#4F7CFF]/30">
               <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Your Productive Score</h4>
               <p className="text-sm font-mono text-[#52525B] dark:text-[#A1A1AA] mb-4 bg-zinc-100 dark:bg-zinc-950 p-2 rounded w-fit border border-zinc-200 dark:border-zinc-800">
                 (Productive Time ÷ Total Screen Time) × 100
@@ -472,11 +472,11 @@ export default function DocumentationPage() {
           <Paragraph>Scolect generates automatic insights in the Application Details modal.</Paragraph>
           <Reveal>
             <div className="space-y-4">
-              <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-900 dark:to-transparent rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-all duration-300 hover:shadow-lg">
+              <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-900 dark:to-transparent rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/30 transition-all duration-300 hover:shadow-lg">
                 <p className="font-bold text-[#18181B] dark:text-[#FAFAFA]">&quot;You primarily use [App] during [Time Period]&quot;</p>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mt-1">Tells you when you naturally reach for this app. Use this to schedule tasks appropriately.</p>
               </div>
-              <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-900 dark:to-transparent rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/30 transition-all duration-300 hover:shadow-lg">
+              <div className="p-4 bg-gradient-to-r from-zinc-50 to-transparent dark:from-zinc-900 dark:to-transparent rounded-lg border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/30 transition-all duration-300 hover:shadow-lg">
                 <p className="font-bold text-[#18181B] dark:text-[#FAFAFA]">&quot;Usage trending upward/downward&quot;</p>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mt-1">Watch these trends over weeks to see if changes you make (like setting limits) are having the desired effect.</p>
               </div>
@@ -507,9 +507,9 @@ export default function DocumentationPage() {
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]"><strong>Context Matters:</strong> YouTube can be educational or a time sink. Classify based on your actual habits.</p>
               </div>
 
-              <div className="p-6 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-[#7C3AED]/10 transition-all duration-500 hover:-translate-y-2 hover:border-[#7C3AED]/30 group">
+              <div className="p-6 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-[#4F7CFF]/10 transition-all duration-500 hover:-translate-y-2 hover:border-[#4F7CFF]/30 group">
                 <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] flex items-center gap-2 mb-3">
-                  <Clock className="text-[#7C3AED] group-hover:scale-110 transition-transform duration-300" size={20} /> Effective Focus
+                  <Clock className="text-[#2F5BE8] group-hover:scale-110 transition-transform duration-300" size={20} /> Effective Focus
                 </h4>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-2"><strong>Start Small:</strong> Begin with 25-minute sessions. Build the habit before attempting 60-minute blocks.</p>
                 <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]"><strong>Honor Breaks:</strong> Skipping breaks defeats the purpose. Breaks allow your brain to consolidate learning.</p>
@@ -558,7 +558,7 @@ export default function DocumentationPage() {
                 </p>
               </div>
 
-              <div className="border-l-4 border-[#7C3AED] pl-4 hover:pl-6 transition-all duration-300 hover:border-l-[6px]">
+              <div className="border-l-4 border-[#4F7CFF] pl-4 hover:pl-6 transition-all duration-300 hover:border-l-[6px]">
                 <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA]">Tracking Isn&apos;t Working</h4>
                 <div className="text-sm text-[#52525B] dark:text-[#A1A1AA] mt-2">
                   <ul className="list-disc pl-5 space-y-1">
@@ -598,8 +598,8 @@ export default function DocumentationPage() {
           <SectionHeading id="faq">6. FAQ</SectionHeading>
           <Reveal>
             <div className="space-y-4">
-              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#7C3AED]/30 transition-all duration-300">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]">
+              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#4F7CFF]/30 transition-all duration-300">
+                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF]">
                   <span>Does Scolect work when I&apos;m not actively using it?</span>
                   <span className="transition-transform group-open:rotate-90 duration-300"><ChevronRight size={16} /></span>
                 </summary>
@@ -608,8 +608,8 @@ export default function DocumentationPage() {
                 </div>
               </details>
 
-              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#7C3AED]/30 transition-all duration-300">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]">
+              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#4F7CFF]/30 transition-all duration-300">
+                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF]">
                   <span>Can I see screen time for a specific app on a specific day?</span>
                   <span className="transition-transform group-open:rotate-90 duration-300"><ChevronRight size={16} /></span>
                 </summary>
@@ -618,8 +618,8 @@ export default function DocumentationPage() {
                 </div>
               </details>
 
-              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#7C3AED]/30 transition-all duration-300">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]">
+              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#4F7CFF]/30 transition-all duration-300">
+                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF]">
                   <span>What happens if I close Scolect?</span>
                   <span className="transition-transform group-open:rotate-90 duration-300"><ChevronRight size={16} /></span>
                 </summary>
@@ -628,8 +628,8 @@ export default function DocumentationPage() {
                 </div>
               </details>
 
-              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#7C3AED]/30 transition-all duration-300">
-                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]">
+              <details className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:shadow-lg hover:border-[#4F7CFF]/30 transition-all duration-300">
+                <summary className="flex justify-between items-center font-medium cursor-pointer list-none text-[#18181B] dark:text-[#FAFAFA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF]">
                   <span>Does Scolect drain battery on laptops?</span>
                   <span className="transition-transform group-open:rotate-90 duration-300"><ChevronRight size={16} /></span>
                 </summary>
@@ -641,11 +641,11 @@ export default function DocumentationPage() {
           </Reveal>
 
           <Reveal>
-            <div className="mt-12 p-8 bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 text-center shadow-xl hover:shadow-2xl hover:shadow-[#7C3AED]/10 transition-all duration-500 hover:scale-[1.02]">
+            <div className="mt-12 p-8 bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-950 dark:to-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 text-center shadow-xl hover:shadow-2xl hover:shadow-[#4F7CFF]/10 transition-all duration-500 hover:scale-[1.02]">
               <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] mb-4 flex items-center justify-center gap-2">
                 <HelpCircle size={20} className="animate-pulse" style={{ animationDuration: '3s' }} /> Need More Help?
               </h3>
-              <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-[#7C3AED] dark:text-[#8B5CF6]">
+              <div className="flex flex-wrap justify-center gap-4 text-sm font-medium text-[#2F5BE8] dark:text-[#7296FF]">
                 <a href="/contact" className="hover:underline hover:scale-110 transition-transform duration-200">Contact Support</a>
                 <span className="text-zinc-300 dark:text-zinc-700">•</span>
                 <a href="/report-bug" className="hover:underline hover:scale-110 transition-transform duration-200">Report a Bug</a>

@@ -118,7 +118,7 @@ const DownloadPage: React.FC = () => {
 
             {/* Header */}
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--primary)] to-fuchsia-500 flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--primary)] to-blue-400 flex items-center justify-center shadow-lg">
                 <Apple className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -140,19 +140,19 @@ const DownloadPage: React.FC = () => {
                     window.open(latestRelease.appleStore, '_blank', 'noopener,noreferrer');
                     setShowMacDialog(false);
                   }}
-                  className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
+                  className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(79, 124, 255,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
                 >
                   {/* Hover gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-blue-400/0 group-hover:from-[var(--primary)]/5 group-hover:to-blue-400/5 transition-all duration-500 rounded-xl" />
                   
                   <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                     <Apple className="w-5 h-5 text-white" />
                   </div>
                   <div className="relative z-10 flex-1">
-                    <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300">Mac App Store</h4>
+                    <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300">Mac App Store</h4>
                     <p className="text-xs text-[var(--text-muted)] mt-0.5">Recommended • Auto-updates included</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+                  <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
                 </button>
               )}
 
@@ -163,19 +163,19 @@ const DownloadPage: React.FC = () => {
                     window.open(latestRelease.macLink, '_blank', 'noopener,noreferrer');
                     setShowMacDialog(false);
                   }}
-                  className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
+                  className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(79, 124, 255,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
                 >
                   {/* Hover gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-blue-400/0 group-hover:from-[var(--primary)]/5 group-hover:to-blue-400/5 transition-all duration-500 rounded-xl" />
                   
                   <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-zinc-600 to-zinc-700 dark:from-zinc-500 dark:to-zinc-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                     <Download className="w-5 h-5 text-white" />
                   </div>
                   <div className="relative z-10 flex-1">
-                    <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300">Direct Download</h4>
+                    <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300">Direct Download</h4>
                     <p className="text-xs text-[var(--text-muted)] mt-0.5">DMG installer • Manual updates</p>
                   </div>
-                  <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+                  <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
                 </button>
               )}
             </div>
@@ -209,7 +209,7 @@ const DownloadPage: React.FC = () => {
 
             {/* Header */}
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--primary)] to-fuchsia-500 flex items-center justify-center shadow-lg">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[var(--primary)] to-blue-400 flex items-center justify-center shadow-lg">
                 <Globe className="w-5 h-5 text-white" />
               </div>
               <div>
@@ -230,15 +230,15 @@ const DownloadPage: React.FC = () => {
                   window.open(CHROME_EXTENSION_URL, '_blank', 'noopener,noreferrer');
                   setShowExtensionDialog(false);
                 }}
-                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
+                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(79, 124, 255,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-blue-400/0 group-hover:from-[var(--primary)]/5 group-hover:to-blue-400/5 transition-all duration-500 rounded-xl" />
 
                 <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   <Globe className="w-5 h-5 text-white" />
                 </div>
                 <div className="relative z-10 flex-1">
-                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-2">
+                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300 flex items-center gap-2">
                     Chrome Web Store
                     {detectedBrowser === 'chrome' && (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--success)]/20 text-[var(--success)] font-medium">Your Browser</span>
@@ -246,7 +246,7 @@ const DownloadPage: React.FC = () => {
                   </h4>
                   <p className="text-xs text-[var(--text-muted)] mt-0.5">Chrome, Edge, Brave, Opera & other Chromium browsers</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
               </button>
 
               {/* Firefox Add-ons — available */}
@@ -255,15 +255,15 @@ const DownloadPage: React.FC = () => {
                   window.open(FIREFOX_EXTENSION_URL, '_blank', 'noopener,noreferrer');
                   setShowExtensionDialog(false);
                 }}
-                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(124,58,237,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
+                className="group relative w-full flex items-center gap-4 p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] hover:border-[var(--primary)] hover:shadow-[0_10px_40px_rgba(79, 124, 255,0.2)] transition-all duration-500 hover:-translate-y-0.5 overflow-hidden text-left"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-500 rounded-xl" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-blue-400/0 group-hover:from-[var(--primary)]/5 group-hover:to-blue-400/5 transition-all duration-500 rounded-xl" />
 
                 <div className="relative z-10 w-10 h-10 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center flex-shrink-0 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg">
                   <Globe className="w-5 h-5 text-white" />
                 </div>
                 <div className="relative z-10 flex-1">
-                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300 flex items-center gap-2">
+                  <h4 className="font-semibold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300 flex items-center gap-2">
                     Firefox Add-ons
                     {detectedBrowser === 'firefox' && (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-[var(--success)]/20 text-[var(--success)] font-medium">Your Browser</span>
@@ -271,7 +271,7 @@ const DownloadPage: React.FC = () => {
                   </h4>
                   <p className="text-xs text-[var(--text-muted)] mt-0.5">Mozilla Firefox</p>
                 </div>
-                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
+                <ExternalLink className="w-4 h-4 text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] relative z-10 group-hover:translate-x-1 transition-all duration-300" />
               </button>
             </div>
 
@@ -288,18 +288,18 @@ const DownloadPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative pt-36 pb-16 px-6 text-center max-w-5xl mx-auto">
         {/* Enhanced gradient orbs with improved animation */}
-        <div className="absolute top-[5%] left-[50%] -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-r from-[#7C3AED]/30 via-fuchsia-500/20 to-cyan-500/20 dark:from-[#8B5CF6]/15 dark:via-fuchsia-500/10 dark:to-cyan-500/10 blur-[140px] rounded-full z-10 pointer-events-none animate-[orbPulse_8s_ease-in-out_infinite]" />
-        <div className="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-fuchsia-500/20 to-purple-600/15 dark:from-fuchsia-500/10 dark:to-purple-600/5 blur-[120px] rounded-full z-10 pointer-events-none animate-[orbFloat_10s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-[5%] left-[50%] -translate-x-1/2 w-[900px] h-[450px] bg-gradient-to-r from-[#4F7CFF]/30 via-blue-400/20 to-cyan-500/20 dark:from-[#7296FF]/15 dark:via-blue-400/10 dark:to-cyan-500/10 blur-[140px] rounded-full z-10 pointer-events-none animate-[orbPulse_8s_ease-in-out_infinite]" />
+        <div className="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-gradient-to-br from-blue-400/20 to-blue-600/15 dark:from-blue-400/10 dark:to-blue-600/5 blur-[120px] rounded-full z-10 pointer-events-none animate-[orbFloat_10s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
         <div className="absolute top-[15%] right-[20%] w-[400px] h-[400px] bg-gradient-to-tl from-cyan-500/20 to-blue-500/15 dark:from-cyan-500/10 dark:to-blue-500/5 blur-[100px] rounded-full z-10 pointer-events-none animate-[orbRotate_12s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
         
         {/* Additional sparkle effects */}
         <div className="absolute top-[20%] left-[30%] w-2 h-2 bg-[var(--primary)] rounded-full z-10 animate-[twinkle_3s_ease-in-out_infinite]" style={{ animationDelay: '0.5s' }} />
-        <div className="absolute top-[30%] right-[25%] w-1.5 h-1.5 bg-fuchsia-400 rounded-full z-10 animate-[twinkle_4s_ease-in-out_infinite]" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute top-[30%] right-[25%] w-1.5 h-1.5 bg-blue-300 rounded-full z-10 animate-[twinkle_4s_ease-in-out_infinite]" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-[40%] left-[15%] w-1 h-1 bg-cyan-400 rounded-full z-10 animate-[twinkle_5s_ease-in-out_infinite]" style={{ animationDelay: '2.5s' }} />
         
         <div className="relative z-20">
-          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[var(--text-main)] animate-[fadeInUp_0.6s_ease-out] drop-shadow-[0_0_30px_rgba(124,58,237,0.3)]">
-            Download <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] via-fuchsia-500 to-cyan-500 bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] drop-shadow-[0_0_20px_rgba(124,58,237,0.5)]">Scolect</span>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-[var(--text-main)] animate-[fadeInUp_0.6s_ease-out] drop-shadow-[0_0_30px_rgba(79, 124, 255,0.3)]">
+            Download <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] via-blue-400 to-cyan-500 bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] drop-shadow-[0_0_20px_rgba(79, 124, 255,0.5)]">Scolect</span>
           </h1>
           <p className="text-xl text-[var(--text-muted)] max-w-2xl mx-auto mb-10 leading-relaxed animate-[fadeInUp_0.6s_ease-out_0.2s_both]">
             Free, open-source screen time tracking for desktop and the web. Available on Windows, macOS, and Chrome.
@@ -310,13 +310,13 @@ const DownloadPage: React.FC = () => {
             {/* Windows Download */}
             <button
               onClick={handleWindowsDownload}
-              className="group relative flex items-center gap-3 bg-gradient-to-r from-[var(--primary)] via-fuchsia-600 to-[var(--primary)] bg-[length:200%_auto] hover:bg-[var(--primary-hover)] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-[0_10px_40px_rgba(124,58,237,0.4)] hover:shadow-[0_20px_60px_rgba(124,58,237,0.6)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden animate-[gradientShift_3s_ease-in-out_infinite]"
+              className="group relative flex items-center gap-3 bg-gradient-to-r from-[var(--primary)] via-blue-500 to-[var(--primary)] bg-[length:200%_auto] hover:bg-[var(--primary-hover)] text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-[0_10px_40px_rgba(79, 124, 255,0.4)] hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.6)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden animate-[gradientShift_3s_ease-in-out_infinite]"
             >
               {/* Animated gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
               {/* Glow effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[var(--primary)]/50 via-fuchsia-500/50 to-cyan-500/50 blur-xl -z-10" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-[var(--primary)]/50 via-blue-400/50 to-cyan-500/50 blur-xl -z-10" />
 
               <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 drop-shadow-lg" aria-hidden="true">
                 <path d="M0 0h11.377v11.372H0zM12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zM12.623 12.623H24V24H12.623z"/>
@@ -327,7 +327,7 @@ const DownloadPage: React.FC = () => {
             {/* macOS Download */}
             <button
               onClick={handleMacDownload}
-              className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
+              className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
             >
               {/* Animated gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
@@ -339,7 +339,7 @@ const DownloadPage: React.FC = () => {
             {/* Browser Extension */}
             <button
               onClick={() => setShowExtensionDialog(true)}
-              className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
+              className="group relative flex items-center gap-3 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 shadow-lg hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.3)] hover:-translate-y-2 hover:scale-[1.05] overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
 
@@ -361,20 +361,20 @@ const DownloadPage: React.FC = () => {
 
       {/* System Requirements */}
       <section className="px-6 py-12 max-w-5xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
-        <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgba(124,58,237,0.2)] hover:border-[var(--primary)]/50 transition-all duration-500 group overflow-hidden">
+        <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-8 shadow-[0_8px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.2)] hover:border-[var(--primary)]/50 transition-all duration-500 group overflow-hidden">
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/5 via-transparent to-fuchsia-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/5 via-transparent to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
           
           {/* Corner glow */}
           <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--primary)]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
           
-          <h2 className="text-2xl font-bold mb-6 group-hover:text-[var(--primary)] transition-colors duration-300 relative z-10">System Requirements</h2>
+          <h2 className="text-2xl font-bold mb-6 group-hover:text-[var(--primary-ink)] transition-colors duration-300 relative z-10">System Requirements</h2>
           
           <div className="grid md:grid-cols-2 gap-8 relative z-10">
             {/* Windows Requirements */}
             <div className="space-y-1">
               <div className="flex items-center gap-2 mb-4">
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[var(--primary)]" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[var(--primary-ink)]" aria-hidden="true">
                   <path d="M0 0h11.377v11.372H0zM12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zM12.623 12.623H24V24H12.623z"/>
                 </svg>
                 <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">Windows</h3>
@@ -401,9 +401,9 @@ const DownloadPage: React.FC = () => {
             
             {/* macOS Requirements */}
             <div className="space-y-1 relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-[var(--primary)]/10 via-fuchsia-500/10 to-cyan-500/10 rounded-xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-[pulse_4s_ease-in-out_infinite]" />
+              <div className="absolute -inset-4 bg-gradient-to-r from-[var(--primary)]/10 via-blue-400/10 to-cyan-500/10 rounded-xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 animate-[pulse_4s_ease-in-out_infinite]" />
               <div className="flex items-center gap-2 mb-4">
-                <Apple className="w-5 h-5 text-[var(--primary)]" />
+                <Apple className="w-5 h-5 text-[var(--primary-ink)]" />
                 <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--text-muted)]">macOS</h3>
               </div>
               <ul className="space-y-3 text-[var(--text-muted)] text-sm relative z-10">
@@ -429,18 +429,18 @@ const DownloadPage: React.FC = () => {
 
           {/* Recommended specs */}
           <div className="mt-8 pt-6 border-t border-[var(--border)] relative z-10">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--primary)] mb-4">Recommended for Best Experience</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-[var(--primary-ink)] mb-4">Recommended for Best Experience</h3>
             <div className="grid sm:grid-cols-3 gap-4 text-sm text-[var(--text-muted)]">
               <div className="flex items-center gap-2">
-                <Cpu className="w-4 h-4 text-[var(--primary)]" />
+                <Cpu className="w-4 h-4 text-[var(--primary-ink)]" />
                 <span>6 GB+ RAM</span>
               </div>
               <div className="flex items-center gap-2">
-                <HardDrive className="w-4 h-4 text-[var(--primary)]" />
+                <HardDrive className="w-4 h-4 text-[var(--primary-ink)]" />
                 <span>500 MB for data</span>
               </div>
               <div className="flex items-center gap-2">
-                <Monitor className="w-4 h-4 text-[var(--primary)]" />
+                <Monitor className="w-4 h-4 text-[var(--primary-ink)]" />
                 <span>1920×1080 display</span>
               </div>
             </div>
@@ -457,7 +457,7 @@ const DownloadPage: React.FC = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           <BenefitCard 
-            icon={<RefreshCw className="w-6 h-6 text-[var(--primary)]" />}
+            icon={<RefreshCw className="w-6 h-6 text-[var(--primary-ink)]" />}
             title="Automatic Updates"
             desc="Never manually download updates again. New features and bug fixes install automatically in the background."
             delay="0s"
@@ -485,11 +485,11 @@ const DownloadPage: React.FC = () => {
 
       {/* Installation Steps */}
       <section className="px-6 py-16 bg-[var(--bg-card)] border-y border-[var(--border)] relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/5 via-transparent to-fuchsia-500/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/5 via-transparent to-blue-400/5 pointer-events-none" />
         
         {/* Animated particles */}
         <div className="absolute top-[10%] left-[5%] w-1 h-1 bg-[var(--primary)]/40 rounded-full animate-[float_6s_ease-in-out_infinite]" />
-        <div className="absolute top-[30%] right-[10%] w-1.5 h-1.5 bg-fuchsia-400/40 rounded-full animate-[float_8s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-[30%] right-[10%] w-1.5 h-1.5 bg-blue-300/40 rounded-full animate-[float_8s_ease-in-out_infinite]" style={{ animationDelay: '1s' }} />
         <div className="absolute bottom-[20%] left-[15%] w-1 h-1 bg-cyan-400/40 rounded-full animate-[float_7s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
         
         <div className="max-w-4xl mx-auto relative z-10">
@@ -500,7 +500,7 @@ const DownloadPage: React.FC = () => {
             {/* Windows Installation */}
             <div className="bg-[var(--bg-page)] rounded-xl p-6 border border-[var(--border)]">
               <div className="flex items-center gap-2 mb-6">
-                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[var(--primary)]" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current text-[var(--primary-ink)]" aria-hidden="true">
                   <path d="M0 0h11.377v11.372H0zM12.623 0H24v11.372H12.623zM0 12.623h11.377V24H0zM12.623 12.623H24V24H12.623z"/>
                 </svg>
                 <h3 className="font-bold text-lg">Windows</h3>
@@ -516,7 +516,7 @@ const DownloadPage: React.FC = () => {
             {/* macOS Installation */}
             <div className="bg-[var(--bg-page)] rounded-xl p-6 border border-[var(--border)]">
               <div className="flex items-center gap-2 mb-6">
-                <Apple className="w-5 h-5 text-[var(--primary)]" />
+                <Apple className="w-5 h-5 text-[var(--primary-ink)]" />
                 <h3 className="font-bold text-lg">macOS</h3>
               </div>
               <div className="space-y-4">
@@ -544,7 +544,7 @@ const DownloadPage: React.FC = () => {
         {/* First Launch */}
         <div className="animate-[fadeInUp_0.8s_ease-out]">
           <h2 className="text-2xl font-bold mb-6">First Launch Setup</h2>
-          <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.15)] hover:border-[var(--primary)]/50 transition-all duration-500 group overflow-hidden">
+          <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl p-6 shadow-lg hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.15)] hover:border-[var(--primary)]/50 transition-all duration-500 group overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[var(--primary)] to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center" />
             
             <p className="text-[var(--text-muted)] mb-6">
@@ -592,7 +592,7 @@ const DownloadPage: React.FC = () => {
 
       {/* Version & GitHub */}
       <section className="px-6 py-12 max-w-4xl mx-auto animate-[fadeInUp_0.8s_ease-out]">
-        <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-lg hover:shadow-[0_20px_60px_rgba(124,58,237,0.2)] transition-all duration-500 group">
+        <div className="relative bg-[var(--bg-card)] border border-[var(--border)] rounded-2xl overflow-hidden flex flex-col md:flex-row shadow-lg hover:shadow-[0_20px_60px_rgba(79, 124, 255,0.2)] transition-all duration-500 group">
           
           {/* Connecting line animation */}
           <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-[var(--primary)] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden md:block" />
@@ -600,7 +600,7 @@ const DownloadPage: React.FC = () => {
           <div className="p-8 md:w-1/2 border-b md:border-b-0 md:border-r border-[var(--border)] hover:bg-[var(--bg-page)]/50 transition-all duration-500 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-24 h-24 bg-[var(--primary)]/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <h3 className="font-bold text-lg mb-4 group-hover:text-[var(--primary)] transition-colors duration-300 relative z-10">Version Information</h3>
+            <h3 className="font-bold text-lg mb-4 group-hover:text-[var(--primary-ink)] transition-colors duration-300 relative z-10">Version Information</h3>
             <div className="space-y-2 text-sm text-[var(--text-muted)] relative z-10">
               <div className="flex justify-between hover:text-[var(--text-main)] transition-colors duration-300 p-2 rounded hover:bg-[var(--bg-card)] group/item">
                 <span className="group-hover/item:translate-x-1 transition-transform duration-300">Current Version</span> 
@@ -639,7 +639,7 @@ const DownloadPage: React.FC = () => {
                   </li>
                 )}
               </ul>
-              <a href="/changelog" className="inline-block mt-4 text-sm font-medium text-[var(--primary)] hover:underline hover:scale-105 inline-flex items-center gap-1 transition-all group/link">
+              <a href="/changelog" className="inline-block mt-4 text-sm font-medium text-[var(--primary-ink)] hover:underline hover:scale-105 inline-flex items-center gap-1 transition-all group/link">
                 Read full changelog
                 <ArrowRight className="w-3 h-3 group-hover/link:translate-x-1 transition-transform duration-300" />
               </a>
@@ -669,7 +669,7 @@ const DownloadPage: React.FC = () => {
       {/* Coming Soon / Future Platforms */}
       <section className="px-6 py-16 bg-[var(--bg-card)] border-t border-[var(--border)] relative overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[var(--primary)]/5 rounded-full blur-3xl pointer-events-none animate-[orbPulse_10s_ease-in-out_infinite]" />
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-fuchsia-500/5 rounded-full blur-3xl pointer-events-none animate-[orbPulse_12s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-400/5 rounded-full blur-3xl pointer-events-none animate-[orbPulse_12s_ease-in-out_infinite]" style={{ animationDelay: '2s' }} />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <h2 className="text-2xl font-bold mb-8 animate-[fadeInUp_0.6s_ease-out]">Platform Roadmap</h2>
@@ -702,7 +702,7 @@ const DownloadPage: React.FC = () => {
       {/* Footer / Community */}
       <section className="px-6 py-20 relative overflow-hidden">
         {/* Background effects */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-[var(--primary)]/10 via-fuchsia-500/5 to-cyan-500/10 blur-3xl rounded-full pointer-events-none animate-[orbRotate_15s_ease-in-out_infinite]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gradient-to-r from-[var(--primary)]/10 via-blue-400/5 to-cyan-500/10 blur-3xl rounded-full pointer-events-none animate-[orbRotate_15s_ease-in-out_infinite]" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           {/* Help Links */}
@@ -714,7 +714,7 @@ const DownloadPage: React.FC = () => {
 
           {/* CTA Section */}
           <div className="text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] via-fuchsia-500 to-cyan-500 mb-6 shadow-[0_0_30px_rgba(124,58,237,0.4)] animate-[pulse_3s_ease-in-out_infinite]">
+            <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--primary)] via-blue-400 to-cyan-500 mb-6 shadow-[0_0_30px_rgba(79, 124, 255,0.4)] animate-[pulse_3s_ease-in-out_infinite]">
               <CheckCircle2 className="w-6 h-6 text-white animate-[bounce_2s_ease-in-out_infinite]" />
             </div>
             
@@ -729,7 +729,7 @@ const DownloadPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-[fadeInUp_0.6s_ease-out_0.4s_both]">
               <button 
                 onClick={handleWindowsDownload} 
-                className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--primary)] via-fuchsia-600 to-cyan-600 hover:from-[var(--primary-hover)] hover:via-fuchsia-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(124,58,237,0.4)] hover:-translate-y-1 relative overflow-hidden"
+                className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[var(--primary)] via-blue-500 to-cyan-600 hover:from-[var(--primary-hover)] hover:via-blue-600 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(79, 124, 255,0.4)] hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current relative z-10" aria-hidden="true">
@@ -740,7 +740,7 @@ const DownloadPage: React.FC = () => {
               
               <button
                 onClick={handleMacDownload}
-                className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] hover:-translate-y-1 relative overflow-hidden"
+                className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(79, 124, 255,0.2)] hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <Apple className="w-5 h-5 relative z-10" />
@@ -749,7 +749,7 @@ const DownloadPage: React.FC = () => {
 
               <button
                 onClick={() => setShowExtensionDialog(true)}
-                className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] hover:-translate-y-1 relative overflow-hidden"
+                className="group inline-flex items-center justify-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] hover:border-[var(--primary)] text-[var(--text-main)] px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-500 hover:shadow-[0_20px_50px_rgba(79, 124, 255,0.2)] hover:-translate-y-1 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[var(--primary)]/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 <Globe className="w-5 h-5 relative z-10" />
@@ -911,19 +911,19 @@ const DownloadPage: React.FC = () => {
 
 const BenefitCard = ({ icon, title, desc, delay }: { icon: React.ReactNode, title: string, desc: string, delay: string }) => (
   <div 
-    className="relative bg-[var(--bg-card)] p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--primary)] transition-all duration-500 group hover:shadow-[0_20px_50px_rgba(124,58,237,0.2)] hover:-translate-y-3 animate-[fadeInUp_0.8s_ease-out_both] overflow-hidden"
+    className="relative bg-[var(--bg-card)] p-6 rounded-2xl border border-[var(--border)] hover:border-[var(--primary)] transition-all duration-500 group hover:shadow-[0_20px_50px_rgba(79, 124, 255,0.2)] hover:-translate-y-3 animate-[fadeInUp_0.8s_ease-out_both] overflow-hidden"
     style={{ animationDelay: delay }}
   >
     {/* Glow effect */}
-    <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--primary)]/0 group-hover:from-[var(--primary)]/10 group-hover:to-fuchsia-500/10 transition-all duration-700 rounded-2xl" />
+    <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 to-[var(--primary)]/0 group-hover:from-[var(--primary)]/10 group-hover:to-blue-400/10 transition-all duration-700 rounded-2xl" />
     
     {/* Corner accent */}
     <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-[var(--primary)]/20 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     
-    <div className="mb-4 bg-[var(--bg-page)] w-12 h-12 rounded-xl flex items-center justify-center border border-[var(--border)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:shadow-[0_10px_30px_rgba(124,58,237,0.3)] group-hover:border-[var(--primary)] relative z-10">
+    <div className="mb-4 bg-[var(--bg-page)] w-12 h-12 rounded-xl flex items-center justify-center border border-[var(--border)] group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 group-hover:shadow-[0_10px_30px_rgba(79, 124, 255,0.3)] group-hover:border-[var(--primary)] relative z-10">
       {icon}
     </div>
-    <h3 className="font-bold text-lg mb-2 text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300 relative z-10">{title}</h3>
+    <h3 className="font-bold text-lg mb-2 text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300 relative z-10">{title}</h3>
     <p className="text-sm text-[var(--text-muted)] leading-relaxed relative z-10">{desc}</p>
   </div>
 );
@@ -933,13 +933,13 @@ const Step = ({ number, title, desc, delay }: { number: number, title: string, d
     className="flex gap-4 items-start group hover:translate-x-2 transition-all duration-500 animate-[fadeInUp_0.6s_ease-out_both]"
     style={{ animationDelay: delay }}
   >
-    <div className="relative flex-shrink-0 w-8 h-8 rounded-full bg-[var(--bg-page)] border border-[var(--border)] flex items-center justify-center font-bold text-[var(--primary)] text-sm group-hover:scale-125 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(124,58,237,0.5)] group-hover:border-[var(--primary)]">
+    <div className="relative flex-shrink-0 w-8 h-8 rounded-full bg-[var(--bg-page)] border border-[var(--border)] flex items-center justify-center font-bold text-[var(--primary-ink)] text-sm group-hover:scale-125 group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-500 group-hover:shadow-[0_0_20px_rgba(79, 124, 255,0.5)] group-hover:border-[var(--primary)]">
       {/* Ripple effect */}
       <div className="absolute inset-0 rounded-full bg-[var(--primary)] opacity-0 group-hover:opacity-20 group-hover:scale-150 transition-all duration-700" />
       <span className="relative z-10">{number}</span>
     </div>
     <div className="flex-1">
-      <h4 className="font-bold text-[var(--text-main)] group-hover:text-[var(--primary)] transition-colors duration-300">{title}</h4>
+      <h4 className="font-bold text-[var(--text-main)] group-hover:text-[var(--primary-ink)] transition-colors duration-300">{title}</h4>
       <p className="text-[var(--text-muted)] text-sm mt-1">{desc}</p>
     </div>
   </div>
@@ -952,7 +952,7 @@ const CheckItem = ({ title, desc, delay }: { title: string, desc: string, delay:
   >
     <CheckCircle2 className="w-5 h-5 text-[var(--success)] flex-shrink-0 mt-0.5 group-hover:scale-125 group-hover:rotate-12 transition-all duration-500 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
     <div>
-      <h4 className="font-semibold text-[var(--text-main)] text-sm group-hover:text-[var(--primary)] transition-colors duration-300">{title}</h4>
+      <h4 className="font-semibold text-[var(--text-main)] text-sm group-hover:text-[var(--primary-ink)] transition-colors duration-300">{title}</h4>
       <p className="text-[var(--text-muted)] text-xs mt-0.5">{desc}</p>
     </div>
   </div>
@@ -980,7 +980,7 @@ const PlatformCard = ({ icon, title, desc, status, delay }: { icon: React.ReactN
   const getStatusBadge = () => {
     switch (status) {
       case 'planned':
-        return <span className="text-xs px-2 py-1 rounded-full bg-[var(--primary)]/20 text-[var(--primary)] font-medium">Planned</span>;
+        return <span className="text-xs px-2 py-1 rounded-full bg-[var(--primary)]/20 text-[var(--primary-ink)] font-medium">Planned</span>;
       case 'considering':
         return <span className="text-xs px-2 py-1 rounded-full bg-[var(--warning)]/20 text-[var(--warning)] font-medium">Considering</span>;
       case 'future':
@@ -994,14 +994,14 @@ const PlatformCard = ({ icon, title, desc, status, delay }: { icon: React.ReactN
 
   return (
     <div 
-      className="relative p-6 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] opacity-80 hover:opacity-100 transition-all duration-500 hover:border-[var(--primary)]/50 hover:shadow-[0_20px_50px_rgba(124,58,237,0.15)] hover:-translate-y-2 animate-[fadeInUp_0.8s_ease-out_both] group overflow-hidden"
+      className="relative p-6 rounded-xl border border-[var(--border)] bg-[var(--bg-page)] opacity-80 hover:opacity-100 transition-all duration-500 hover:border-[var(--primary)]/50 hover:shadow-[0_20px_50px_rgba(79, 124, 255,0.15)] hover:-translate-y-2 animate-[fadeInUp_0.8s_ease-out_both] group overflow-hidden"
       style={{ animationDelay: delay }}
     >
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 via-transparent to-fuchsia-500/0 group-hover:from-[var(--primary)]/5 group-hover:to-fuchsia-500/5 transition-all duration-700 rounded-xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[var(--primary)]/0 via-transparent to-blue-400/0 group-hover:from-[var(--primary)]/5 group-hover:to-blue-400/5 transition-all duration-700 rounded-xl" />
       
       <div className="flex items-center justify-between mb-3 relative z-10">
-        <div className="flex items-center gap-3 text-[var(--text-muted)] group-hover:text-[var(--primary)] transition-colors duration-300">
+        <div className="flex items-center gap-3 text-[var(--text-muted)] group-hover:text-[var(--primary-ink)] transition-colors duration-300">
           <div className="group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">{icon}</div>
           <h3 className="font-bold">{title}</h3>
         </div>
@@ -1013,8 +1013,8 @@ const PlatformCard = ({ icon, title, desc, status, delay }: { icon: React.ReactN
 };
 
 const FooterLink = ({ icon, label, link }: { icon: React.ReactNode, label: string, link: string }) => (
-  <a href={link} className="relative flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-sm font-medium transition-all duration-500 hover:shadow-[0_10px_30px_rgba(124,58,237,0.2)] hover:scale-105 hover:-translate-y-1 group overflow-hidden">
-    <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-[var(--primary)]/0 group-hover:from-[var(--primary)]/10 group-hover:to-fuchsia-500/10 transition-all duration-500 rounded-full" />
+  <a href={link} className="relative flex items-center gap-2 px-4 py-2 rounded-full border border-[var(--border)] bg-[var(--bg-card)] hover:border-[var(--primary)] text-sm font-medium transition-all duration-500 hover:shadow-[0_10px_30px_rgba(79, 124, 255,0.2)] hover:scale-105 hover:-translate-y-1 group overflow-hidden">
+    <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/0 to-[var(--primary)]/0 group-hover:from-[var(--primary)]/10 group-hover:to-blue-400/10 transition-all duration-500 rounded-full" />
     <span className="group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 relative z-10">{icon}</span>
     <span className="relative z-10">{label}</span>
   </a>

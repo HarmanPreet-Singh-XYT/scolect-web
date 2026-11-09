@@ -31,7 +31,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 // --- Visual Identity Constants ---
-// Primary: #7C3AED (Violet 600)
+// Primary: #4F7CFF (Logo Blue)
 // Background: #FAFAFA (Zinc 50) / #09090B (Zinc 950)
 // Text: #18181B (Zinc 900) / #FAFAFA (Zinc 50)
 
@@ -166,7 +166,7 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
           {/* Header */}
           <div className="sticky top-0 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 px-6 py-4 flex items-center justify-between z-10">
             <div className="flex items-center gap-3">
-              <div className="p-2 rounded-lg bg-[#7C3AED]/10 text-[#7C3AED]">
+              <div className="p-2 rounded-lg bg-[#4F7CFF]/10 text-[#2F5BE8]">
                 <MessageSquarePlus size={24} />
               </div>
               <div>
@@ -213,8 +213,8 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
                     onClick={() => handleChange('type', type.value)}
                     className={`p-3 rounded-xl border-2 transition-all duration-200 text-left ${
                       formData.type === type.value
-                        ? 'border-[#7C3AED] bg-[#7C3AED]/5 shadow-sm'
-                        : 'border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/30'
+                        ? 'border-[#4F7CFF] bg-[#4F7CFF]/5 shadow-sm'
+                        : 'border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/30'
                     }`}
                   >
                     <div className="flex items-center gap-2">
@@ -245,10 +245,10 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
                 value={formData.title}
                 onChange={(e) => handleChange('title', e.target.value)}
                 placeholder="Brief summary of your feedback"
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/20 transition-all duration-200 ${
+                className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#4F7CFF]/20 transition-all duration-200 ${
                   errors.title 
                     ? 'border-red-500' 
-                    : 'border-zinc-200 dark:border-zinc-800 focus:border-[#7C3AED]'
+                    : 'border-zinc-200 dark:border-zinc-800 focus:border-[#4F7CFF]'
                 }`}
                 disabled={isSubmitting}
               />
@@ -271,10 +271,10 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
                 onChange={(e) => handleChange('description', e.target.value)}
                 placeholder="Please provide as much detail as possible:&#10;• What problem are you trying to solve?&#10;• How would this improve your experience?&#10;• Any specific ideas for implementation?"
                 rows={6}
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/20 transition-all duration-200 resize-none ${
+                className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#4F7CFF]/20 transition-all duration-200 resize-none ${
                   errors.description 
                     ? 'border-red-500' 
-                    : 'border-zinc-200 dark:border-zinc-800 focus:border-[#7C3AED]'
+                    : 'border-zinc-200 dark:border-zinc-800 focus:border-[#4F7CFF]'
                 }`}
                 disabled={isSubmitting}
               />
@@ -309,7 +309,7 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
                     value={formData.name}
                     onChange={(e) => handleChange('name', e.target.value)}
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:border-[#7C3AED] focus:ring-2 focus:ring-[#7C3AED]/20 transition-all duration-200"
+                    className="w-full px-4 py-3 rounded-xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:border-[#4F7CFF] focus:ring-2 focus:ring-[#4F7CFF]/20 transition-all duration-200"
                     disabled={isSubmitting}
                   />
                 </div>
@@ -324,10 +324,10 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     placeholder="your@email.com"
-                    className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#7C3AED]/20 transition-all duration-200 ${
+                    className={`w-full px-4 py-3 rounded-xl border-2 bg-white dark:bg-zinc-950 text-[#18181B] dark:text-[#FAFAFA] placeholder:text-zinc-400 focus:outline-none focus:ring-2 focus:ring-[#4F7CFF]/20 transition-all duration-200 ${
                       errors.email 
                         ? 'border-red-500' 
-                        : 'border-zinc-200 dark:border-zinc-800 focus:border-[#7C3AED]'
+                        : 'border-zinc-200 dark:border-zinc-800 focus:border-[#4F7CFF]'
                     }`}
                     disabled={isSubmitting}
                   />
@@ -373,7 +373,7 @@ const FeedbackFormModal = ({ isOpen, onClose, meta = {} }: FeedbackFormProps) =>
               <button
                 type="submit"
                 disabled={isSubmitting || submitStatus === 'success'}
-                className="flex-1 px-6 py-3 rounded-xl bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] text-white font-bold shadow-lg shadow-violet-500/30 hover:shadow-xl hover:shadow-violet-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
+                className="flex-1 px-6 py-3 rounded-xl bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] text-white font-bold shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
@@ -417,19 +417,19 @@ const SectionHeader = ({ title, subtitle, center = false }: { title: string, sub
 
 const FeedbackTypeCard = ({ icon: Icon, title, description, examples, index }: { icon: any, title: string, description: string, examples: string[], index: number }) => (
   <div 
-    className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED]/40 transition-all duration-500 hover:shadow-xl hover:shadow-violet-500/10 hover:-translate-y-2 group animate-slide-up relative overflow-hidden"
+    className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF]/40 transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/10 hover:-translate-y-2 group animate-slide-up relative overflow-hidden"
     style={{ animationDelay: `${index * 100}ms` }}
   >
-    <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
     
     <div className="flex items-center gap-3 mb-4 relative z-10">
-      <div className="p-2 rounded-lg bg-[#7C3AED]/10 text-[#7C3AED] dark:text-[#8B5CF6] group-hover:scale-110 group-hover:bg-[#7C3AED]/20 transition-all duration-300">
+      <div className="p-2 rounded-lg bg-[#4F7CFF]/10 text-[#2F5BE8] dark:text-[#7296FF] group-hover:scale-110 group-hover:bg-[#4F7CFF]/20 transition-all duration-300">
         <Icon size={24} />
       </div>
-      <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#7C3AED] transition-colors duration-300">{title}</h3>
+      <h3 className="text-lg font-bold text-[#18181B] dark:text-[#FAFAFA] group-hover:text-[#2F5BE8] transition-colors duration-300">{title}</h3>
     </div>
     <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4 min-h-[40px] relative z-10">{description}</p>
-    <div className="bg-zinc-50 dark:bg-zinc-950 p-3 rounded-lg border border-zinc-100 dark:border-zinc-800 relative z-10 group-hover:border-violet-500/20 transition-colors duration-300">
+    <div className="bg-zinc-50 dark:bg-zinc-950 p-3 rounded-lg border border-zinc-100 dark:border-zinc-800 relative z-10 group-hover:border-blue-500/20 transition-colors duration-300">
       <span className="text-xs font-bold text-[#18181B] dark:text-[#FAFAFA] uppercase tracking-wide block mb-2">Examples:</span>
       <ul className="space-y-1">
         {examples.map((ex, idx) => (
@@ -438,7 +438,7 @@ const FeedbackTypeCard = ({ icon: Icon, title, description, examples, index }: {
             className="text-xs text-[#52525B] dark:text-[#A1A1AA] flex items-start gap-1.5 group-hover:translate-x-1 transition-transform duration-300"
             style={{ transitionDelay: `${idx * 50}ms` }}
           >
-            <span className="mt-1 w-1 h-1 rounded-full bg-[#7C3AED] shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
+            <span className="mt-1 w-1 h-1 rounded-full bg-[#4F7CFF] shrink-0 group-hover:scale-150 transition-transform duration-300"></span>
             {ex}
           </li>
         ))}
@@ -498,7 +498,7 @@ const RoadmapItem = ({ title, status, desc, date, index }: { title: string, stat
         {statusLabels[status]}
       </div>
       <div className="flex-1">
-        <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] text-sm group-hover:text-[#7C3AED] transition-colors duration-300">{title}</h4>
+        <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] text-sm group-hover:text-[#2F5BE8] transition-colors duration-300">{title}</h4>
         <p className="text-xs text-[#52525B] dark:text-[#A1A1AA] mt-1">{desc}</p>
         <p className="text-[10px] text-zinc-400 mt-2 font-medium">{date}</p>
       </div>
@@ -513,7 +513,7 @@ const FloatingParticles = () => {
       {[...Array(15)].map((_, i) => (
         <div
           key={i}
-          className="absolute w-1 h-1 bg-[#7C3AED]/30 rounded-full animate-float"
+          className="absolute w-1 h-1 bg-[#4F7CFF]/30 rounded-full animate-float"
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
@@ -566,7 +566,7 @@ export default function FeedbackPage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED]">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8]">
       {/* Global Styles */}
       <style jsx global>{`
         @keyframes fade-in {
@@ -628,22 +628,22 @@ export default function FeedbackPage() {
       
       {/* HERO SECTION */}
       <div className="pt-32 pb-20 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 relative overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#7C3AED]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#4F7CFF]/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#14B8A6]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
         
         <FloatingParticles />
         
         <div className={`max-w-4xl mx-auto relative z-10 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] text-sm font-medium mb-6 border border-[#7C3AED]/20 backdrop-blur-sm hover:bg-[#7C3AED]/20 transition-all duration-300 cursor-default group">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4F7CFF]/10 text-[#2F5BE8] text-sm font-medium mb-6 border border-[#4F7CFF]/20 backdrop-blur-sm hover:bg-[#4F7CFF]/20 transition-all duration-300 cursor-default group">
             <MessageSquarePlus size={16} className="group-hover:rotate-12 transition-transform duration-300" /> 
             Shape the Future
             <Sparkles size={14} className="opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-[#18181B] dark:text-[#FAFAFA] mb-6">
-            Submit <span className="text-[#7C3AED] dark:text-[#8B5CF6] relative inline-block">
+            Submit <span className="text-[#2F5BE8] dark:text-[#7296FF] relative inline-block">
               Feedback
               <svg className="absolute -bottom-5 left-0 w-full" viewBox="0 0 100 10" preserveAspectRatio="none">
-                <path d="M0,5 Q25,0 50,5 T100,5" stroke="#7C3AED" strokeWidth="2" fill="none" className="animate-pulse" />
+                <path d="M0,5 Q25,0 50,5 T100,5" stroke="#4F7CFF" strokeWidth="2" fill="none" className="animate-pulse" />
               </svg>
             </span>
           </h1>
@@ -661,7 +661,7 @@ export default function FeedbackPage() {
 
       {/* FEEDBACK TYPES */}
       <section className="py-20 px-6 bg-[#FAFAFA] dark:bg-[#09090B] relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-violet-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent" />
         
         <div className="max-w-7xl mx-auto relative z-10">
           <SectionHeader title="What Can You Share?" subtitle="We welcome all types of feedback, from feature requests to UX improvements." />
@@ -717,7 +717,7 @@ export default function FeedbackPage() {
             </div>
             <h4 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2">Wait! Is this actually a bug?</h4>
             <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-4">If something is broken, crashing, or showing errors, please use the Bug Report page instead.</p>
-            <a href="/report-bug" className="inline-flex items-center gap-2 text-sm font-bold text-[#7C3AED] hover:gap-3 transition-all duration-300 group/link">
+            <a href="/report-bug" className="inline-flex items-center gap-2 text-sm font-bold text-[#2F5BE8] hover:gap-3 transition-all duration-300 group/link">
               Go to Report Bug Page 
               <ArrowRight size={14} className="group-hover/link:translate-x-1 transition-transform" />
             </a>
@@ -807,7 +807,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
 
       {/* SUBMISSION OPTIONS */}
       <section className="py-20 px-6 bg-[#FAFAFA] dark:bg-[#09090B] relative">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-violet-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent" />
         
         <div className="max-w-6xl mx-auto relative z-10">
           <SectionHeader title="Submit Your Feedback" subtitle="Choose the method that works best for you." center />
@@ -830,14 +830,14 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
             </div>
 
             {/* Email */}
-            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#7C3AED] transition-all duration-500 group hover:shadow-2xl hover:shadow-violet-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 to-violet-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <Mail size={48} className="text-[#7C3AED] mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10" />
+            <div className="p-8 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 hover:border-[#4F7CFF] transition-all duration-500 group hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2 relative overflow-hidden animate-slide-up" style={{ animationDelay: '100ms' }}>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <Mail size={48} className="text-[#2F5BE8] mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10" />
               <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-2 relative z-10">Email Feedback</h3>
               <p className="text-sm text-[#52525B] dark:text-[#A1A1AA] mb-6 relative z-10">
                 For private feedback or detailed suggestions without GitHub.
               </p>
-              <a href="mailto:feedback@scolect.com" className="inline-flex items-center gap-2 font-bold text-[#7C3AED] hover:gap-4 transition-all duration-300 group/link relative z-10">
+              <a href="mailto:feedback@scolect.com" className="inline-flex items-center gap-2 font-bold text-[#2F5BE8] hover:gap-4 transition-all duration-300 group/link relative z-10">
                 Email Feedback <ArrowRight size={16} className="group-hover/link:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -867,7 +867,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
         <div className="max-w-4xl mx-auto">
           <SectionHeader title="How We Handle Feedback" subtitle="Your suggestion's journey from idea to implementation." />
           
-          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-violet-300 before:to-transparent dark:before:via-violet-700">
+          <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-blue-300 before:to-transparent dark:before:via-blue-700">
             {[
               { title: "1. Read & Tag", desc: "We read every submission and tag it (Feature, UX, High-Impact).", icon: FileText },
               { title: "2. Community Discussion", desc: "Ideas are discussed on GitHub. High-voted ideas rise to the top.", icon: MessageCircle },
@@ -879,12 +879,12 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
                 className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active animate-slide-up"
                 style={{ animationDelay: `${idx * 150}ms` }}
               >
-                <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-violet-100 to-violet-200 dark:from-violet-900/50 dark:to-violet-800/50 text-[#7C3AED] shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-white dark:border-zinc-900 bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/50 dark:to-blue-800/50 text-[#2F5BE8] shadow-lg shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 group-hover:scale-110 transition-transform duration-300">
                   <step.icon size={18} />
                 </div>
-                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#7C3AED]/30 transition-all duration-300 group-hover:-translate-y-1">
+                <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 shadow-sm hover:shadow-xl hover:border-[#4F7CFF]/30 transition-all duration-300 group-hover:-translate-y-1">
                   <h3 className="font-bold text-[#18181B] dark:text-[#FAFAFA] mb-1 flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-[#7C3AED] group-hover:animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-[#4F7CFF] group-hover:animate-pulse" />
                     {step.title}
                   </h3>
                   <p className="text-sm text-[#52525B] dark:text-[#A1A1AA]">{step.desc}</p>
@@ -897,7 +897,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
 
       {/* ROADMAP HIGHLIGHTS */}
       <section className="py-20 px-6 bg-[#FAFAFA] dark:bg-[#09090B] relative">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-violet-500/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-blue-500/5 via-transparent to-transparent" />
         
         <div className="max-w-4xl mx-auto relative z-10">
           <SectionHeader title="Community Feedback in Action" subtitle="Real examples of user feedback that became features." />
@@ -934,7 +934,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
           </div>
           
           <div className="mt-8 text-center animate-slide-up" style={{ animationDelay: '400ms' }}>
-            <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-[#7C3AED] hover:gap-3 transition-all duration-300 group">
+            <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-[#2F5BE8] hover:gap-3 transition-all duration-300 group">
               <Map size={16} />
               View Full Roadmap on GitHub 
               <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -946,7 +946,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
       {/* FINAL CTA */}
       <section className="py-24 px-6 text-center bg-gradient-to-br from-zinc-900 via-zinc-900 to-zinc-800 text-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#7C3AED]/20 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#4F7CFF]/20 rounded-full blur-3xl animate-pulse" />
         </div>
         
         <div className="absolute inset-0 opacity-5">
@@ -957,7 +957,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
         </div>
         
         <div className="max-w-3xl mx-auto relative z-10">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-violet-500 to-violet-600 mb-8 shadow-lg shadow-violet-500/30 group cursor-default hover:scale-110 transition-transform duration-300">
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 mb-8 shadow-lg shadow-blue-500/30 group cursor-default hover:scale-110 transition-transform duration-300">
             <ThumbsUp className="text-white group-hover:rotate-12 transition-transform duration-300" size={40} />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-zinc-200 to-white bg-clip-text text-transparent">
@@ -969,7 +969,7 @@ Add a tooltip or quick tutorial on first launch explaining how to categorize app
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button 
               onClick={() => setIsFormOpen(true)}
-              className="px-8 py-4 bg-gradient-to-r from-[#7C3AED] to-[#6D28D9] hover:from-[#6D28D9] hover:to-[#5B21B6] rounded-xl font-bold transition-all duration-300 shadow-lg shadow-violet-900/30 hover:shadow-xl hover:shadow-violet-900/40 hover:-translate-y-1 flex items-center justify-center gap-2 group"
+              className="px-8 py-4 bg-gradient-to-r from-[#4F7CFF] to-[#2547C4] hover:from-[#2547C4] hover:to-[#203C9E] rounded-xl font-bold transition-all duration-300 shadow-lg shadow-blue-900/30 hover:shadow-xl hover:shadow-blue-900/40 hover:-translate-y-1 flex items-center justify-center gap-2 group"
             >
               <MessageSquarePlus size={20} />
               Quick Form

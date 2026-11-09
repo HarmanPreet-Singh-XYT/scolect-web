@@ -50,7 +50,7 @@ export default function ExitIntentPopup() {
         </button>
 
         <div className="text-center">
-          <div className="inline-flex p-3 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] mb-6">
+          <div className="inline-flex p-3 rounded-full bg-[#4F7CFF]/10 text-[#2F5BE8] mb-6">
             <Download size={32} />
           </div>
           
@@ -65,7 +65,7 @@ export default function ExitIntentPopup() {
           <Link 
             href="/download"
             onClick={() => setIsVisible(false)}
-            className="block w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold py-4 rounded-xl shadow-lg shadow-violet-500/20 transition-all hover:scale-[1.02] mb-4"
+            className="block w-full bg-[#4F7CFF] hover:bg-[#2547C4] text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-500/20 transition-all hover:scale-[1.02] mb-4"
           >
             Download Now
           </Link>

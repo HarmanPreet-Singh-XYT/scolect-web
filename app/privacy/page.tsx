@@ -14,14 +14,14 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
 // --- Visual Identity Constants ---
-// Primary: #7C3AED (Violet 600)
+// Primary: #4F7CFF (Logo Blue)
 // Background: #FAFAFA (Zinc 50) / #09090B (Zinc 950)
 // Text: #18181B (Zinc 900) / #FAFAFA (Zinc 50)
 
 const PolicySection = ({ title, children, icon: Icon }: { title: string, children: React.ReactNode, icon?: any }) => (
   <section className="mb-12 scroll-mt-24">
     <div className="flex items-center gap-3 mb-4 pb-2 border-b border-zinc-200 dark:border-zinc-800">
-      {Icon && <Icon className="text-[#7C3AED]" size={24} />}
+      {Icon && <Icon className="text-[#2F5BE8]" size={24} />}
       <h2 className="text-2xl font-bold text-[#18181B] dark:text-[#FAFAFA]">{title}</h2>
     </div>
     <div className="text-lg leading-relaxed text-[#52525B] dark:text-[#A1A1AA] space-y-4">
@@ -32,12 +32,12 @@ const PolicySection = ({ title, children, icon: Icon }: { title: string, childre
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED]">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8]">
       <Navbar/>
       {/* HERO SECTION */}
       <div className="pt-32 pb-16 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
         <div className="max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] text-sm font-medium mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4F7CFF]/10 text-[#2F5BE8] text-sm font-medium mb-6">
             <ShieldCheck size={16} /> Effective Date: March 25, 2025
           </div>
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-[#18181B] dark:text-[#FAFAFA] mb-6">
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <a 
             href="mailto:privacy@scolect.com" 
-            className="inline-flex items-center gap-2 text-[#7C3AED] hover:text-[#6D28D9] font-bold text-lg hover:underline transition-colors"
+            className="inline-flex items-center gap-2 text-[#2F5BE8] hover:text-[#2547C4] font-bold text-lg hover:underline transition-colors"
           >
             privacy@scolect.com
           </a>

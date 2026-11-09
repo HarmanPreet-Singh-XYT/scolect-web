@@ -49,7 +49,7 @@ const inputCls = [
   'border border-zinc-200 dark:border-zinc-700',
   'text-zinc-900 dark:text-zinc-100',
   'placeholder:text-zinc-400 dark:placeholder:text-zinc-500',
-  'focus:outline-none focus:ring-2 focus:ring-violet-500/25 focus:border-violet-500',
+  'focus:outline-none focus:ring-2 focus:ring-blue-500/25 focus:border-blue-500',
   'transition-all duration-150',
 ].join(' ');
 
@@ -141,10 +141,10 @@ export default function BugReportForm() {
   }
 
   const isSecurity      = form.type === 'security';
-  const accentGradient  = isSecurity ? 'from-rose-500 to-rose-600'     : 'from-violet-600 to-violet-700';
+  const accentGradient  = isSecurity ? 'from-rose-500 to-rose-600'     : 'from-blue-600 to-blue-700';
   const submitActiveBtn = isSecurity
     ? 'bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 shadow-rose-500/20'
-    : 'bg-gradient-to-r from-violet-600 to-violet-700 hover:from-violet-700 hover:to-violet-800 shadow-violet-500/20';
+    : 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 shadow-blue-500/20';
 
   return (
     <div className="max-w-xl mx-auto">
@@ -158,7 +158,7 @@ export default function BugReportForm() {
           <div className="flex items-center gap-2.5 mb-1">
             {isSecurity
               ? <Lock size={18} className="text-rose-500" />
-              : <Bug  size={18} className="text-violet-600" />
+              : <Bug  size={18} className="text-blue-600" />
             }
             <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">
               {isSecurity ? 'Report a Security Issue' : 'Report a Bug'}

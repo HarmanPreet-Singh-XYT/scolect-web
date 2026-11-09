@@ -77,7 +77,7 @@ const Reveal = ({
 const ReleaseBadge = ({ type }: { type: 'feature' | 'improvement' | 'fix' | 'tech' }) => {
   const styles = {
     feature: "bg-[#14B8A6]/10 text-[#14B8A6] border-[#14B8A6]/20",
-    improvement: "bg-[#7C3AED]/10 text-[#7C3AED] border-[#7C3AED]/20",
+    improvement: "bg-[#4F7CFF]/10 text-[#2F5BE8] border-[#4F7CFF]/20",
     fix: "bg-[#F43F5E]/10 text-[#F43F5E] border-[#F43F5E]/20",
     tech: "bg-[#52525B]/10 text-[#52525B] dark:text-[#A1A1AA] border-[#52525B]/20"
   };
@@ -116,7 +116,7 @@ const ReleaseSection = ({
   <Reveal delay={Math.min(index * 60, 300)} className={`relative pl-8 md:pl-0 md:grid md:grid-cols-12 gap-8 pb-16 last:pb-0`}>
     {/* Timeline Line */}
     <div className="hidden md:block absolute left-[25%] top-0 bottom-0 w-px bg-zinc-200 dark:bg-zinc-800"></div>
-    <div className={`hidden md:block absolute left-[calc(25%-5px)] top-2 w-2.5 h-2.5 rounded-full ring-4 ring-[#FAFAFA] dark:ring-[#09090B] ${isLatest ? 'bg-[#7C3AED]' : 'bg-zinc-300 dark:bg-zinc-700'}`}></div>
+    <div className={`hidden md:block absolute left-[calc(25%-5px)] top-2 w-2.5 h-2.5 rounded-full ring-4 ring-[#FAFAFA] dark:ring-[#09090B] ${isLatest ? 'bg-[#4F7CFF]' : 'bg-zinc-300 dark:bg-zinc-700'}`}></div>
 
     {/* Metadata Column */}
     <div className="md:col-span-3 md:text-right mb-4 md:mb-0">
@@ -126,16 +126,16 @@ const ReleaseSection = ({
           <Calendar size={14} /> {date}
         </div>
         {isLatest && (
-          <span className="inline-block px-3 py-1 bg-[#7C3AED] text-white text-xs font-bold rounded-full shadow-lg shadow-violet-500/20">
+          <span className="inline-block px-3 py-1 bg-[#4F7CFF] text-white text-xs font-bold rounded-full shadow-lg shadow-blue-500/20">
             Latest Release
           </span>
         )}
         {isLatest && (
           <div className="mt-6 space-y-3">
-            <a href="/download" className="flex items-center justify-center md:justify-end gap-2 text-sm font-medium text-[#7C3AED] hover:underline">
+            <a href="/download" className="flex items-center justify-center md:justify-end gap-2 text-sm font-medium text-[#2F5BE8] hover:underline">
               <Download size={16} /> Download Page
             </a>
-            <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases" className="flex items-center justify-center md:justify-end gap-2 text-sm font-medium text-[#18181B] dark:text-[#FAFAFA] hover:text-[#7C3AED] dark:hover:text-[#8B5CF6]">
+            <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases" className="flex items-center justify-center md:justify-end gap-2 text-sm font-medium text-[#18181B] dark:text-[#FAFAFA] hover:text-[#2F5BE8] dark:hover:text-[#7296FF]">
               <Package size={16} /> GitHub Release
             </a>
           </div>
@@ -168,12 +168,12 @@ const ReleaseSection = ({
       {improvements.length > 0 && (
         <div>
           <h3 className="flex items-center gap-2 font-bold text-[#18181B] dark:text-[#FAFAFA] mb-3">
-            <Zap className="text-[#7C3AED]" size={18} /> Improvements
+            <Zap className="text-[#2F5BE8]" size={18} /> Improvements
           </h3>
           <ul className="space-y-2">
             {improvements.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2 text-sm text-[#52525B] dark:text-[#A1A1AA]">
-                <span className="mt-1.5 w-1 h-1 rounded-full bg-[#7C3AED] shrink-0" />
+                <span className="mt-1.5 w-1 h-1 rounded-full bg-[#4F7CFF] shrink-0" />
                 {item}
               </li>
             ))}
@@ -228,13 +228,13 @@ export default function ChangelogPage() {
   const considerationFeatures = upcomingFeatures.filter(f => f.status === "consideration");
   const router = useRouter();
   return (
-    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#7C3AED]/20 selection:text-[#7C3AED]">
+    <div className="min-h-screen bg-[#FAFAFA] dark:bg-[#09090B] font-sans selection:bg-[#4F7CFF]/20 selection:text-[#2F5BE8]">
     <Navbar/>
       {/* HERO */}
       <div className="pt-32 pb-20 px-6 text-center border-b border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
         <div className="max-w-4xl mx-auto">
           <Reveal>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#7C3AED]/10 text-[#7C3AED] text-sm font-medium mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#4F7CFF]/10 text-[#2F5BE8] text-sm font-medium mb-6">
               <History size={16} /> Version History
             </div>
           </Reveal>
@@ -264,7 +264,7 @@ export default function ChangelogPage() {
           <Reveal direction="left">
             <div>
               <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 flex items-center gap-2">
-                <GitCommit size={20} className="text-[#7C3AED]" /> Upcoming Releases
+                <GitCommit size={20} className="text-[#2F5BE8]" /> Upcoming Releases
               </h3>
               <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl border border-zinc-200 dark:border-zinc-800">
                 <h4 className="font-bold text-sm uppercase tracking-wider text-[#14B8A6] mb-4">In Development</h4>
@@ -286,7 +286,7 @@ export default function ChangelogPage() {
                 </ul>
                 
                 <div className="mt-6 pt-6 border-t border-zinc-100 dark:border-zinc-800">
-                  <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/issues" className="text-[#7C3AED] font-bold text-sm hover:underline">Vote on Features in GitHub Discussions →</a>
+                  <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/issues" className="text-[#2F5BE8] font-bold text-sm hover:underline">Vote on Features in GitHub Discussions →</a>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function ChangelogPage() {
           <Reveal direction="right" delay={150}>
             <div>
               <h3 className="text-xl font-bold text-[#18181B] dark:text-[#FAFAFA] mb-6 flex items-center gap-2">
-                <Info size={20} className="text-[#7C3AED]" /> Release Philosophy
+                <Info size={20} className="text-[#2F5BE8]" /> Release Philosophy
               </h3>
               <div className="prose dark:prose-invert text-sm text-[#52525B] dark:text-[#A1A1AA]">
                 <p className="mb-4">{releasePhilosophy.description}</p>

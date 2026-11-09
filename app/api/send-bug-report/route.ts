@@ -71,7 +71,7 @@ export async function POST(request: Request) {
               box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             }
             .header {
-              background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
+              background: linear-gradient(135deg, #4F7CFF 0%, #2547C4 100%);
               color: white;
               padding: 30px;
               border-radius: 8px;
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
               background: #f9fafb;
               padding: 16px;
               border-radius: 8px;
-              border-left: 4px solid #7C3AED;
+              border-left: 4px solid #4F7CFF;
             }
             .info-grid {
               display: grid;
@@ -312,7 +312,7 @@ Submitted on ${new Date().toLocaleString()}
             <style>
               body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; }
               .container { max-width: 600px; margin: 0 auto; padding: 20px; }
-              .header { background: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%); color: white; padding: 30px; border-radius: 8px; text-align: center; }
+              .header { background: linear-gradient(135deg, #4F7CFF 0%, #2547C4 100%); color: white; padding: 30px; border-radius: 8px; text-align: center; }
               .content { background: white; padding: 30px; margin-top: 20px; border-radius: 8px; border: 1px solid #e5e7eb; }
               .footer { margin-top: 20px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #666; font-size: 12px; text-align: center; }
             </style>
@@ -325,7 +325,7 @@ Submitted on ${new Date().toLocaleString()}
               <div class="content">
                 <p>Hi there,</p>
                 <p>Thank you for submitting a bug report for <strong>Scolect</strong>. We've received your report about:</p>
-                <p style="background: #f9fafb; padding: 16px; border-radius: 8px; border-left: 4px solid #7C3AED;">
+                <p style="background: #f9fafb; padding: 16px; border-radius: 8px; border-left: 4px solid #4F7CFF;">
                   <strong>${formData.title}</strong>
                 </p>
                 <p>Our team will review your report within 24-48 hours and get back to you if we need any additional information.</p>
