@@ -20,9 +20,49 @@ export interface Release {
 
 export const releases: Release[] = [
   {
+    version: "v2.4.2",
+    date: "November 13, 2026",
+    isLatest: true,
+    features: [
+      "(macOS) Update reminder on launch: Scolect tells you when a new version is available and offers to update. If you dismiss it, it won't remind you again for that version.",
+    ],
+    improvements: [
+      "Browser limits has a cleaner, more compact layout.",
+      "Browser history has a \"Show more sites\" option, translated into all supported languages.",
+    ],
+    fixes: [
+      "(macOS) Updating no longer gets blocked when the app is set to minimize to the tray.",
+      "Dark mode: page backgrounds and card outlines now follow your theme correctly.",
+      "Insights: fixed a layout overflow in the Reports insights view in narrow windows.",
+    ],
+    size: 24.4,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.4.2/screentime-2.4.2-macos.dmg",
+  },
+  {
+    version: "v2.4.1",
+    date: "November 12, 2026",
+    isLatest: false,
+    features: [
+      "Browser tabs (desktop and extension): click a website in Overview to open a detail dialog, a date range selector in History, and a \"show more sites\" option in Websites.",
+    ],
+    improvements: [
+      "Browser limits results now load in pages, fixing lag with large visit histories.",
+      "The Scolect brand theme is now the default.",
+      "The window now fits the screen size when the app first opens.",
+      "(Windows) Reworked the block overlay to use a queue. Hard-blocked windows are now hidden, and protected system processes are skipped.",
+    ],
+    fixes: [
+      "(Windows) Fixed the crash and hang when the app shuts down.",
+      "(Windows) Fixed thread-safety, DLL-loading, restart, and resource-cleanup issues in the runner.",
+      "Fixed date calculations that broke around daylight saving changes, affecting Insights, Reports, Applications, Focus Mode, and Alerts & Limits.",
+    ],
+    size: 24.4,
+    macLink: "https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/releases/download/v2.4.1/screentime-2.4.1-macos.dmg",
+  },
+  {
     version: "v2.4.0",
     date: "October 27, 2026",
-    isLatest: true,
+    isLatest: false,
     features: [
       "Insights: new view with a usage heatmap, daily timeline, search, and week-over-week comparison. Time that can't be placed on the timeline is tracked and shown separately.",
       "Manual time logging: log time by hand or with a built-in stopwatch.",
