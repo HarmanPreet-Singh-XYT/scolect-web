@@ -171,7 +171,7 @@ export default function Footer() {
           <div className="pt-8 border-t border-zinc-200 dark:border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#52525B] dark:text-[#A1A1AA]">
             <div className="flex items-center gap-2">
               &copy; {currentYear} Scolect. Open source under 
-              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/blob/main/LICENSE" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">LGPL-2.1 License</a>
+              <a href="https://github.com/HarmanPreet-Singh-XYT/Scolect-ScreenTimeApp/blob/main/LICENSE" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">AGPL-3.0 License</a>
             </div>
             
             <div className="flex items-center gap-2 group cursor-default">
